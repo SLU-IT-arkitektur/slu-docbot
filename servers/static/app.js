@@ -3,13 +3,11 @@ const App = {
     state: {
         interaction_id: '',
     },
-    $: { // working with DOM in this namespace
-        appEl: document.getElementById('app'),
+    $: { 
         inputEl: document.getElementById('queryInput'),
         feedbackSpan: document.getElementById('feedbackSpan'),
         responseDiv: document.querySelector('.response'),
         readmore: document.getElementById('readmore'),
-        responseMsg: document.querySelector('.response .responseMsg'),
         renderFeedbackSpan: () => {
             App.$.feedbackSpan.innerHTML = `
                 <img src="./static/thumbsUp.png" onClick="App.sendFeedback('thumbsup')" class="feedbackButton" />

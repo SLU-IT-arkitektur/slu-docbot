@@ -62,9 +62,25 @@ INTERACTION_SCHEMA = [
 redis_host = os.getenv('REDIS_HOST')
 redis_port = os.getenv('REDIS_PORT')
 redis_password = os.getenv('REDIS_PASSWORD')
-conn = redis.Redis(host=redis_host, port=redis_port,
-                   password=redis_password, encoding='utf-8', decode_responses=True)
 
+def connect_redis(retries=5, delay=5):
+    for i in range(retries):
+        try:
+            conn = redis.Redis(host=redis_host, port=redis_port,
+                            password=redis_password, encoding='utf-8', decode_responses=True)    
+            if conn.ping():
+                logging.info("Connected to Redis")
+                return conn
+        except redis.ConnectionError as e:
+            if i < retries - 1: 
+                logging.error(e)
+                logging.info(f'Retry {i+1}/{retries} failed, retrying in {delay} seconds')
+                time.sleep(delay)
+                continue
+            else:
+                raise
+
+conn = connect_redis()
 
 def ensure_interaction_feedback_search_index():
     try:
@@ -74,7 +90,6 @@ def ensure_interaction_feedback_search_index():
     except Exception as e:
         logging.info(e)
         pass  # assume the index already exists
-
 
 if conn.ping():
     logging.info("Connected to Redis")
