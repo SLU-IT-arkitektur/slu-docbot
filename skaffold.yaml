@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta11
+kind: Config
+build:
+  artifacts:
+  - image: docbot
+    context: .
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+      - ./devops/k8s/local/*.yaml
+ 

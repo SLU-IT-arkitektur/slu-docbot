@@ -1,0 +1,46 @@
+<html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+</head>
+
+<body style="margin:20px">
+    <h1>Rapport: chatbot POC - Utbildningshandboken</h1>
+    <p>
+        genererad: {{ generated_timestamp }}
+    </p>
+    <p>
+        <strong>Antal interaktioner: {{ numberOfInteractions }}</strong><br />
+        <strong>Antal tumme upp: {{numberOfThumbsUps}}</strong><br />
+        <strong>Antal tumme ner: {{numberOfThumbsDowns}}</strong><br />
+
+    </p>
+    <h2>Svar som fick tummen upp</h2>
+    {% for feedback in thumbsUps %}
+    <p>
+        <b>datumstämpel</b>: {{ feedback.timestamp }}<br />
+        <b>frågan</b>: {{ feedback.query }}<br />
+        <b>svaret</b>: {{ feedback.reply }}<br />
+        <b>svarstid</b>: {{ feedback.request_duration_in_seconds }} sekunder<br />
+        <b>svarstid OpenAI</b>: {{ feedback.chat_completions_req_duration_in_seconds }} sekunder<br />
+    </p>
+
+    {% endfor %}
+
+    <h2>Svar som fick tummen ner</h2>
+    {% for feedback in thumbsDowns %}
+    <p>
+        <b>datumstämpel</b>: {{ feedback.timestamp }}<br />
+        <b>frågan</b>: {{ feedback.query }}<br />
+        <b>svaret</b>: {{ feedback.reply }}<br />
+        <b>svarstid</b>: {{ feedback.request_duration_in_seconds }} sekunder<br />
+        <b>svarstid OpenAI</b>: {{ feedback.chat_completions_req_duration_in_seconds }} sekunder<br />
+    </p>
+
+    {% endfor %}
+</body>
+
+</html>

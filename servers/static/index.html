@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script type="text/javascript" src="/static/config.js"></script>
+    <script type="text/javascript" defer src="/static/app.js"></script>
+    <title>slu-docbot</title>
+</head>
+<body>
+    <main class="container">
+        <section>
+            <h2>chatbot POC: Utbildningshandboken</h2>
+
+            <img src="./static/chatbot.png" id="chatbotimg" alt="Chatbot Image"/>
+            <p>Jag är en bot som är specialiserad på <a href="/static/utbildningshandboken.docx">Utbildningshandboken</a>,
+                ställ en fråga till mig nedan.
+            </p>
+            <p class="info">
+                <i>OBS: Alla frågor och svar loggas för att förbättra boten. Dock loggas
+                    ingen information som kan kopplas till dig som användare, du är anonym. PS: Detta är en proof-of-concept
+                    och i nuvarande version kan vissa frågor ibland ta <b>upp till 20
+                        sekunder</b> att besvara.</i>
+            </p>
+            <input type="text" id="queryInput" placeholder="Ange din fråga här och tryck enter..">
+        </section>
+
+        <section>
+            <p>
+                <span class="response"></span>
+                <span id="feedbackSpan"></span>
+            </p>
+
+            <p>
+                <span id="readmore"></span>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
