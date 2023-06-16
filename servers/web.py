@@ -58,10 +58,19 @@ INTERACTION_SCHEMA = [
     NumericField("chat_completions_req_duration_in_seconds"),
     TextField("feedback")
 ]
-
 redis_host = os.getenv('REDIS_HOST')
 redis_port = os.getenv('REDIS_PORT')
 redis_password = os.getenv('REDIS_PASSWORD')
+
+def ensure_interaction_feedback_search_index(conn: redis.Redis):
+    try:
+        conn.ft("interaction").create_index(
+            INTERACTION_SCHEMA, definition=IndexDefinition(prefix=[INTERACTION_PREFIX],
+                                                           index_type=IndexType.HASH))
+        logging.info("Created interaction index")
+    except Exception as e:
+        logging.info(e)
+        pass  # assume the index already exists
 
 def connect_redis(retries=5, delay=5):
     for i in range(retries):
@@ -70,6 +79,7 @@ def connect_redis(retries=5, delay=5):
                             password=redis_password, encoding='utf-8', decode_responses=True)    
             if conn.ping():
                 logging.info("Connected to Redis")
+                ensure_interaction_feedback_search_index(conn)
                 return conn
         except redis.ConnectionError as e:
             if i < retries - 1: 
@@ -81,20 +91,6 @@ def connect_redis(retries=5, delay=5):
                 raise
 
 conn = connect_redis()
-
-def ensure_interaction_feedback_search_index():
-    try:
-        conn.ft("interaction").create_index(
-            INTERACTION_SCHEMA, definition=IndexDefinition(prefix=[INTERACTION_PREFIX],
-                                                           index_type=IndexType.HASH))
-    except Exception as e:
-        logging.info(e)
-        pass  # assume the index already exists
-
-if conn.ping():
-    logging.info("Connected to Redis")
-    ensure_interaction_feedback_search_index()
-
 
 prompt_instructions = os.getenv('PROMPT_INST')
 if prompt_instructions is None:
