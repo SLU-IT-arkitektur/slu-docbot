@@ -1,8 +1,9 @@
-apiVersion: skaffold/v2beta11
+apiVersion: skaffold/v4beta5
 kind: Config
 build:
+manifests:
+  rawYaml:
+    - ./devops/k8s/local/redis-stack-server.yaml
 deploy:
-  kubectl:
-    manifests:
-      - ./devops/k8s/local/redis-stack-server.yaml
- 
+  statusCheck: false
+  kubectl: {}

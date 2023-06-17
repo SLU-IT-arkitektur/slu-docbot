@@ -1,13 +1,14 @@
-apiVersion: skaffold/v2beta11
+apiVersion: skaffold/v4beta5
 kind: Config
 build:
   artifacts:
-  - image: docbot
-    context: .
-    docker:
-      dockerfile: Dockerfile
+    - image: docbot
+      context: .
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - ./devops/k8s/local/*.yaml
 deploy:
-  kubectl:
-    manifests:
-      - ./devops/k8s/local/*.yaml
- 
+  statusCheck: false
+  kubectl: {}

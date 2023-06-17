@@ -43,8 +43,6 @@ spec:
           image: docbot
           ports:
           - containerPort: 8000
-        
-
 ---
 apiVersion: v1
 kind: Service
