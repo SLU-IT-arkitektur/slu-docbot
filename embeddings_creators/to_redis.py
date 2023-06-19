@@ -36,10 +36,8 @@ def create_embeddings(sections_generator):
         num_of_tokens_in_section = num_tokens_from_string(text, "cl100k_base")
         total_number_of_tokens += num_of_tokens_in_section
         
-        # TODO handle case where num_of_tokens_in_section > allowed 8191... dont skip them..
-        # split the text if it's too long (part1 and part2 etc..?) do i need to combine the embeddings?
-        if num_of_tokens_in_section > 8000 or num_of_tokens_in_section < 1:
-            continue
+        # TODO handle case where num_of_tokens_in_section > allowed 8191... 
+        # not an issue for Utbildningshandboken, but might be for other datasets
 
         print(f'creating embeddings for section {header} with {num_of_tokens_in_section} tokens')
         print(f'total number of tokens so far: {total_number_of_tokens}')
