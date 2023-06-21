@@ -63,7 +63,7 @@ const App = {
             });
             if (response.ok) {
                 const data = await response.json();
-                message = data.message;
+                const message = data.message;
                 App.$.setFeedbackSpanHtml(`<strong>${message}</strong>`);
                 setTimeout(() => {
                     App.$.hideFeedbackSpan();
