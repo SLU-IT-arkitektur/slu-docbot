@@ -3,7 +3,7 @@ const App = {
     state: {
         interaction_id: '',
     },
-    $: { 
+    $: {
         inputEl: document.getElementById('queryInput'),
         feedbackSpan: document.getElementById('feedbackSpan'),
         responseDiv: document.querySelector('.response'),
@@ -19,6 +19,13 @@ const App = {
         hideFeedbackSpan: () => {
             App.$.feedbackSpan.style.display = 'none';
         },
+        showProgressbar: () => {
+           App.$.responseDiv.innerHTML = "<progress></progress>";
+        },
+        hideProgressbar: () => {
+            const pb = App.$.responseDiv.querySelector('progress');
+            App.$.responseDiv.removeChild(pb);
+        },
         enableInput: () => {
             App.$.inputEl.disabled = false;
         },
@@ -27,9 +34,6 @@ const App = {
         },
         setResponseDivText: (str) => {
             App.$.responseDiv.textContent = str;
-        },
-        setResponseDivHtml: (str) => {
-            App.$.responseDiv.innerHTML = str;
         },
         setFeedbackSpanText: (str) => {
             App.$.feedbackSpan.textContent = str;
@@ -96,7 +100,7 @@ const App = {
         }
 
         try {
-            App.$.setResponseDivHtml("<progress></progress>"); // show progress bar
+            App.$.showProgressbar();
             App.$.disableInput();
             const response = await fetch(App.apiUrl + 'qa', {
                 method: 'POST',

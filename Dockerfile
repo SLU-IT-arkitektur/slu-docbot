@@ -20,9 +20,9 @@ RUN adduser \
 
 
 ## add necessary permissions
-RUN chown -R botrunner:botrunner /app/servers/static/ && chmod -R 755 /app/servers/static/
+RUN chown -R botrunner:botrunner /app/server/static/ && chmod -R 755 /app/server/static/
 
 USER botrunner
 
-# entrypoint.sh makes sure the right env/config.js is replacing the config.js in ./servers/static
+# entrypoint.sh makes sure the right env/config.js is replacing the config.js in ./server/static
 ENTRYPOINT ["/app/entrypoint.sh"]

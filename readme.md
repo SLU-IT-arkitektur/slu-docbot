@@ -59,9 +59,9 @@ If you want to reset redis you can run: `skaffold delete` and then `skaffold run
 
 
 ## how this works
-1) We first parse the word document and extract sections. Sections are pairs of a heading and the text that follows it. We yield these pairs as a stream of tuples. **See ./data_retrievers/parse_docx.py**
+1) We first parse the word document and extract sections. Sections are pairs of a heading and the text that follows it. We yield these pairs as a stream of tuples. **See ./section_creators/docx_parser.py**
 
-2) We then use the openai API to create [embeddings](https://www.pinecone.io/learn/vector-embeddings/) for each section. We store these embeddings in redis. This is done in a seperate module that subscribes to the stream of tuples from the previous step. **See ./embeddings_creators/to_redis.py**  
+2) We then use the openai API to create [embeddings](https://www.pinecone.io/learn/vector-embeddings/) for each section. We store these embeddings in redis. This is done in a seperate module that subscribes to the stream of tuples from the previous step. **See ./embeddings_stores/redis_store.py**  
 
 3) We now have a redis database with embeddings for each section and can search for the most similar section to a given question.
 We do this by first creating an embedding for the question and then comparing it to all the embeddings in the database. We use the cosine similarity metric for this.

@@ -2,7 +2,7 @@ import unittest
 import os
 from docx import Document
 from typing import Tuple, Iterator
-from data_retrievers.parse_docx import parse_docx 
+from section_creators.docx_parser import parse_docx 
 
 class TestParseDocx(unittest.TestCase):
 
