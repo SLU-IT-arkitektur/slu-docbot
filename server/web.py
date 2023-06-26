@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -6,13 +8,12 @@ from pydantic import BaseModel
 import logging
 from fastapi import Depends
 from fastapi.security import HTTPBasicCredentials
-from dotenv import load_dotenv
 from server import settings
 from .auth import authenticate
 from .redis_store import RedisStore
 from .feedback_handler import handle_feedback
 from .query_handler import handle_query
-load_dotenv()
+
 
 logging.basicConfig(level=logging.INFO)
 settings.check_required() # ..or fail early!
