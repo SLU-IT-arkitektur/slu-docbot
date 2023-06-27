@@ -23,11 +23,17 @@
     <p>
         <b>datumstämpel</b>: {{ feedback.timestamp }}<br />
         <b>frågan</b>: {{ feedback.query }}<br />
+        {% if feedback.from_cache is defined%}
+        <b>svar <span style="color:red">från cache</span></b>: {{ feedback.cached_reply }}<br />
+        <b style="text-decoration: underline;">original frågan:</b> {{ feedback.original_query }}<br />
+        {% else %}
         <b>svaret</b>: {{ feedback.reply }}<br />
+        {% endif %}
         <b>svarstid</b>: {{ feedback.request_duration_in_seconds }} sekunder<br />
         <b>svarstid OpenAI</b>: {{ feedback.chat_completions_req_duration_in_seconds }} sekunder<br />
-    </p>
+     
 
+    </p>
     {% endfor %}
 
     <h2>Svar som fick tummen ner</h2>
@@ -35,11 +41,19 @@
     <p>
         <b>datumstämpel</b>: {{ feedback.timestamp }}<br />
         <b>frågan</b>: {{ feedback.query }}<br />
+        {% if feedback.from_cache is defined%}
+        <b>svar <span style="color:red">från cache</span></b>: {{ feedback.cached_reply }}<br />
+        <b style="text-decoration: underline;">original frågan:</b> {{ feedback.original_query }}<br />
+        {% else %}
         <b>svaret</b>: {{ feedback.reply }}<br />
+        {% endif %}
         <b>svarstid</b>: {{ feedback.request_duration_in_seconds }} sekunder<br />
         <b>svarstid OpenAI</b>: {{ feedback.chat_completions_req_duration_in_seconds }} sekunder<br />
+        {% if from_cache is defined and from_cache %}
+        <b>svaret kom från cache!</b><br/>
+        <b>original frågan:</b> {{ feedback.original_query }}<br />
+        {% endif %}
     </p>
-
     {% endfor %}
 </body>
 

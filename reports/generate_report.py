@@ -1,3 +1,4 @@
+import json
 import redis
 import os
 import jinja2
@@ -15,7 +16,6 @@ conn = redis.Redis(host=redis_host, port=redis_port,
 if not conn.ping():
     print("Redis connection failed.")
     exit(1)
-
 
 
 def get_number_of_interactions():

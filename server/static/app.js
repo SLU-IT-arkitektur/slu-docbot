@@ -7,6 +7,7 @@ const App = {
         inputEl: document.getElementById('queryInput'),
         feedbackSpan: document.getElementById('feedbackSpan'),
         responseDiv: document.querySelector('.response'),
+        cacheInfo: document.getElementById('cache-info'),
         readmore: document.getElementById('readmore'),
         renderFeedbackSpan: () => {
             App.$.feedbackSpan.innerHTML = `
@@ -20,7 +21,7 @@ const App = {
             App.$.feedbackSpan.style.display = 'none';
         },
         showProgressbar: () => {
-           App.$.responseDiv.innerHTML = "<progress></progress>";
+            App.$.responseDiv.innerHTML = "<progress></progress>";
         },
         hideProgressbar: () => {
             const pb = App.$.responseDiv.querySelector('progress');
@@ -34,6 +35,18 @@ const App = {
         },
         setResponseDivText: (str) => {
             App.$.responseDiv.textContent = str;
+        },
+        appendResponseDivText: (str) => {
+            App.$.responseDiv.textContent += str;
+        },
+        showCacheInfoSpan: () => {
+            App.$.cacheInfo.style.display = 'block';
+        },
+        hideCacheInfoSpan: () => {
+            App.$.cacheInfo.style.display = 'none';
+        },
+        setCacheInfoSpanText: (str) => {
+            App.$.cacheInfo.textContent = str;
         },
         setFeedbackSpanText: (str) => {
             App.$.feedbackSpan.textContent = str;
@@ -51,6 +64,7 @@ const App = {
     },
     reset: () => {
         App.$.setReadmoreHtml('');
+        App.$.hideCacheInfoSpan();
         App.$.hideFeedbackSpan();
     },
     sendFeedback: async (str) => {
@@ -115,6 +129,10 @@ const App = {
                 const data = await response.json();
                 App.state.interaction_id = data.interaction_id;
                 App.$.setResponseDivText(data.message); // textContent does not parse HTML (safer when presenting response from LLM)
+                if (data.from_cache && data.from_cache === 'true') {
+                    App.$.setCacheInfoSpanText(`OBS: Svaret på din fråga levereras direkt från vår cache (snabbminne). Detta sker när en fråga är väldigt lik en tidigare ställd fråga. Det hjälper oss att leverera svar snabbare och effektivare. Den ursprungliga frågan, från vilken vi återanvände svaret, var:  "${data.original_query}"`);
+                    App.$.showCacheInfoSpan();
+                }
                 App.$.showFeedbackSpan();
                 if (data.sectionHeaders && data.sectionHeaders.length > 0) {
                     App.$.appendReadmoreHtml('Läs mer:<br/>');

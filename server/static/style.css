@@ -1,13 +1,38 @@
-.info { font-size: 0.8em;}
-#chatbotimg {margin-bottom:2px}
-#feedbackSpan {float:right; display:none}
-.responseLabel{font-weight:bold; display: none;}
+.info {
+    font-size: 0.8em;
+}
+
+#chatbotimg {
+    margin-bottom: 2px
+}
+
+#feedbackSpan {
+    float: right;
+    display: none
+}
+
+.responseLabel {
+    font-weight: bold;
+    display: none;
+}
+
 .container section:first-of-type {
     padding-bottom: 0px;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
 }
+
 .container section:last-of-type {
-    padding-top: 0px; 
+    padding-top: 0px;
     margin-top: 10px;
 }
-.feedbackButton {cursor: pointer;}
+
+.feedbackButton {
+    cursor: pointer;
+}
+
+#cache-info {
+    font-style: italic;
+    font-size: 0.8em;
+    color: hsl(195, 85%, 41%);
+    display: none;
+}

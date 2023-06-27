@@ -1,3 +1,4 @@
+import json
 import time
 import logging
 from typing import Tuple
@@ -6,9 +7,11 @@ from fastapi.responses import JSONResponse
 import numpy as np
 import openai
 from server import settings
+from .semantic_cache import try_get_reply_from_cache, add_to_cache
 from .open_ai_client import call_chat_completions
 from .redis_store import RedisStore
 from util import get_embedding, num_tokens_from_string, truncate_text
+
 
 def get_num_tokens_for_req(numb_tokens_in_prompt_instructions: int, numb_tokens_in_query: int) -> int:
     max_tokens_for_gpt35_turbo = 4096
@@ -52,6 +55,7 @@ def create_context(similar_sections, total_tokens_allowed_for_request) -> Tuple[
 
     return context, tokens_in_context
 
+
 def handle_query(query: str, redis_store: RedisStore):
     interaction_id = uuid.uuid4()
     start_time = time.time()
@@ -62,6 +66,21 @@ def handle_query(query: str, redis_store: RedisStore):
         logging.info(f'query is too long (max 80 characters): {len(query)}')
         logging.info(query)
         return JSONResponse(content={"message": "Max 80 tecken"}, status_code=400)
+
+    if settings.semantic_cache_enabled:
+        logging.info("semantic cache enabled, checking cache...")
+        hit = try_get_reply_from_cache(query, redis_store)
+        if hit is not None:
+            logging.info(f"Found reply in cache for query {query}")
+            cache_reply = {
+                "message": hit["reply"],
+                "interaction_id": str(interaction_id),
+                "from_cache": "true",
+                "sectionHeaders": json.loads(hit["section_headers_as_json"]),
+                "original_query": hit["original_query"],
+            }
+            redis_store.set_interaction(interaction_id, start_time, query, '', {"cached_reply": hit["reply"], "original_query": hit["original_query"]}, 0)
+            return cache_reply
 
     numb_tokens_in_prompt_instructions = num_tokens_from_string(
         settings.prompt_instructions, "cl100k_base")
@@ -80,7 +99,8 @@ def handle_query(query: str, redis_store: RedisStore):
     # prompt injection mitigation tecnique: not sending the query if it is not similar enough (min_score above) to the context
     # if less than 1000 tokens in the context it's probably not enough to give a good answer
     if context is None or len(context) == 0 or tokens_in_context < 1000:
-        redis_store.set_interaction(interaction_id, start_time, query, '', 0)
+        redis_store.set_interaction(
+            interaction_id, start_time, query, '', cache_reply=None, chat_completions_req_duration=0)
         logging.info('query is not similar enough to the context')
         return {"interaction_id": str(interaction_id), "message": "Jag hittar inget svar på din fråga i Utbildningshandboken"}
 
@@ -113,7 +133,8 @@ def handle_query(query: str, redis_store: RedisStore):
     except TimeoutError as e:
         logging.error("TimeoutError")
         logging.error(f"OpenAI API request timed out: {e}")
-        return JSONResponse(content={"message": "OpenAI har väldigt långa svarstider just nu, var god försök igen senare."}, status_code=200) # because cloud flare handles 504 differently and serves a html page instead?
+        # because cloud flare handles 504 differently and serves a html page instead?
+        return JSONResponse(content={"message": "OpenAI har väldigt långa svarstider just nu, var god försök igen senare."}, status_code=200)
     except Exception as e:
         logging.error("Unknown error:")
         logging.error(e)
@@ -123,7 +144,8 @@ def handle_query(query: str, redis_store: RedisStore):
     chat_completions_req_duration = round(
         chat_completions_req_stop-chat_completions_req_start, 0)
 
-    logging.info(f'chat_completions_req_duration: {chat_completions_req_duration} seconds')
+    logging.info(
+        f'chat_completions_req_duration: {chat_completions_req_duration} seconds')
 
     message = response["choices"][0]["message"]["content"]
     reply = {
@@ -133,5 +155,12 @@ def handle_query(query: str, redis_store: RedisStore):
     }
 
     redis_store.set_interaction(interaction_id, start_time, query,
-                    str(reply["message"]), chat_completions_req_duration)
+                                str(reply["message"]), None, chat_completions_req_duration)
+
+    section_headers_as_json = json.dumps(reply["sectionHeaders"])
+    if settings.semantic_cache_enabled:
+        logging.info("semantic cache enabled, adding reply to cache...")
+        add_to_cache(query, str(reply["message"]),
+                     section_headers_as_json, redis_store)
+
     return reply
