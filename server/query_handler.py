@@ -157,8 +157,9 @@ def handle_query(query: str, redis_store: RedisStore):
     redis_store.set_interaction(interaction_id, start_time, query,
                                 str(reply["message"]), None, chat_completions_req_duration)
 
-    section_headers_as_json = json.dumps(reply["sectionHeaders"])
+    
     if settings.semantic_cache_enabled:
+        section_headers_as_json = json.dumps(reply["sectionHeaders"])
         logging.info("semantic cache enabled, adding reply to cache...")
         add_to_cache(query, str(reply["message"]),
                      section_headers_as_json, redis_store)
