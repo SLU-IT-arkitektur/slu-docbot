@@ -24,11 +24,6 @@ else:
     semantic_cache_min_similarity_score = float(semantic_cache_min_similarity_score)
     logging.info(f"SEMANTIC_CACHE_MIN_SIMILARITY_SCORE is set to {semantic_cache_min_similarity_score}")
 
-cors_allowed_origins = os.getenv('CORS_ALLOWED_ORIGINS')
-if cors_allowed_origins is None:
-    cors_allowed_origins = 'http://localhost:8000'
-    logging.warn(f"CORS_ALLOWED_ORIGINS is not set, defaulting to {cors_allowed_origins}")
-
 def check_required():
     if prompt_instructions is None:
         logging.error("PROMPT_INST is not set")

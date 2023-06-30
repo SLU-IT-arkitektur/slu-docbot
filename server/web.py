@@ -20,16 +20,6 @@ settings.check_required() # ..or fail early!
 redis_store = RedisStore()
 app = FastAPI()
 
-allowed_origins = settings.cors_allowed_origins.split(',')
-logging.info(f"Allowed origins: {allowed_origins}")
-app.add_middleware( 
-    CORSMiddleware,
-    allow_origins=allowed_origins, 
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 static_folder = Path(__file__).parent / "static"
 @app.get("/")
 async def root(credentials: HTTPBasicCredentials = Depends(authenticate)):
