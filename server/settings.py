@@ -11,7 +11,7 @@ correct_password = os.getenv('PASSWORD')
 semantic_cache_enabled = os.getenv('SEMANTIC_CACHE_ENABLED')
 if semantic_cache_enabled is None:
     semantic_cache_enabled = True; # defaults to true
-    logging.warn("SEMANTIC_CACHE_ENABLED is not set, defaulting to true")
+    logging.warn(f"SEMANTIC_CACHE_ENABLED is not set, defaulting to {semantic_cache_enabled}")
 else:
     semantic_cache_enabled = semantic_cache_enabled.lower() == 'true'
     logging.info(f"SEMANTIC_CACHE_ENABLED is set to {semantic_cache_enabled}")
@@ -19,11 +19,15 @@ else:
 semantic_cache_min_similarity_score = os.getenv('SEMANTIC_CACHE_MIN_SIMILARITY_SCORE')
 if semantic_cache_min_similarity_score is None:
     semantic_cache_min_similarity_score = 0.97 # defaults to 0.97
-    logging.warn("SEMANTIC_CACHE_MIN_SIMILARITY_SCORE is not set, defaulting to 0.97")
+    logging.warn(f"SEMANTIC_CACHE_MIN_SIMILARITY_SCORE is not set, defaulting to {semantic_cache_min_similarity_score}")
 else:
     semantic_cache_min_similarity_score = float(semantic_cache_min_similarity_score)
     logging.info(f"SEMANTIC_CACHE_MIN_SIMILARITY_SCORE is set to {semantic_cache_min_similarity_score}")
 
+cors_allowed_origins = os.getenv('CORS_ALLOWED_ORIGINS')
+if cors_allowed_origins is None:
+    cors_allowed_origins = 'http://localhost:8000'
+    logging.warn(f"CORS_ALLOWED_ORIGINS is not set, defaulting to {cors_allowed_origins}")
 
 def check_required():
     if prompt_instructions is None:
