@@ -41,7 +41,7 @@ class FeedbackPayload(BaseModel):
     interaction_id: str
 
 @app.post("/feedback", status_code=200)
-async def qa(payload: FeedbackPayload, credentials: HTTPBasicCredentials = Depends(authenticate)):
+async def feedback(payload: FeedbackPayload, credentials: HTTPBasicCredentials = Depends(authenticate)):
    return handle_feedback(payload.feedback, payload.interaction_id, redis_store)
 
 
