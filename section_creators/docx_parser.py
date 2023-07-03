@@ -8,7 +8,6 @@ This module parses a word document and extracts (headers, text) sections and yie
 
 def parse_docx(path_to_doc) -> Iterator[Tuple[str, str]]:
     doc = Document(path_to_doc)
-    print(f'parsing word document...')
     current_header = None
     sections = dict()
     

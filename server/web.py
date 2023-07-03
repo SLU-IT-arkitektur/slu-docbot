@@ -14,9 +14,9 @@ from .redis_store import RedisStore
 from .feedback_handler import handle_feedback
 from .query_handler import handle_query
 
-
 logging.basicConfig(level=logging.INFO)
-settings.check_required() # ..or fail early!
+settings.check_required() # .. or fail early!
+settings.print_settings_with_defaults()
 redis_store = RedisStore()
 app = FastAPI()
 
