@@ -24,6 +24,11 @@ else:
     semantic_cache_min_similarity_score = float(semantic_cache_min_similarity_score)
     logging.info(f"SEMANTIC_CACHE_MIN_SIMILARITY_SCORE is set to {semantic_cache_min_similarity_score}")
 
+sections_min_similarity_score = os.getenv('SECTIONS_MIN_SIMILARITY_SCORE')
+if sections_min_similarity_score is None:
+    sections_min_similarity_score = 0.8 # defaults to 0.8
+    logging.warn(f"SECTIONS_MIN_SIMILARITY_SCORE is not set, defaulting to {sections_min_similarity_score}")
+
 def check_required():
     if prompt_instructions is None:
         logging.error("PROMPT_INST is not set")

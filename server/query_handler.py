@@ -34,7 +34,7 @@ def create_context(similar_sections, total_tokens_allowed_for_request) -> Tuple[
         logging.info(f"Found {similar_sections.total} similar sections:")
         for i, section in enumerate(similar_sections.docs):
             score = 1 - float(section.vector_score)
-            min_score = 0.8
+            min_score = settings.sections_min_similarity_score
             if score < min_score:
                 logging.info(
                     f'ignoring section {section.header} with score {score} (lower than {min_score})')
@@ -92,7 +92,7 @@ def handle_query(query: str, redis_store: RedisStore):
     query_vector = np.array(query_embedding).astype(np.float32).tobytes()
 
     logging.info("Searching for similar sections...")
-    similar_sections = redis_store.search_vectors(query_vector, 3)
+    similar_sections = redis_store.search_sections(query_vector, 3)
     context, tokens_in_context = create_context(
         similar_sections, total_tokens_allowed_for_request)
 

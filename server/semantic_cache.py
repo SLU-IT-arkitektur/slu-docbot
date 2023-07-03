@@ -16,7 +16,7 @@ def try_get_reply_from_cache(query: str, redis_store: RedisStore):
     hit = result.docs[0] # because we only ask for 1 result
     score = 1 - float(hit.vector_score)
     min_score = settings.semantic_cache_min_similarity_score
-    if score > min_score:
+    if score >= min_score:
         logging.info(f"Found reply in cache for query {query} (query similarity score: {score}))")
         return {"reply": hit.reply, "section_headers_as_json": hit.section_headers_as_json, "original_query": hit.query}
     else: 

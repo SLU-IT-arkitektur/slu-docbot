@@ -16,8 +16,6 @@ spec:
         - env:
             - name: SEMANTIC_CACHE_ENABLED
               value: "true"
-            # - name: SEMANTIC_CACHE_MIN_SIMILARITY_SCORE
-            #   value: "0.97"
             - name: REDIS_HOST
               value: redis-service
             - name: USERNAME

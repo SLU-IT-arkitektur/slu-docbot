@@ -8,6 +8,8 @@ from redis.commands.search.query import Query
 from server import settings
 
 class RedisStore:
+    SECTION_INDEX = "section"
+
     INTERACTION_INDEX = "interaction"
     INTERACTION_PREFIX = "interaction:"
     INTERACTION_SCHEMA = [
@@ -159,13 +161,13 @@ class RedisStore:
             return None
     
 
-    def search_vectors(self, query_vector, top_k=5):
+    def search_sections(self, query_vector, top_k=5):
         base_query = f"*=>[KNN {top_k} @embedding $vector AS vector_score]"
         query = Query(base_query).return_fields("header", "body",
                                                 "num_of_tokens", "vector_score").sort_by("vector_score").dialect(2)
 
         try:
-            results = self.conn.ft("section").search(
+            results = self.conn.ft(self.SECTION_INDEX).search(
                 query, query_params={"vector": query_vector})
         except Exception as e:
             logging.info("Error calling Redis search: ", e)
