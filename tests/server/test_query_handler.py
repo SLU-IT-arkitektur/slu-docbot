@@ -29,13 +29,12 @@ class TestHandleQuery(unittest.TestCase):
     @patch('server.query_handler.get_embedding')
     @patch('server.semantic_cache.get_embedding')
     def test_cache_hit(self, mock_get_embedding_semantic_cache,mock_get_embedding_query_handler, mock_settings):
-        # Configure the mock settings to enable semantic cache
         mock_settings.configure_mock(semantic_cache_enabled=True)
 
         # Mock get_embedding (in both places it is imported)
-        # returning mocked embedding
-        mock_get_embedding_semantic_cache.return_value = [0.1, 0.2, 0.3]
-        mock_get_embedding_query_handler.return_value = [0.1, 0.2, 0.3]
+        fake_embedding = [0.1, 0.2, 0.3]
+        mock_get_embedding_semantic_cache.return_value = fake_embedding
+        mock_get_embedding_query_handler.return_value = fake_embedding
 
         # Mock search_semantic_cache (redis_store)
         mock_doc = Mock()
@@ -58,8 +57,6 @@ class TestHandleQuery(unittest.TestCase):
     @patch('server.semantic_cache.get_embedding')
     def test_call_to_open_ai(self,mock_get_embedding_semantic_cache,mock_get_embedding_query_handler, mock_call_chat_completions, mock_settings, mock_add_to_cache):
         
-        # Mock open ai response
-        # returning mocked_open_ai_response
         mocked_open_ai_response = {
             "choices": [
                 {
@@ -70,21 +67,19 @@ class TestHandleQuery(unittest.TestCase):
             ]
         }
         mock_call_chat_completions.return_value = mocked_open_ai_response
-        # Configure the mock settings to enable semantic cache, prompt instructions and min similarity score
         mock_settings.configure_mock(semantic_cache_enabled=True, 
                                      prompt_instructions="test prompt instructions",
                                      sections_min_similarity_score = 0.9)
         
         # Mock get_embedding (in both places it is imported)
-        # returning mocked embedding
-        mock_get_embedding_semantic_cache.return_value = [0.1, 0.2, 0.3]
-        mock_get_embedding_query_handler.return_value = [0.1, 0.2, 0.3]
+        fake_embedding = [0.1, 0.2, 0.3]
+        mock_get_embedding_semantic_cache.return_value = fake_embedding
+        mock_get_embedding_query_handler.return_value = fake_embedding
 
         # Mock search_semantic_cache (redis_store)
-        # returning mocked doc
         mock_doc = Mock()
         large_diff = 0.5 
-        mock_doc.configure_mock(reply="test reply", section_headers_as_json="[]", query="original test query", vector_score=large_diff)
+        mock_doc.configure_mock(reply="test reply", section_headers_as_json="[]", query="original test query", vector_score=large_diff) # <-- large diff = no hit
         self.mock_redis.search_semantic_cache.return_value = Mock(docs=[mock_doc])
 
         # Mock search_sections (redis_store)
@@ -97,7 +92,7 @@ class TestHandleQuery(unittest.TestCase):
         # call query handler
         response = handle_query("test query", self.mock_redis)
 
-        # assert that we moved passed the semantic cache (no hit close enought)
+        # assert that we moved passed the semantic cache (no hit close enough)
         # and that we were able to build a context and send a request to open ai
         # and that we got a response from the open ai client
         assert(response["message"] == "mocked open ai response")
@@ -114,9 +109,7 @@ class TestHandleQuery(unittest.TestCase):
     @patch('server.query_handler.get_embedding')
     @patch('server.semantic_cache.get_embedding')
     def test_call_to_open_ai_without_semantic_cache(self,mock_get_embedding_semantic_cache,mock_get_embedding_query_handler, mock_call_chat_completions, mock_settings, mock_add_to_cache):
-        
-        # Mock open ai response
-        # returning mocked_open_ai_response
+
         mocked_open_ai_response = {
             "choices": [
                 {
@@ -127,16 +120,15 @@ class TestHandleQuery(unittest.TestCase):
             ]
         }
         mock_call_chat_completions.return_value = mocked_open_ai_response
-        # Configure the mock settings to enable semantic cache, prompt instructions and min similarity score
 
         mock_settings.configure_mock(semantic_cache_enabled=False,  # <--- disabling semantic cache
                                      prompt_instructions="test prompt instructions",
                                      sections_min_similarity_score = 0.9)
         
         # Mock get_embedding (in both places it is imported)
-        # returning mocked embedding
-        mock_get_embedding_semantic_cache.return_value = [0.1, 0.2, 0.3]
-        mock_get_embedding_query_handler.return_value = [0.1, 0.2, 0.3]
+        fake_embedding = [0.1, 0.2, 0.3]
+        mock_get_embedding_semantic_cache.return_value = fake_embedding
+        mock_get_embedding_query_handler.return_value = fake_embedding
 
         # Mock search_sections (redis_store)
         # returning mocked section with 2000 tokens and a very small diff (close hit)
@@ -148,7 +140,7 @@ class TestHandleQuery(unittest.TestCase):
         # call query handler
         response = handle_query("test query", self.mock_redis)
 
-        # assert that we moved passed the semantic cache (no hit close enought)
+        # assert that we moved passed the semantic cache (no hit close enough)
         # and that we were able to build a context and send a request to open ai
         # and that we got a response from the open ai client
         assert(response["message"] == "mocked open ai response")
@@ -166,22 +158,22 @@ class TestHandleQuery(unittest.TestCase):
     @patch('server.query_handler.get_embedding')
     @patch('server.semantic_cache.get_embedding')
     def test_not_enough_context(self, mock_get_embedding_semantic_cache,mock_get_embedding_query_handler, mock_settings):
-        # Configure the mock settings to enable semantic cache, prompt instructions and min similarity score
+        
         mock_settings.configure_mock(semantic_cache_enabled=True, 
                                      prompt_instructions="test prompt instructions",
                                      sections_min_similarity_score = 0.9)
         
         # Mock get_embedding (in both places it is imported)
-        # returning mocked embedding
-        mock_get_embedding_semantic_cache.return_value = [0.1, 0.2, 0.3]
-        mock_get_embedding_query_handler.return_value = [0.1, 0.2, 0.3]
+        fake_embedding = [0.1, 0.2, 0.3]
+        mock_get_embedding_semantic_cache.return_value = fake_embedding
+        mock_get_embedding_query_handler.return_value = fake_embedding
 
 
         # Mock search_semantic_cache (redis_store)
         # returning mocked doc
         mock_doc = Mock()
         large_diff = 0.5 
-        mock_doc.configure_mock(reply="test reply", section_headers_as_json="[]", query="original test query", vector_score=large_diff)
+        mock_doc.configure_mock(reply="test reply", section_headers_as_json="[]", query="original test query", vector_score=large_diff) # <--- large diff = no hit
         self.mock_redis.search_semantic_cache.return_value = Mock(docs=[mock_doc])
 
         # Mock search_sections (redis_store)
@@ -196,7 +188,7 @@ class TestHandleQuery(unittest.TestCase):
         response = handle_query("test query", self.mock_redis)
 
         # assert that we moved passed the semantic cache (no hit close enough)
-        # and that we response properly when we are unable to build a context (to small section)
+        # and that we respond properly when we are unable to build a context with enough tokens
         assert(response["message"] == "Jag hittar inget svar på din fråga i Utbildningshandboken")
         assert(response["interaction_id"] is not None)
 
@@ -206,22 +198,22 @@ class TestHandleQuery(unittest.TestCase):
     @patch('server.query_handler.get_embedding')
     @patch('server.semantic_cache.get_embedding')
     def test_no_relevant_sections(self,mock_get_embedding_semantic_cache,mock_get_embedding_query_handler, mock_settings):
-        # Configure the mock settings to enable semantic cache, prompt instructions and min similarity score
+        
         mock_settings.configure_mock(semantic_cache_enabled=True, 
                                      prompt_instructions="test prompt instructions",
                                      sections_min_similarity_score = 0.9)
         
         # Mock get_embedding (in both places it is imported)
-        # returning mocked embedding
-        mock_get_embedding_semantic_cache.return_value = [0.1, 0.2, 0.3]
-        mock_get_embedding_query_handler.return_value = [0.1, 0.2, 0.3]
+        fake_embedding = [0.1, 0.2, 0.3]
+        mock_get_embedding_semantic_cache.return_value = fake_embedding
+        mock_get_embedding_query_handler.return_value = fake_embedding
 
 
         # Mock search_semantic_cache (redis_store)
         # returning mocked doc
         mock_doc = Mock()
         large_diff = 0.5 
-        mock_doc.configure_mock(reply="test reply", section_headers_as_json="[]", query="original test query", vector_score=large_diff)
+        mock_doc.configure_mock(reply="test reply", section_headers_as_json="[]", query="original test query", vector_score=large_diff) # <--- large diff = no hit
         self.mock_redis.search_semantic_cache.return_value = Mock(docs=[mock_doc])
 
         # Mock search_sections (redis_store)
@@ -232,7 +224,7 @@ class TestHandleQuery(unittest.TestCase):
         response = handle_query("test query", self.mock_redis)
 
         # assert that we moved passed the semantic cache (no hit close enough)
-        # and that we response properly when we are unable to build a context (to small section)
+        # and that we respond properly when we are unable to build a context with enough tokens
         assert(response["message"] == "Jag hittar inget svar på din fråga i Utbildningshandboken")
         assert(response["interaction_id"] is not None)
 
@@ -247,22 +239,15 @@ class TestHandleQuery(unittest.TestCase):
         # Mock open ai response raising exception
         mock_call_chat_completions.side_effect = Exception("mocked exception")
 
-        # Configure the mock settings to enable semantic cache, prompt instructions and min similarity score
-        mock_settings.configure_mock(semantic_cache_enabled=True, 
+        mock_settings.configure_mock(semantic_cache_enabled=False, 
                                      prompt_instructions="test prompt instructions",
                                      sections_min_similarity_score = 0.9)
         
         # Mock get_embedding (in both places it is imported)
-        # returning mocked embedding
-        mock_get_embedding_semantic_cache.return_value = [0.1, 0.2, 0.3]
-        mock_get_embedding_query_handler.return_value = [0.1, 0.2, 0.3]
+        fake_embedding = [0.1, 0.2, 0.3]
+        mock_get_embedding_semantic_cache.return_value = fake_embedding
+        mock_get_embedding_query_handler.return_value = fake_embedding
 
-        # Mock search_semantic_cache (redis_store)
-        # returning mocked doc
-        mock_doc = Mock()
-        large_diff = 0.5 
-        mock_doc.configure_mock(reply="test reply", section_headers_as_json="[]", query="original test query", vector_score=large_diff)
-        self.mock_redis.search_semantic_cache.return_value = Mock(docs=[mock_doc])
 
         # Mock search_sections (redis_store)
         # returning mocked section with 2000 tokens and a very small diff (close hit)
@@ -274,12 +259,10 @@ class TestHandleQuery(unittest.TestCase):
         # call query handler
         response = handle_query("test query", self.mock_redis)
 
-        # assert that we moved passed the semantic cache (no hit close enought)
-        # and that we were able to build a context and send a request to open ai
-        # and that we got a response from the open ai client
-        assert(response["message"] == "Något gick fel :(")
+        expected_error_message_on_open_ai_exception = "Något gick fel :("
+        assert(response["message"] == expected_error_message_on_open_ai_exception) 
       
-        # finally since semantic_cache_enabled is true we should have called add_to_cache
+        # finally since semantic_cache_enabled is False we should have NOT called add_to_cache
         mock_add_to_cache.assert_not_called()
 
     @patch('server.query_handler.add_to_cache')
@@ -292,23 +275,15 @@ class TestHandleQuery(unittest.TestCase):
         # Mock open ai response raising exception
         mock_call_chat_completions.side_effect = TimeoutError("open ai to slow today...")
 
-        # Configure the mock settings to enable semantic cache, prompt instructions and min similarity score
-        mock_settings.configure_mock(semantic_cache_enabled=True, 
+        mock_settings.configure_mock(semantic_cache_enabled=False, 
                                      prompt_instructions="test prompt instructions",
                                      sections_min_similarity_score = 0.9)
         
         # Mock get_embedding (in both places it is imported)
-        # returning mocked embedding
-        mock_get_embedding_semantic_cache.return_value = [0.1, 0.2, 0.3]
-        mock_get_embedding_query_handler.return_value = [0.1, 0.2, 0.3]
-
-        # Mock search_semantic_cache (redis_store)
-        # returning mocked doc
-        mock_doc = Mock()
-        large_diff = 0.5 
-        mock_doc.configure_mock(reply="test reply", section_headers_as_json="[]", query="original test query", vector_score=large_diff)
-        self.mock_redis.search_semantic_cache.return_value = Mock(docs=[mock_doc])
-
+        fake_embedding = [0.1, 0.2, 0.3]
+        mock_get_embedding_semantic_cache.return_value = fake_embedding
+        mock_get_embedding_query_handler.return_value = fake_embedding
+      
         # Mock search_sections (redis_store)
         # returning mocked section with 2000 tokens and a very small diff (close hit)
         mock_section = Mock()
@@ -319,10 +294,9 @@ class TestHandleQuery(unittest.TestCase):
         # call query handler
         response = handle_query("test query", self.mock_redis)
         data = json.loads(response.body)
-        # assert that we moved passed the semantic cache (no hit close enought)
-        # and that we were able to build a context and send a request to open ai
-        # and that we got a response from the open ai client
-        assert(data["message"] == "OpenAI har väldigt långa svarstider just nu, var god försök igen senare.")
+
+        expected_error_message_on_openai_timeout = "OpenAI har väldigt långa svarstider just nu, var god försök igen senare."
+        assert(data["message"] == expected_error_message_on_openai_timeout)
       
-        # finally since semantic_cache_enabled is true we should have called add_to_cache
+        # finally since semantic_cache_enabled is False we should have NOT called add_to_cache
         mock_add_to_cache.assert_not_called()
