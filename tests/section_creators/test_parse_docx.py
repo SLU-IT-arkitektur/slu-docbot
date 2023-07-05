@@ -1,11 +1,13 @@
 import unittest
 import os
 from docx import Document
-from section_creators.docx_parser import parse_docx 
+from section_creators.docx_parser import parse_docx
+from tests.base_test import BaseTest 
 
-class TestParseDocx(unittest.TestCase):
+class TestParseDocx(BaseTest):
 
     def setUp(self):
+        super().setUp()
         # Create a temporary Word document for testing purposes
         self.test_docx_path = 'test.docx'
         doc = Document()

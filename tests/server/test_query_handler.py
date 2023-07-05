@@ -3,12 +3,13 @@ import logging
 import unittest
 from unittest.mock import Mock, patch
 from server.query_handler import handle_query
+from tests.base_test import BaseTest
 
 
-class TestHandleQuery(unittest.TestCase):
+class TestHandleQuery(BaseTest):
 
     def setUp(self):
-        print(f'{__name__} :: {self._testMethodName}')
+        super().setUp()
         # Create a mock RedisStore
         self.mock_redis = Mock()
     

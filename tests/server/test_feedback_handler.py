@@ -4,16 +4,15 @@ import logging
 import unittest
 from unittest.mock import Mock, patch
 from server.feedback_handler import handle_feedback
+from tests.base_test import BaseTest
 
 
-class TestHandleFeedback(unittest.TestCase):
+class TestHandleFeedback(BaseTest):
 
     def setUp(self):
-        print(f'{__name__} :: {self._testMethodName}')
+        super().setUp()
         # Create a mock RedisStore
         self.mock_redis = Mock()
-        # mute all logging
-        logging.getLogger().disabled = True
 
     def test_handle_feedback_bad_input(self):
         feedback = "not a thumb"
