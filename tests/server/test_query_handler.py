@@ -8,7 +8,7 @@ from server.query_handler import handle_query
 class TestHandleQuery(unittest.TestCase):
 
     def setUp(self):
-        print(self._testMethodName)
+        print(f'{__name__} :: {self._testMethodName}')
         # Create a mock RedisStore
         self.mock_redis = Mock()
     

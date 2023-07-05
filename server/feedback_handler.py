@@ -3,6 +3,7 @@ from fastapi.responses import JSONResponse
 from .redis_store import RedisStore
 
 def handle_feedback(feedback: str, interaction_id: str, redis_store: RedisStore):
+    feedback = feedback.lower()
     THUMBSUP = "thumbsup"
     THUMBSDOWN = "thumbsdown"
     if feedback != THUMBSUP and feedback != THUMBSDOWN:
