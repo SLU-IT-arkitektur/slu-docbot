@@ -61,7 +61,7 @@ def handle_query(query: str, redis_store: RedisStore):
     start_time = time.time()
     if len(query) < 1:
         return JSONResponse(content={"message": "Please enter a query"}, status_code=400)
-    # prompt injection mitigation tecnique: not allowing too long queries
+    # prompt injection mitigation technique: not allowing too long queries
     if len(query) > 80:
         logging.info(f'query is too long (max 80 characters): {len(query)}')
         logging.info(query)
@@ -96,7 +96,7 @@ def handle_query(query: str, redis_store: RedisStore):
     context, tokens_in_context = create_context(
         similar_sections, total_tokens_allowed_for_request)
 
-    # prompt injection mitigation tecnique: not sending the query if it is not similar enough (min_score above) to the context
+    # prompt injection mitigation technique: not sending the query if it is not similar enough (min_score above) to the context
     # if less than 1000 tokens in the context it's probably not enough to give a good answer
     if context is None or len(context) == 0 or tokens_in_context < 1000:
         redis_store.set_interaction(
@@ -104,7 +104,7 @@ def handle_query(query: str, redis_store: RedisStore):
         logging.info('query is not similar enough to the context')
         return {"interaction_id": str(interaction_id), "message": "Jag hittar inget svar på din fråga i Utbildningshandboken"}
 
-    # prompt injection mitigation tecnique: having the last word..
+    # prompt injection mitigation technique: having the last word..
     prompt = f'''context: """{context}""" question: """{query}"""
     prompt: """{settings.prompt_instructions}""" 
     answer: '''
