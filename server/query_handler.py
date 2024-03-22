@@ -14,7 +14,7 @@ from util import get_embedding, num_tokens_from_string, truncate_text
 
 
 def get_num_tokens_for_req(numb_tokens_in_prompt_instructions: int, numb_tokens_in_query: int) -> int:
-    max_tokens_for_gpt35_turbo = 4096
+    max_tokens_for_gpt35_turbo = 16000
     tokens_margin_for_prompt = 100
     tokens_saved_for_response = 1000
     total_tokens_allowed_for_request = (
@@ -106,7 +106,7 @@ def handle_query(query: str, redis_store: RedisStore):
 
     # prompt injection mitigation technique: having the last word..
     prompt = f'''context: """{context}""" question: """{query}"""
-    prompt: """{settings.prompt_instructions}""" 
+    prompt: """{settings.prompt_instructions}"""
     answer: '''
 
     logging.info("sending a total of " + str(num_tokens_from_string(prompt,
@@ -157,7 +157,6 @@ def handle_query(query: str, redis_store: RedisStore):
     redis_store.set_interaction(interaction_id, start_time, query,
                                 str(reply["message"]), None, chat_completions_req_duration)
 
-    
     if settings.semantic_cache_enabled:
         section_headers_as_json = json.dumps(reply["sectionHeaders"])
         logging.info("semantic cache enabled, adding reply to cache...")

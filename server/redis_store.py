@@ -119,8 +119,7 @@ class RedisStore:
 
     def get_interaction(self, interaction_id: str):
         try:
-            logging.info('searching for ' +
-                         f'{self.INTERACTION_PREFIX}{interaction_id}')
+            logging.info('searching for ' + f'{self.INTERACTION_PREFIX}{interaction_id}')
             interaction = self.conn.hgetall(
                 f'{self.INTERACTION_PREFIX}{interaction_id}')
             return interaction
@@ -128,7 +127,6 @@ class RedisStore:
             logging.error("Error getting interaction from Redis: ", e)
             return None
 
-    
     def search_semantic_cache(self, query_vector, top_k=1):
         base_query = f"*=>[KNN {top_k} @embedding $vector AS vector_score]"
         query = Query(base_query).return_fields("query", "reply", "section_headers_as_json", "vector_score").sort_by("vector_score").dialect(2)
@@ -138,14 +136,13 @@ class RedisStore:
         except Exception as e:
             logging.error("Error searching semantic cache in Redis: ", e)
             return None
-            
-    
+
     def add_to_semantic_cache(self, query: str, reply: str, section_headers_as_json: str, query_embedding: bytes, expiration=timedelta(minutes=90)):
         key = f"semantic_cache:{query}"
         try:
             logging.info(
                 f'Saving key {key} to cache')
-            
+
             cache_entry_hash = {
                 "query": query,
                 "reply": reply,
@@ -154,12 +151,10 @@ class RedisStore:
             }
             self.conn.hset(name=key, mapping=cache_entry_hash)
             self.conn.expire(key, expiration)
-            
-            
+
         except Exception as e:
             logging.error("Error saving semantic cache entry to Redis: ", e)
             return None
-    
 
     def search_sections(self, query_vector, top_k=5):
         base_query = f"*=>[KNN {top_k} @embedding $vector AS vector_score]"

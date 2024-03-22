@@ -1,8 +1,6 @@
 from dotenv import load_dotenv
-load_dotenv()
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
-from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 from pydantic import BaseModel
 import logging
@@ -13,9 +11,10 @@ from .auth import authenticate
 from .redis_store import RedisStore
 from .feedback_handler import handle_feedback
 from .query_handler import handle_query
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
-settings.check_required() # .. or fail early!
+settings.check_required()   # .. or fail early!
 settings.print_settings_with_defaults()
 redis_store = RedisStore()
 app = FastAPI()
@@ -42,6 +41,4 @@ class FeedbackPayload(BaseModel):
 
 @app.post("/feedback", status_code=200)
 async def feedback(payload: FeedbackPayload, credentials: HTTPBasicCredentials = Depends(authenticate)):
-   return handle_feedback(payload.feedback, payload.interaction_id, redis_store)
-
-
+    return handle_feedback(payload.feedback, payload.interaction_id, redis_store)

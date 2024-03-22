@@ -1,8 +1,7 @@
-import unittest
 import os
 from docx import Document
 from section_creators.docx_parser import parse_docx
-from tests.base_test import BaseTest 
+from tests.base_test import BaseTest
 
 class TestParseDocx(BaseTest):
 

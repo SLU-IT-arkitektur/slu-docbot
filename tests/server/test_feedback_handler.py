@@ -1,8 +1,6 @@
 import datetime
 import json
-import logging
-import unittest
-from unittest.mock import Mock, patch
+from unittest.mock import Mock
 from server.feedback_handler import handle_feedback
 from tests.base_test import BaseTest
 
@@ -31,7 +29,7 @@ class TestHandleFeedback(BaseTest):
         response = handle_feedback("thumbsup", "interaction_id", self.mock_redis)
         self.assertEqual(response.status_code, 404)
         self.assertEqual(json.loads(response.body), {"message": "Interaction not found"})
-    
+
     def test_handle_feedback_happy_path(self):
         feedback = "thumbsup"
         self.mock_redis.get_interaction.return_value = {"interaction_id": "interaction_id", "feedback": feedback}

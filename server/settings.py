@@ -9,7 +9,7 @@ redis_password = os.getenv('REDIS_PASSWORD')
 correct_username = os.getenv('USERNAME')
 correct_password = os.getenv('PASSWORD')
 
-semantic_cache_enabled_default_value = True;
+semantic_cache_enabled_default_value = True
 semantic_cache_enabled = os.getenv('SEMANTIC_CACHE_ENABLED')
 semantic_cache_enabled = semantic_cache_enabled_default_value if semantic_cache_enabled is None else semantic_cache_enabled.lower() == 'true'
 
@@ -40,9 +40,9 @@ def check_required():
     if correct_password is None:
         logging.error("Error: PASSWORD is not set")
         exit(1)
-   
+
     logging.info('Settings initialized successfully')
-    
+
 def print_settings_with_defaults():
     logging.info(f'semantic_cache_enabled is set to {semantic_cache_enabled} (default: {semantic_cache_enabled_default_value})')
     logging.info(f'semantic_cache_min_similarity_score is set to {semantic_cache_min_similarity_score} (default: {semantic_cache_min_similarity_score_default_value})')

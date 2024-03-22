@@ -1,4 +1,3 @@
-import json
 import redis
 import os
 import jinja2
@@ -63,17 +62,16 @@ def generate_report():
     template = template_env.get_template("simple.html")
 
     thumbsUps = get_all_thumbs_up()
-    thumbsUps = sorted(thumbsUps, key=lambda x: x['timestamp'], reverse=True) # newest first
+    thumbsUps = sorted(thumbsUps, key=lambda x: x['timestamp'], reverse=True)  # newest first
     thumbsDowns = get_all_thumbs_down()
-    thumbsDowns = sorted(thumbsDowns, key=lambda x: x['timestamp'], reverse=True) # newest first
-
+    thumbsDowns = sorted(thumbsDowns, key=lambda x: x['timestamp'], reverse=True)  # newest first
 
     report = template.render(generated_timestamp=generated_timestamp, numberOfInteractions=numberOfInteractions, numberOfThumbsUps=numberOfThumbsUps, numberOfThumbsDowns=numberOfThumbsDowns, thumbsUps=thumbsUps, thumbsDowns=thumbsDowns)
-     
     with open('report.html', 'w') as f:
         f.write(report)
-    
+
     print("saved ./report.html")
 
+
 if __name__ == "__main__":
-    generate_report() 
+    generate_report()

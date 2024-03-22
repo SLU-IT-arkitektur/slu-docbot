@@ -10,7 +10,7 @@ def parse_docx(path_to_doc) -> Iterator[Tuple[str, str]]:
     doc = Document(path_to_doc)
     current_header = None
     sections = dict()
-    
+
     for paragraph in doc.paragraphs:
         if paragraph.style.name.startswith('Heading'):
             if current_header is not None:
@@ -26,4 +26,3 @@ def parse_docx(path_to_doc) -> Iterator[Tuple[str, str]]:
     # make sure to fire off the last section
     if current_header is not None:
         yield current_header, sections[current_header]
-            
