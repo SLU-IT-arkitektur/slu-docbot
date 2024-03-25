@@ -7,6 +7,8 @@ from util import num_tokens_from_string, truncate_text
 This module scrapes a website and extracts (headers, text) sections and yields one pair at a time through a generator function.
 '''
 
+# TODO vi kan få ut ankar länken här också och ha någon generisk "text_ref" eller liknande på vår embeddingsstruktur
+# på det viset kan vi använda denna till att göra klickbara "läs mer länkar" OM text_ref är satt (måste stödja både docx och web varianten)
 
 def extract_content(url: str) -> Iterator[Tuple[str, str]]:
     response = requests.get(url)
