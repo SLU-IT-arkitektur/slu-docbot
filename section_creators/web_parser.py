@@ -2,10 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 from typing import Tuple, Iterator
 import re
-
+from util import num_tokens_from_string, truncate_text
 '''
 This module scrapes a website and extracts (headers, text) sections and yields one pair at a time through a generator function.
 '''
+
 
 def extract_content(url: str) -> Iterator[Tuple[str, str]]:
     response = requests.get(url)
@@ -31,4 +32,9 @@ def extract_content(url: str) -> Iterator[Tuple[str, str]]:
                 print(f'found next h2 tag: {sibling.text} breaking section {header} here...')
                 break
             text += sibling.get_text()
+            num_tokens = num_tokens_from_string(text, "cl100k_base")
+            if num_tokens > 8192:
+                print(f'Breaking section {header} here... due to token limit')
+                text = truncate_text(text, 8000)
+                break
         yield header, text
