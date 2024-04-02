@@ -30,10 +30,12 @@ except Exception as e:
     print("Index already exists")
 
 p = conn.pipeline(transaction=False)
+
+
 def create_embeddings(sections_generator):
     total_number_of_tokens = 0
-    print('subscribing to sections_generator function and creating embeddings one (header, text) pair at a time and saving them in redis')
-    for header, text in sections_generator:
+    print('subscribing to sections_generator function and creating embeddings one (header, text, anchor_url) tuple at a time and saving them in redis')
+    for header, text, anchor_url in sections_generator:
         num_of_tokens_in_section = num_tokens_from_string(text, "cl100k_base")
         total_number_of_tokens += num_of_tokens_in_section
         # TODO handle case where num_of_tokens_in_section > allowed 8191...
@@ -44,9 +46,11 @@ def create_embeddings(sections_generator):
         embedding = get_embedding(text)  # max tokens 8191!
         # convert to numpy array
         vector = np.array(embedding).astype(np.float32).tobytes()
+        # section-link default "" eller null? ska fungera även om section creator från docx eller pdf osv..
         section_hash = {
             "header": header,
             "body": text,
+            "anchor_url": anchor_url,
             "num_of_tokens": num_of_tokens_in_section,
             "embedding": vector
         }

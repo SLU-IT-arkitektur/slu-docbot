@@ -84,7 +84,7 @@ class TestHandleQuery(BaseTest):
         # returning mocked section with 2000 tokens and a very small diff (close hit)
         mock_section = Mock()
         very_small_diff = 1.54972076416e-06  # = 0.00000154972076416
-        mock_section.configure_mock(header="test section header", body="b" * 2000, num_of_tokens="2000", vector_score=very_small_diff)
+        mock_section.configure_mock(header="test section header", body="b" * 2000, anchor_url="", num_of_tokens="2000", vector_score=very_small_diff)
         self.mock_redis.search_sections.return_value = Mock(docs=[mock_section])
 
         # call query handler
@@ -131,7 +131,7 @@ class TestHandleQuery(BaseTest):
         # returning mocked section with 2000 tokens and a very small diff (close hit)
         mock_section = Mock()
         very_small_diff = 1.54972076416e-06  # = 0.00000154972076416
-        mock_section.configure_mock(header="test section header", body="b" * 2000, num_of_tokens="2000", vector_score=very_small_diff)
+        mock_section.configure_mock(header="test section header", body="b" * 2000, anchor_url="", num_of_tokens="2000", vector_score=very_small_diff)
         self.mock_redis.search_sections.return_value = Mock(docs=[mock_section])
 
         # call query handler

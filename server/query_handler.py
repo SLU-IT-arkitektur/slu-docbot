@@ -56,6 +56,18 @@ def create_context(similar_sections, total_tokens_allowed_for_request) -> Tuple[
     return context, tokens_in_context
 
 
+def create_read_more_content(similar_sections) -> str:
+    read_more_headers = []
+    if similar_sections:
+        for section in similar_sections.docs:
+            if section.anchor_url and section.anchor_url != "":
+                read_more_headers.append(f'<a href="{section.anchor_url}">{section.header}</a>')
+            else:
+                read_more_headers.append(section.header)
+            read_more_headers.sort()
+    return read_more_headers
+
+
 def handle_query(query: str, redis_store: RedisStore):
     interaction_id = uuid.uuid4()
     start_time = time.time()
@@ -142,16 +154,17 @@ def handle_query(query: str, redis_store: RedisStore):
 
     chat_completions_req_stop = time.time()
     chat_completions_req_duration = round(
-        chat_completions_req_stop-chat_completions_req_start, 0)
+        chat_completions_req_stop - chat_completions_req_start, 0)
 
     logging.info(
         f'chat_completions_req_duration: {chat_completions_req_duration} seconds')
 
+    read_more_headers = create_read_more_content(similar_sections)
     message = response["choices"][0]["message"]["content"]
     reply = {
         "message": message,
         "interaction_id": str(interaction_id),
-        "sectionHeaders": [section.header for section in similar_sections.docs],
+        "sectionHeaders": read_more_headers,
     }
 
     redis_store.set_interaction(interaction_id, start_time, query,

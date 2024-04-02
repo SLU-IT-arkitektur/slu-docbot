@@ -21,7 +21,7 @@ const App = {
             App.$.feedbackSpan.style.display = 'none';
         },
         showProgressbar: () => {
-            App.$.responseDiv.innerHTML = "<span aria-busy='true'>Söker efter svaret i Utbildningshanboken...</span>";
+            App.$.responseDiv.innerHTML = "<span aria-busy='true'>Söker efter svaret i Utbildningshandboken...</span>";
         },
         hideProgressbar: () => {
             const pb = App.$.responseDiv.querySelector('progress');

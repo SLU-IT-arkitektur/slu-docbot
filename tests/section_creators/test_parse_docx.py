@@ -3,6 +3,7 @@ from docx import Document
 from section_creators.docx_parser import parse_docx
 from tests.base_test import BaseTest
 
+
 class TestParseDocx(BaseTest):
 
     def setUp(self):
@@ -18,9 +19,10 @@ class TestParseDocx(BaseTest):
         doc.save(self.test_docx_path)
 
     def test_parse_docx(self):
+        empty_anchor_url = ''
         expected_result = [
-            ('Header 1', 'This is a test paragraph under Header 1.'),
-            ('Header 2', 'This is a test paragraph under Header 2.This is a second test paragraph under Header 2.'),
+            ('Header 1', 'This is a test paragraph under Header 1.', empty_anchor_url),
+            ('Header 2', 'This is a test paragraph under Header 2.This is a second test paragraph under Header 2.', empty_anchor_url),
         ]
 
         result = list(parse_docx(self.test_docx_path))

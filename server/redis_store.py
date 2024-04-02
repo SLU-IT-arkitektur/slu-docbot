@@ -7,6 +7,7 @@ from redis.commands.search.indexDefinition import IndexDefinition, IndexType
 from redis.commands.search.query import Query
 from server import settings
 
+
 class RedisStore:
     SECTION_INDEX = "section"
 
@@ -158,7 +159,7 @@ class RedisStore:
 
     def search_sections(self, query_vector, top_k=5):
         base_query = f"*=>[KNN {top_k} @embedding $vector AS vector_score]"
-        query = Query(base_query).return_fields("header", "body",
+        query = Query(base_query).return_fields("header", "body", "anchor_url",
                                                 "num_of_tokens", "vector_score").sort_by("vector_score").dialect(2)
 
         try:
