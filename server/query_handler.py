@@ -61,7 +61,7 @@ def create_read_more_content(similar_sections) -> str:
     if similar_sections:
         for section in similar_sections.docs:
             if section.anchor_url and section.anchor_url != "":
-                read_more_headers.append(f'<a href="{section.anchor_url}">{section.header}</a>')
+                read_more_headers.append(f'<a target="_blank" href="{section.anchor_url}">{section.header}</a>')
             else:
                 read_more_headers.append(section.header)
             read_more_headers.sort()
