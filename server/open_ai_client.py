@@ -1,6 +1,7 @@
 import threading
 import openai
 
+
 def call_chat_completions(prompt: str):
     response = None
 

@@ -21,6 +21,7 @@ sections_min_similarity_score_default_value = 0.8
 sections_min_similarity_score = os.getenv('SECTIONS_MIN_SIMILARITY_SCORE')
 sections_min_similarity_score = sections_min_similarity_score_default_value if sections_min_similarity_score is None else float(sections_min_similarity_score)
 
+
 def check_required():
     if prompt_instructions is None:
         logging.error("PROMPT_INST is not set")
@@ -42,6 +43,7 @@ def check_required():
         exit(1)
 
     logging.info('Settings initialized successfully')
+
 
 def print_settings_with_defaults():
     logging.info(f'semantic_cache_enabled is set to {semantic_cache_enabled} (default: {semantic_cache_enabled_default_value})')

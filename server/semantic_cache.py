@@ -22,10 +22,12 @@ def try_get_reply_from_cache(query: str, redis_store: RedisStore):
         logging.info(f"Found reply in cache for query {query} (query similarity score: {score}), but score is too low (min score: {min_score})")
         return None
 
+
 def add_to_cache(query: str, reply: str, section_headers_as_json: str, redis_store: RedisStore):
     query_embedding = _get_embedding_for_query(query)
     redis_store.add_to_semantic_cache(query, reply, section_headers_as_json, query_embedding)
     logging.info(f"Added query {query} to cache")
+
 
 def _get_embedding_for_query(query: str) -> bytes:
     emb = get_embedding(query)  # max tokens 8191!

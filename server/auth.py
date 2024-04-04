@@ -4,6 +4,8 @@ from server import settings
 
 # setup basic http auth
 security = HTTPBasic()
+
+
 def authenticate(credentials: HTTPBasicCredentials = Depends(security)):
 
     if (settings.correct_username is None) or (settings.correct_password is None):
