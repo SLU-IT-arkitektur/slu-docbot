@@ -50,13 +50,13 @@ def generate_report():
     generated_timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(f'Reported generated at {generated_timestamp}')
     numberOfInteractions = get_number_of_interactions()
-    print("Number of interactions: ", numberOfInteractions)
+    print("Number of interactions (with or without feedback, saved for 7 days): ", numberOfInteractions)
 
     numberOfThumbsUps = get_number_of_interactions_with_thumbs_up()
-    print("Number of interactions with thumbsUp feedback: ", numberOfThumbsUps)
+    print("Number of interactions with thumbsUp feedback (saved for 90 days): ", numberOfThumbsUps)
 
     numberOfThumbsDowns = get_number_of_interactions_with_thumbs_down()
-    print("Number of interactions with thumbsDown feedback: ", numberOfThumbsDowns)
+    print("Number of interactions with thumbsDown feedback (saved for 90 days): ", numberOfThumbsDowns)
 
     template_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
     template = template_env.get_template("simple.html")

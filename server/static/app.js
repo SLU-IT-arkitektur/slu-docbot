@@ -8,6 +8,8 @@ const App = {
         feedbackSpan: document.getElementById('feedbackSpan'),
         responseDiv: document.querySelector('.response'),
         cacheInfo: document.getElementById('cache-info'),
+        updatedInfo: document.getElementById('updated-info'),
+        updatedInfoHeader: document.getElementById('updated-info-header'),
         readmore: document.getElementById('readmore'),
         renderFeedbackSpan: () => {
             App.$.feedbackSpan.innerHTML = `
@@ -42,11 +44,23 @@ const App = {
         showCacheInfoSpan: () => {
             App.$.cacheInfo.style.display = 'block';
         },
+        showUpdatedInfoSpan: () => {
+            App.$.updatedInfo.style.display = 'block';
+        },
         hideCacheInfoSpan: () => {
             App.$.cacheInfo.style.display = 'none';
         },
+        hideUpdatedInfoSpan: () => {
+            App.$.updatedInfo.style.display = 'none';
+        },
         setCacheInfoSpanText: (str) => {
             App.$.cacheInfo.textContent = str;
+        },
+        setUpdatedInfoSpanText: (str) => {
+            App.$.updatedInfo.textContent = str;
+        },
+        setUpdatedInfoHeaderSpanText: (str) => {
+            App.$.updatedInfoHeader.textContent = str;
         },
         setFeedbackSpanText: (str) => {
             App.$.feedbackSpan.textContent = str;
@@ -66,6 +80,7 @@ const App = {
         App.$.setReadmoreHtml('');
         App.$.hideCacheInfoSpan();
         App.$.hideFeedbackSpan();
+        App.$.hideUpdatedInfoSpan();
     },
     sendFeedback: async (str) => {
         try {
@@ -140,6 +155,10 @@ const App = {
                         App.$.appendReadmoreHtml(`${s}<br/>`);
                     });
                 }
+                if (data.embeddings_version) {
+                    App.$.setUpdatedInfoSpanText(`(chatbot uppdaterad mot källa:  ${data.embeddings_version})`);
+                    App.$.showUpdatedInfoSpan();
+                }
             } else {
                 console.error(`Error: ${response.status} ${response.statusText}`);
                 const data = await response.json();
@@ -162,6 +181,17 @@ const App = {
             App.$.enableInput();
         }
     },
+    displayEmbeddingsUpdatedAtInfo: async () => {
+        const response = await fetch(App.apiUrl + 'embeddings_version', {
+            method: 'GET',
+       });
+        if (response.ok) {
+            const data = await response.json();
+            if (data && data.version) {
+               App.$.setUpdatedInfoHeaderSpanText(`(chatbot uppdaterad mot källa:  ${data.version})`) 
+            }
+        }
+    },
     wireEvents: () => {
         App.$.inputEl.addEventListener('keydown', async (e) => {
             if (e.code === 13 || e.key === 'Enter') {
@@ -172,6 +202,7 @@ const App = {
         });
     },
     init: () => {
+        App.displayEmbeddingsUpdatedAtInfo();
         App.wireEvents();
         App.$.renderFeedbackSpan();
     }

@@ -1,0 +1,2090 @@
+
+
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+<title> Tyv&#228;rr lyckas vi inte hitta sidan du s&#246;kte… | Medarbetarwebben</title>
+
+<script type="text/javascript" src="/modules/EPiServer.Vizzit/ClientResources/js/vizzit.integration.js"></script>
+<script type="text/javascript">
+$vizzit$ = typeof $vizzit$ != 'undefined' ? $vizzit$ : {};
+</script>
+<script type="text/javascript">
+$vizzit$ = {keys: $vizzit$.keys || {},client: $vizzit$.client || {},config: $vizzit$.config || {},endpoint: $vizzit$.endpoint || {},};
+</script>
+<script type="text/javascript">
+$vizzit$.keys.public = 'mYcuQqfwyr4Qx4Jg5b0e41vbItSS67ui97US9PEP3jw=';
+</script>
+<script type="text/javascript">
+$vizzit$.config.cookie_auto = false;
+</script>
+ 
+
+<meta name="generator" content="EPiServer" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="title" content="Tyvärr lyckas vi inte hitta sidan du sökte…">
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+
+
+<meta property="og:site_name" content="SLU.SE" />
+<meta name="twitter:site" content="" />
+
+    <meta property="og:title" content="Tyv&#228;rr lyckas vi inte hitta sidan du s&#246;kte… | Medarbetarwebben" />
+    <meta name="twitter:title" content="Tyv&#228;rr lyckas vi inte hitta sidan du s&#246;kte… | Medarbetarwebben" />
+
+    <meta name="description" content="Använd länkarna i toppmenyn högst upp på sidan eller någon av ingångssidorna i huvudmenyn i den gula listen ovan, så kanske du ändå kan hitta det du söker." />
+    <meta property="og:description" content="Använd länkarna i toppmenyn högst upp på sidan eller någon av ingångssidorna i huvudmenyn i den gula listen ovan, så kanske du ändå kan hitta det du söker." />
+    <meta name="twitter:description" content="Använd länkarna i toppmenyn högst upp på sidan eller någon av ingångssidorna i huvudmenyn i den gula listen ovan, så kanske du ändå kan hitta det du söker." />
+
+    <meta property="og:url" content="https://internt.slu.se/installningar/404/" />
+
+    <meta property="og:image" content="https://www.slu.se/globalassets/ew/ew-centrala/start/Profilkollage_logo.jpg" />
+    <meta name="twitter:image" content="https://www.slu.se/globalassets/ew/ew-centrala/start/Profilkollage_logo.jpg" />
+
+<meta name="EPi.ID" content="3605" />
+<meta name="EPi.Title" content="Tyvärr lyckas vi inte hitta sidan du sökte…" />
+<meta name="EPi.Published" content="2010-04-20 15:16:00" />
+<meta name="EPi.Modified" content="2021-05-26 14:06:54" />
+<meta name="EPi.Revised" content="2021-05-26 14:06:54" />
+
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+        <meta name="EPi.Category" content="Medarbetarwebben" />
+
+<link rel="canonical" href="https://internt.slu.se/installningar/404/">
+
+
+
+<link rel="preload" href="/Static/css/Fonts/Merriweather/merriweather-v11-latin-300.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/css/Fonts/Merriweather/merriweather-v11-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/css/Fonts/Oswald/oswald-v10-latin-300.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/css/Fonts/Oswald/oswald-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/css/Fonts/Oswald/oswald-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/css/Fonts/Roboto/roboto-v15-latin-300.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/css/Fonts/Roboto/roboto-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/css/Fonts/Roboto_Condensed/roboto-condensed-v13-latin-300.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/css/Fonts/Roboto_Condensed/roboto-condensed-v13-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/fontawesome-6-pro/webfonts/fa-light-300.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/Static/fontawesome-6-pro/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+
+<link href="/bundles/css/global?v=BCrlf3Df-RIaWpl57uCS_EIj9LRWiAe3fyxb-FzwHzE1" rel="stylesheet"/>
+
+<link href="/bundles/less?v=e4aBuNvRTCAXNK2YqCgbTM5TIx8OHYy1sldWy_2Y4O41" rel="stylesheet"/>
+
+
+<link href="/bundles/less/print?v=O_Wm9GKuLb5DPAtf6Ih6dyBSU8PiAgCNniQG0uFPabQ1" rel="stylesheet" type="text/css" media="print" />
+
+
+
+
+
+    <!-- EPI2-5 -->
+    
+    
+    
+        <script>
+            var klaroConfig = {
+    version: 1,
+    styling: { theme: ["dark", "left"] },
+    //styling: { theme: ['light', 'top', 'wide']},
+    htmlTexts: false,
+    cookieExpiresAfterDays: 30,
+    groupByPurpose: false,
+    default: false,
+    mustConsent: false,
+    acceptAll: true,
+    hideDeclineAll: false,
+    hideLearnMore: false,
+    translations: {
+        sv: {
+            privacyPolicyUrl: "https://www.slu.se/om-slu/om-webbplatsen/",
+            consentNotice: {
+                description: "Denna webbplats använder kakor (cookies), som lagras i din webbläsare. Vissa kakor är nödvändiga för att webbplatsen ska fungera korrekt. Andra är valbara. ",
+                learnMore: "Hantera valbara kakor"
+            },
+            consentModal: {
+                title: "Information om tjänster som använder kakor",
+                description: "Denna webbplats använder kakor (cookies) som lagras i din webbläsare. Vissa kakor är nödvändiga för att sidan ska fungera korrekt och andra är valbara. Du väljer vilka du vill tillåta."
+            },
+            privacyPolicy: {
+                name: "om våra kakor",
+                text: "Läs mer {privacyPolicy}."
+            },
+            contextualConsent: {
+                acceptAlways: "Alltid",
+                acceptOnce: "En gång",
+                description: "Godkänn funktionskakor?"
+            },
+            decline: "Tillåt bara nödvändiga kakor",
+            ok: "Tillåt alla kakor",
+            service: {
+                disableAll: {
+                    description: "Använd detta reglage för att tillåta alla kakor eller endast nödvändiga.",
+                    title: "Ändra för alla kakor"
+                }
+            },
+            purposeItem: {
+                service: "service",
+                services: "services"
+            }
+        },
+        en: {
+            privacyPolicyUrl: "https://www.slu.se/en/about-slu/about-slus-websites/",
+            consentNotice: {
+                description: "This website uses cookies which are stored in your browser. Some cookies are necessary for the website to work properly and others are selectable. You choose which ones you want to allow.",
+                learnMore: "Cookie settings"
+            },
+            consentModal: {
+                title: "Information about services that use cookies",
+                description: "This website uses cookies which are stored in your web browser. Some cookies are necessary for the page to function correctly and others are selectable. You choose which ones you want to allow."
+            },
+            privacyPolicy: {
+                name: "about our cookies",
+                text: "Read more {privacyPolicy}."
+            },
+            contextualConsent: {
+                acceptAlways: "Always",
+                acceptOnce: "Once",
+                description: "Approve function cookies?"
+            },
+            decline: "Allow only necessary cookies",
+            ok: "Allow all cookies",
+            service: {
+                disableAll: {
+                    description: "Use this slider to allow all cookies or only necessary.",
+                    title: "Change for all cookies"
+                }
+            }
+        }
+    },
+    services:[
+        {
+            name: "necessary",
+            contextualConsentOnly: false,
+            required: true,
+            translations: {
+                en: {
+                    title: "Necessary cookies",
+                    description: "These cookies are necessary for the website to function and can not be turned off. They are used when you use a function on the website that needs an answer, for example when you set cookies, log in or fill in a form."
+                },
+                sv: {
+                    title: "Nödvändiga kakor",
+                    description: "Dessa kakor är nödvändiga för att webbplatsen ska fungera och kan inte stängas av. De används när du använder en funktion på webbplatsen som behöver ett svar, exempelvis när du ställer in kakor, loggar in eller fyller i ett formulär."
+                }
+            },
+            //cookies: ['ASP.NET_SessionId', '__RequestVerificationToken', '.EPiForm_BID']
+        },
+        {
+            name: "tracking",
+            contextualConsentOnly: false,
+onAccept:
+`
+if(document.cookie.indexOf('___vizzit=') ==-1){
+$vizzit.cookie.set();
+}
+`,      
+            translations: {
+                en: {
+                    title: "Analysis",
+                    description: "The website uses analysis services to evaluate and improve the website content, experience and structure. "
+                },
+                sv: {
+                    title: "Analys",
+                    description: "Webbplatsen använder analystjänster för att utvärdera och förbättra webbplatsens innehåll, upplevelse och struktur. "
+                }
+            }
+        },
+        {
+            name: "functional",
+            contextualConsentOnly: false,
+            translations: {
+                en: {
+                    title: "Function",
+                    description: "These cookies enhance the functionality of the website. For instance, they enable the display of videos and social media feeds. "
+                },
+                sv: {
+                    title: "Funktion",
+                    description: "Dessa kakor ökar funktionen på webbplatsen. Exempelvis möjliggörs visning av filmer och flöden från sociala medier. "
+                }
+            },
+            cookies: ['EPi_NumberOfVisits']
+        },       
+    ]
+};
+
+        </script>
+
+    <script defer data-config="klaroConfig" src="/Static/js/klaro-no-css-min.js" onload="global.moveKlaro()"></script>
+
+    <style>
+        .table-responsive:before {
+            content: "Svep vänster för att läsa mer";
+        }
+    </style>
+
+
+</head>
+
+<body class="standardpage Medarbetarwebben  overflow-lg-visible" data-gck="-8584881716553579053" data-isineditmode="False" data-isauthenticated="False" data-currentid="3605">
+
+    
+
+    
+    <div id="js-klarocontainer"></div>
+    <div role="navigation">
+        <a class="skip-to-main-link z-index-3" href="#main" id="skipToMain">Hoppa till huvudinneh&#229;ll</a>
+    </div>
+
+    
+    
+
+
+<header class="global-header print-hidden z-index-2 position-relative" id="globalHeader">
+    <div class="global-header__wrapper  d-flex align-items-start flex-column">
+        <div class="container-fluid mb-auto">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1 col-xxl-8 offset-xxl-2">
+                    <div class="global-header__brand">
+                        <a class="global-header__logo z-index-2 d-inline-block" href="/" id="homeLink">
+
+<svg class="print-visible" role="img" viewBox="0 0 848.43 848.44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <title id="sluLogoTitleId">Sveriges lantbruksuniversitet logo</title>
+    <path fill="#690f31" d="M867.56,474.7c-58.43,38.71-114,84.5-198.51,84.5-97.68,0-179.9-45.22-195.65-143.29-11.46-71.49-12.89-261.41-12.89-325.85V15.78h1.43c38.67,80.27,107.42,128,107.42,210.78,0,41-13.46,67.55-33.8,106.55-10.6,20.35-26.36,46.35-26.36,70.37,0,14.13,6.59,27.69,30.94,27.69,47.84,0,74.77-24.86,136.93-24.86,71,0,121.75,25.71,190.49,66.69v1.7Z" transform="translate(-19.13 -15.78)" />
+    <path fill="#00634c" d="M19.13,473c68.75-41,119.45-66.69,190.5-66.69,62.16,0,89.08,24.86,136.92,24.86,24.35,0,30.94-13.56,30.94-27.69,0-24-15.75-50-26.35-70.37-20.34-39-33.8-65.57-33.8-106.55,0-82.8,68.75-130.51,107.42-210.78h1.43V89.5c0,65-1.43,254.92-12.89,326.41C397.54,514,315.33,559.2,217.65,559.2c-84.51,0-140.08-45.79-198.52-84.5V473Z" transform="translate(-19.13 -15.78)" />
+    <path fill="#00634c" d="M260.45,686.33c-8-13.47-27.51-24.64-60.45-24.64-24.35,0-42.39,7.45-42.39,27.5,0,45.55,113.44,36.95,113.44,107.42,0,41-29.51,67.61-88,67.61-28.65,0-55-4.59-71-11.75A196.63,196.63,0,0,1,110.63,827a230.15,230.15,0,0,1,1.43-24.06h1.72c16.9,22.05,44.69,29.5,72.19,29.5,26.92,0,41.25-10.89,41.25-29.22,0-45.83-112.29-33.23-112.29-106.85,0-40.39,30.65-65.6,88.23-65.6,14.89,0,43.25,1.72,59,8.88.86,3.73,1.15,13.47,1.15,20.92,0,10.31-.57,19.76-1.15,25.78Z" transform="translate(-19.13 -15.78)" />
+    <path fill="#00634c" d="M451.23,827.55c34.66,0,51-4,61.3-13.46h1.73c-1.15,11.74-7.46,38.67-10.89,47.26H339.51v-1.72c9.74-6,14.32-11.46,14.32-30.65V701.22c0-43.83,0-54.71-13.18-64.74v-1.71c6.31-.58,18.05-1.15,32.37-1.15,16.62,0,31.23.57,38.67,1.43v1.72c-15.46,11.46-16,20.62-16,64.45V827.55Z" transform="translate(-19.13 -15.78)" />
+    <path fill="#00634c" d="M567,700.94c0-43.55,0-52.71-15.76-64.17v-1.72c5.73-.57,20.35-1.43,35.24-1.43,8.31,0,16,0,23.77.57-.28,8.31-1.43,22.06-1.43,66.75v76.19c0,33.52,4.88,50.42,37.53,50.42,25.49,0,50.7-10,61.3-18.91,4.58-4,4.58-8.3,4.58-14V701.8c0-44.41,0-53.29-15.75-65v-1.72c5.73-.57,20.34-1.43,35.81-1.43,7.73,0,15.18,0,23.21.57-.29,8.31-1.44,22.06-1.44,67V806.64c0,19.19,2.29,43,18.62,53.57v1.14h-49c-3.73-4-7.16-16-8.31-20.62-23.21,15.47-47.27,23.49-78.78,23.49C583.29,864.22,567,837.86,567,796v-95.1Z" transform="translate(-19.13 -15.78)" />
+</svg>
+
+                            <span class="visually-hidden">Till startsida</span>
+                        </a>
+                        <div class="global-header__site-owner xpt-1">
+                            <span class="">Medarbetarwebben</span>
+                            <span class="d-none d-lg-block">Information och service f&#246;r medarbetare p&#229; SLU</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="mega-menu z-index-1 d-lg-flex" id="navMenu" aria-label="Navigering">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1 col-xxl-8 offset-xxl-2 d-lg-flex p-0">
+                        <div class="mega-menu__functions d-flex order-lg-2 xpe-3 xpe-lg-0 pt-4 pb-2 py-lg-0">
+                            <div class="d-inline">
+                                <button class="icon-button d-flex flex-column align-items-center" id="quickSearchBtn" type="button" aria-controls="quick-search-ac">
+                                    <span class="icon-button__icon" aria-hidden="true"></span>
+                                    <span class="function-button-text">S&#246;k</span>
+                                </button>
+                            </div>
+                            <div class="d-inline js-language">
+                                    <a class="icon-button d-flex flex-column align-items-center" href="/en/mw-settings/page-not-found/" id="navLanguage">
+                                        <span class="icon-button__icon" aria-hidden="true"></span>
+                                        <span class="function-button-text">English</span>
+                                    </a>
+                                                            </div>
+                            <div class="d-inline">
+                                <button class="icon-button d-flex flex-column align-items-center d-lg-none" id="navMenuToggle" type="button">
+                                    <span class="icon-button__icon" aria-hidden="true"></span>
+                                    <span class="function-button-text">Meny</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mega-menu__links d-lg-block xmx-4 xmx-lg-0 pt-2 pt-lg-1">
+                            <ul class="p-0 d-flex flex-wrap">
+                                    <li>
+                                        <a href="https://www.slu.se/">
+                                            <span>SLU.SE</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://student.slu.se/">
+                                            <span>Studentwebb</span>
+                                        </a>
+                                    </li>
+                                                                                                    <li>
+                                        <a href="https://www.slu.se/site/bibliotek/">
+                                            <span>Bibliotek</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.universitetsdjursjukhuset.se/">
+                                            <span>UDS</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="/installningar/sok-anstalld/">
+                                            <span>S&#246;k personal</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu__menu-root d-none d-lg-block flex-grow-1 order-lg-0" id="navMenuRoot">
+                            <div class="mega-menu__level mega-menu__level--one" id="navGrpRoot">
+                                <div class="mega-menu__mega-scroll">
+                                    <ul class="d-lg-flex mb-0 px-4 px-lg-3">
+                                        <li class="flex-shrink-0">
+                                                <a class="mega-menu__root-link mega-menu__root-link--expand d-block py-2 px-lg-2" href="/min-anstallning/" id="navItm1stLvl201579" data-group="navGrpRoot" data-target="navGrp201579">Min anst&#228;llning</a>
+                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrpRoot" data-destination="navGrp201579">
+                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Min anst&#228;llning</span>
+                </button>
+                <div class="mega-menu__level mega-menu__level--two z-index-lg-1 d-lg-none mx-lg-3 p-lg-4" id="navGrp201579">
+                    <span class="fas fa-circle-location-arrow fa-2x d-none d-lg-inline me-2" aria-hidden="true"></span>
+                    <a class="d-none d-lg-inline" href="/min-anstallning/">Startsida f&#246;r Min anst&#228;llning</a>
+                    <hr class="d-none d-lg-block my-2">
+
+                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrpRoot">
+                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                        <span>Tillbaka till huvudmenyn</span>
+                    </button>
+
+                    <div class="mega-menu__mega-scroll">
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/nyanstalld/" id="navItm2ndLvl508522" data-group="navGrp201579">Nyanst&#228;lld</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/hantering-av-personuppgifter/" id="navItm2ndLvl427473" data-group="navGrp201579">Hantering av personuppgifter</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/lon-och-pension/" id="navItm2ndLvl204367" data-group="navGrp201579">L&#246;n och pension</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp204367">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r L&#246;n och pension</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp204367">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp204367" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/lon-och-pension/lon/" id="navItm3rdLvl93144" data-group="navGrp204367">L&#246;n</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/lon-och-pension/lonesattning/" id="navItm3rdLvl93369" data-group="navGrp204367">L&#246;nes&#228;ttning</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/lon-och-pension/lonekriterier/" id="navItm3rdLvl525557" data-group="navGrp204367">L&#246;nekriterier</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/lon-och-pension/Partsgemensam_information/" id="navItm3rdLvl598164" data-group="navGrp204367">L&#246;nerevision 2023</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/lon-och-pension/pension/" id="navItm3rdLvl93363" data-group="navGrp204367">Pension</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/lon-och-pension/doktorandstege/" id="navItm3rdLvl911" data-group="navGrp204367">Doktorandstegen</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/lon-och-pension/skatt/" id="navItm3rdLvl512391" data-group="navGrp204367">Skatter</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/lon-och-pension/uppdragstillagg_arvoden_ersattningar/" id="navItm3rdLvl523237" data-group="navGrp204367">Uppdragstill&#228;gg och ers&#228;ttningar</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/formaner-pa-slu/" id="navItm2ndLvl412237" data-group="navGrp201579">F&#246;rm&#229;ner p&#229; SLU</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/arbetstid-och-anstallningsvillkor-in/" id="navItm2ndLvl204384" data-group="navGrp201579">Arbetstid och anst&#228;llningsvillkor</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp204384">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Arbetstid och anst&#228;llningsvillkor</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp204384">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp204384" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/arbetstid-och-anstallningsvillkor-in/anstallningsformer/" id="navItm3rdLvl93475" data-group="navGrp204384">Anst&#228;llningsformer</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/arbetstid-och-anstallningsvillkor-in/vara-arbetstider/" id="navItm3rdLvl93471" data-group="navGrp204384">V&#229;ra arbetstider</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/arbetstid-och-anstallningsvillkor-in/distansarbete-medarbetare/" id="navItm3rdLvl520340" data-group="navGrp204384">Distansarbete</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/lediga-anstallningar/" id="navItm2ndLvl228068" data-group="navGrp201579">Lediga anst&#228;llningar</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/forsakringar/" id="navItm2ndLvl93154" data-group="navGrp201579">F&#246;rs&#228;kringar</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/semester-och-ledigheter-in/" id="navItm2ndLvl204388" data-group="navGrp201579">Semester och ledigheter</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp204388">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Semester och ledigheter</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp204388">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp204388" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/semester-och-ledigheter-in/ledighet-for-studier/" id="navItm3rdLvl213200" data-group="navGrp204388">Ledighet f&#246;r studier</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/semester-och-ledigheter-in/semester/" id="navItm3rdLvl93313" data-group="navGrp204388">Semester</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/semester-och-ledigheter-in/annan-tjanstledighet/" id="navItm3rdLvl93286" data-group="navGrp204388">Annan tj&#228;nstledighet</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/semester-och-ledigheter-in/foraldraledighet/" id="navItm3rdLvl93285" data-group="navGrp204388">F&#246;r&#228;ldraledighet och barntillsyn</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/semester-och-ledigheter-in/facklig-fortroendeman/" id="navItm3rdLvl517393" data-group="navGrp204388">Facklig f&#246;rtroendeman</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/sjuk-och-frisk-in/" id="navItm2ndLvl204389" data-group="navGrp201579">Sjuk och frisk</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp204389">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Sjuk och frisk</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp204389">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp204389" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sjuk-och-frisk-in/nar-du-blir-sjuk/" id="navItm3rdLvl93456" data-group="navGrp204389">Om du blir sjuk</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sjuk-och-frisk-in/vard-av-barn/" id="navItm3rdLvl93454" data-group="navGrp204389">V&#229;rd av barn</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sjuk-och-frisk-in/arbetsskada/" id="navItm3rdLvl526" data-group="navGrp204389">Arbetsskada</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sjuk-och-frisk-in/friskvard/" id="navItm3rdLvl93457" data-group="navGrp204389">Friskv&#229;rd</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sjuk-och-frisk-in/foretagshalsovard/" id="navItm3rdLvl535" data-group="navGrp204389">F&#246;retagsh&#228;lsan</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sjuk-och-frisk-in/medicinska-kontroller/" id="navItm3rdLvl490398" data-group="navGrp204389">Medicinska kontroller i arbetslivet</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/kompetens-och-karriarutveckling/" id="navItm2ndLvl212914" data-group="navGrp201579">Kompetens- och karri&#228;rutveckling</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp212914">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Kompetens- och karri&#228;rutveckling</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp212914">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp212914" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/kompetens-och-karriarutveckling/kurser/" id="navItm3rdLvl56105" data-group="navGrp212914">Kurser, seminarier &amp; workshops</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/kompetens-och-karriarutveckling/akademiska-karriaren/" id="navItm3rdLvl237582" data-group="navGrp212914">Akademisk karri&#228;r</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/kompetens-och-karriarutveckling/ledar-medarbetarskap/" id="navItm3rdLvl217443" data-group="navGrp212914">Ledar- &amp; medarbetarskap</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/kompetens-och-karriarutveckling/personal-och-lararbyten/" id="navItm3rdLvl724" data-group="navGrp212914">Personal- &amp; l&#228;rarutbyten</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/kompetens-och-karriarutveckling/fokus-forum-for-karriarutveckling-vid-slu/" id="navItm3rdLvl230355" data-group="navGrp212914">FOKUS</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/kompetens-och-karriarutveckling/utmarkelser-och-priser/" id="navItm3rdLvl373520" data-group="navGrp212914">Utm&#228;rkelser</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/arbetsmiljo-lika-villkor/" id="navItm2ndLvl204390" data-group="navGrp201579">Arbetsmilj&#246; och lika villkor</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp204390">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Arbetsmilj&#246; och Lika villkor</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp204390">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp204390" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/arbetsmiljo-lika-villkor/viktigt-for-dig-som-medarbetare/" id="navItm3rdLvl93477" data-group="navGrp204390">Arbetsmilj&#246; p&#229; SLU</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/lika-villkor/" id="navItm3rdLvl476164" data-group="navGrp204390">J&#228;mst&#228;lldhet och lika villkor</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/arbetsmiljo-lika-villkor/arbetsmiljopolicy/" id="navItm3rdLvl17830" data-group="navGrp204390">Arbetsmilj&#246;policy</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/arbetsmiljo-lika-villkor/skyddsombud/" id="navItm3rdLvl272611" data-group="navGrp204390">Skyddsombud</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/arbetsmiljo-lika-villkor/medarbetarundersokning-2024/" id="navItm3rdLvl692535" data-group="navGrp204390">Medarbetarunders&#246;kning 2024</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/att-vara-medarbetare-in/" id="navItm2ndLvl204386" data-group="navGrp201579">Att vara medarbetare</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp204386">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Att vara medarbetare</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp204386">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp204386" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/att-vara-medarbetare-in/att-vara-medarbetare/" id="navItm3rdLvl93147" data-group="navGrp204386">V&#229;r v&#228;rdegrund</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/att-vara-medarbetare-in/medarbetaride/" id="navItm3rdLvl93291" data-group="navGrp204386">Medarbetarid&#233;</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/att-vara-medarbetare-in/skyldigheter/" id="navItm3rdLvl93287" data-group="navGrp204386">Skyldigheter</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/att-vara-medarbetare-in/personalpolicy/" id="navItm3rdLvl93381" data-group="navGrp204386">Personalpolicy</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/att-vara-medarbetare-in/bisyssla/" id="navItm3rdLvl93382" data-group="navGrp204386">Bisysslor</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/att-vara-medarbetare-in/webbutbildning---statsanstalld/" id="navItm3rdLvl425824" data-group="navGrp204386">Webbutbildning - Statsanst&#228;lld</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/att-vara-medarbetare-in/medarbetarsamtal/" id="navItm3rdLvl536" data-group="navGrp204386">Medarbetarsamtal</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/lokala-kollektivavtal/" id="navItm2ndLvl269350" data-group="navGrp201579">Lokala kollektivavtal</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/blanketter-medarbetare/" id="navItm2ndLvl514305" data-group="navGrp201579">Blanketter medarbetare</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/hrs4r/" id="navItm2ndLvl452440" data-group="navGrp201579">HR Excellence in Research</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/sluta-pa-slu-in/" id="navItm2ndLvl204391" data-group="navGrp201579">Sluta p&#229; SLU?</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp204391">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Sluta p&#229; SLU?</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp204391">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp204391" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sluta-pa-slu-in/om-du-vill-saga-upp-dig/" id="navItm3rdLvl298738" data-group="navGrp204391">Om du vill s&#228;ga upp dig</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sluta-pa-slu-in/foretradesratt/" id="navItm3rdLvl93464" data-group="navGrp204391">F&#246;retr&#228;desr&#228;tt</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/sluta-pa-slu-in/intyg-och-betyg/" id="navItm3rdLvl93463" data-group="navGrp204391">Intyg och betyg</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/tjansteresor/" id="navItm2ndLvl204575" data-group="navGrp201579">Tj&#228;nsteresor</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp204575">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Tj&#228;nsteresor</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp204575">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp204575" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/tjansteresor/boka-tjansteresa/" id="navItm3rdLvl219509" data-group="navGrp204575">Boka tj&#228;nsteresa</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/tjansteresor/riktlinjer-tjansteresor-och-moten/" id="navItm3rdLvl869" data-group="navGrp204575">Riktlinjer f&#246;r tj&#228;nsteresor och m&#246;ten</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/tjansteresor/reserakning-utlagg/" id="navItm3rdLvl55009" data-group="navGrp204575">Reser&#228;kning och utl&#228;gg</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/tjansteresor/reseforskott-och-betalkort/" id="navItm3rdLvl865" data-group="navGrp204575">Betalkort och resef&#246;rskott</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/tjansteresor/information-om-resor-och-avtal/" id="navItm3rdLvl60773" data-group="navGrp204575">Information om resor och avtal</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/tjansteresor/faq---ny-resebyra/" id="navItm3rdLvl528620" data-group="navGrp204575">FAQ - Resor</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/min-anstallning/facket/" id="navItm2ndLvl93153" data-group="navGrp201579">Facket</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201579" data-destination="navGrp93153">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Facket</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp93153">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp93153" data-destination="navGrp201579">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Min anst&#228;llning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/facket/kontaktpersoner/" id="navItm3rdLvl280599" data-group="navGrp93153">Kontaktpersoner vid rekrytering</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/min-anstallning/facket/information-forhandling-o-forankring/" id="navItm3rdLvl208" data-group="navGrp93153">Information och f&#246;rhandling enligt MBL</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+                    </div>
+                </div>
+
+                                            </li><li class="flex-shrink-0">
+                                                <a class="mega-menu__root-link mega-menu__root-link--expand d-block py-2 px-lg-2" href="/stod-service/" id="navItm1stLvl201580" data-group="navGrpRoot" data-target="navGrp201580">St&#246;d &amp; service</a>
+                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrpRoot" data-destination="navGrp201580">
+                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r St&#246;d &amp; service</span>
+                </button>
+                <div class="mega-menu__level mega-menu__level--two z-index-lg-1 d-lg-none mx-lg-3 p-lg-4" id="navGrp201580">
+                    <span class="fas fa-circle-location-arrow fa-2x d-none d-lg-inline me-2" aria-hidden="true"></span>
+                    <a class="d-none d-lg-inline" href="/stod-service/">Startsida f&#246;r St&#246;d &amp; service</a>
+                    <hr class="d-none d-lg-block my-2">
+
+                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201580" data-destination="navGrpRoot">
+                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                        <span>Tillbaka till huvudmenyn</span>
+                    </button>
+
+                    <div class="mega-menu__mega-scroll">
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/admin-stod/" id="navItm2ndLvl320590" data-group="navGrp201580">Administrativt st&#246;d</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201580" data-destination="navGrp320590">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r St&#246;domr&#229;den</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp320590">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp320590" data-destination="navGrp201580">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till St&#246;d &amp; service</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/ekonomi/" id="navItm3rdLvl201802" data-group="navGrp320590">Ekonomi</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/hr-fragor/" id="navItm3rdLvl519052" data-group="navGrp320590">HR-fr&#229;gor</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/inkop/" id="navItm3rdLvl201803" data-group="navGrp320590">Ink&#246;p</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/it/" id="navItm3rdLvl201804" data-group="navGrp320590">IT, AV &amp; telefoni</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/juridik-dataskydd-och-informationshantering/" id="navItm3rdLvl349020" data-group="navGrp320590">Juridik, dataskydd och informationshantering</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/kommunikation-marknadsforing/" id="navItm3rdLvl201805" data-group="navGrp320590">Kommunikation &amp; marknadsf&#246;ring</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/konferenser-och-evenemang/" id="navItm3rdLvl350203" data-group="navGrp320590">Konferenser och evenemang</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/miljo/" id="navItm3rdLvl201809" data-group="navGrp320590">Milj&#246;</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/sakerhet/" id="navItm3rdLvl201810" data-group="navGrp320590">S&#228;kerhet</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/tillganglighet/" id="navItm3rdLvl469116" data-group="navGrp320590">Tillg&#228;nglighet</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/basservice/" id="navItm2ndLvl212310" data-group="navGrp201580">Basservice</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201580" data-destination="navGrp212310">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Basservice (t ex st&#228;d och post)</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp212310">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp212310" data-destination="navGrp201580">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till St&#246;d &amp; service</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="https://www.akademikonferens.se/?epslanguage=sv" id="navItm3rdLvl251833" data-group="navGrp212310">Akademikonferens</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/basservice/lokaler/" id="navItm3rdLvl207049" data-group="navGrp212310">Lokaler (inkl. lokalbokning)</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/basservice/servicecenter/" id="navItm3rdLvl391410" data-group="navGrp212310">Servicecenter</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/lokaler-campus/" id="navItm2ndLvl201808" data-group="navGrp201580">P&#229; v&#229;ra campus</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201580" data-destination="navGrp201808">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r P&#229; v&#229;ra campus</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp201808">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201808" data-destination="navGrp201580">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till St&#246;d &amp; service</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/campus-alnarp1/" id="navItm3rdLvl218734" data-group="navGrp201808">Alnarps byggnader</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/biocentrum/" id="navItm3rdLvl506644" data-group="navGrp201808">BioCentrum</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/ekologicentrum1/" id="navItm3rdLvl53003" data-group="navGrp201808">Ekologicentrum</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="https://www.slu.se/fakulteter/vh/om-fakulteten/institutioner/lovsta/" id="navItm3rdLvl261011" data-group="navGrp201808">L&#246;vsta forskningscentrum</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/mark-vatten-miljocentrum/" id="navItm3rdLvl57342" data-group="navGrp201808">Mark-Vatten-Milj&#246;centrum</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/skogishuset/" id="navItm3rdLvl210289" data-group="navGrp201808">Skogishuset Ume&#229;</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/ulls-hus/" id="navItm3rdLvl209823" data-group="navGrp201808">Ulls hus</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/vhc/" id="navItm3rdLvl212569" data-group="navGrp201808">VHC</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/ovriga-byggnader-ultuna/" id="navItm3rdLvl376882" data-group="navGrp201808">Ultunas &#246;vriga byggnader och platser</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/campusutveckling/" id="navItm3rdLvl437313" data-group="navGrp201808">Campusutveckling</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/lokaler-campus/cykelverkstad/" id="navItm3rdLvl714731" data-group="navGrp201808">Cykelverkstad</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/externfinansiering/" id="navItm2ndLvl420" data-group="navGrp201580">Externfinansiering</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201580" data-destination="navGrp420">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Externfinansiering - utlysningar</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp420">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp420" data-destination="navGrp201580">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till St&#246;d &amp; service</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/externfinansiering/finansiarer/" id="navItm3rdLvl433250" data-group="navGrp420">Finansi&#228;rer</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/externfinansiering/alla-utlysningar/" id="navItm3rdLvl72935" data-group="navGrp420">Utlysningar</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/externfinansiering/rad-och-utbildning/" id="navItm3rdLvl575630" data-group="navGrp420">R&#229;d och utbildning</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/externfinansiering/regler-och-verktyg/" id="navItm3rdLvl575584" data-group="navGrp420">Regler och verktyg</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/externfinansiering/externfinansiering-donationer-och-samarbeten/" id="navItm3rdLvl448419" data-group="navGrp420">Donationer och samarbeten</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/forskning/" id="navItm2ndLvl228169" data-group="navGrp201580">Forska</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201580" data-destination="navGrp228169">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Forska</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp228169">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp228169" data-destination="navGrp201580">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till St&#246;d &amp; service</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/malgrupp/forskare/" id="navItm3rdLvl14707" data-group="navGrp228169">Forskarst&#246;d</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/forskning/karriarbidrag-for-forskare/" id="navItm3rdLvl287632" data-group="navGrp228169">Karri&#228;rbidrag f&#246;r forskare</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/forskning/utlysningar-av-bidrag/" id="navItm3rdLvl349831" data-group="navGrp228169">Utlysningar av bidrag</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/forskning/future-faculty-vid-slu/" id="navItm3rdLvl388635" data-group="navGrp228169">Future Faculty vid SLU</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/forskning/forskningsinfrastruktur/" id="navItm3rdLvl598852" data-group="navGrp228169">Forskningsinfrastruktur</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/fortlopande-miljoanalys/" id="navItm2ndLvl57944" data-group="navGrp201580">Fortl&#246;pande milj&#246;analys</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201580" data-destination="navGrp57944">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Fortl&#246;pande milj&#246;analys</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp57944">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp57944" data-destination="navGrp201580">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till St&#246;d &amp; service</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/fortlopande-miljoanalys/ramar-for-fortlopande-miljoanalys/" id="navItm3rdLvl573094" data-group="navGrp57944">Ramar f&#246;r fortl&#246;pande milj&#246;analys</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/fortlopande-miljoanalys/verksamhetsstod/" id="navItm3rdLvl219515" data-group="navGrp57944">Verksamhetsst&#246;d</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/fortlopande-miljoanalys/kvalitetsarbete/" id="navItm3rdLvl573432" data-group="navGrp57944">Kvalitetsarbete</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/fortlopande-miljoanalys/samverkan_samarbeten/" id="navItm3rdLvl17057" data-group="navGrp57944">Samverkan och samarbeten</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/fortlopande-miljoanalys/utlysningar-av-bidrag/" id="navItm3rdLvl496145" data-group="navGrp57944">Utlysningar av bidrag</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/forsoksdjur/" id="navItm2ndLvl517286" data-group="navGrp201580">F&#246;rs&#246;ksdjur i forskning och undervisning</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/registrator/" id="navItm2ndLvl201953" data-group="navGrp201580">Registrator</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/samverkan/" id="navItm2ndLvl423" data-group="navGrp201580">Samverkan</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/utbildning/" id="navItm2ndLvl201767" data-group="navGrp201580">Utbilda</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201580" data-destination="navGrp201767">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Utbildning</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp201767">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201767" data-destination="navGrp201580">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till St&#246;d &amp; service</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/utbildning/grund--och-avancerad-utbildning/" id="navItm3rdLvl202010" data-group="navGrp201767">Grund- och avancerad niv&#229;</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/utbildning/utbildning-pa-forskarniva/" id="navItm3rdLvl254378" data-group="navGrp201767">Utbildning p&#229; forskarniv&#229;</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/utbildning/uppdragsutbildning-for-slu/" id="navItm3rdLvl67017" data-group="navGrp201767">Uppdragsutbildning</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/utbildning/pedagogiskt-och-digitalt-stod/" id="navItm3rdLvl381558" data-group="navGrp201767">L&#228;rande och digitalisering</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/utbildning/tentamensservice/" id="navItm3rdLvl687120" data-group="navGrp201767">Tentamensservice</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/stod-service/internationalisering/" id="navItm2ndLvl528550" data-group="navGrp201580">Internationalisering</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+                    </div>
+                </div>
+
+                                            </li><li class="flex-shrink-0">
+                                                <a class="mega-menu__root-link mega-menu__root-link--expand d-block py-2 px-lg-2" href="/Organisation-och-styrning/" id="navItm1stLvl201628" data-group="navGrpRoot" data-target="navGrp201628">Organisation &amp; styrning</a>
+                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrpRoot" data-destination="navGrp201628">
+                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Organisation &amp; styrning</span>
+                </button>
+                <div class="mega-menu__level mega-menu__level--two z-index-lg-1 d-lg-none mx-lg-3 p-lg-4" id="navGrp201628">
+                    <span class="fas fa-circle-location-arrow fa-2x d-none d-lg-inline me-2" aria-hidden="true"></span>
+                    <a class="d-none d-lg-inline" href="/Organisation-och-styrning/">Startsida f&#246;r Organisation &amp; styrning</a>
+                    <hr class="d-none d-lg-block my-2">
+
+                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201628" data-destination="navGrpRoot">
+                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                        <span>Tillbaka till huvudmenyn</span>
+                    </button>
+
+                    <div class="mega-menu__mega-scroll">
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/verksamhetside-vision-och-strategiska-mal/" id="navItm2ndLvl946" data-group="navGrp201628">Verksamhetsid&#233;, vision, v&#228;rdegrund och strategiska m&#229;l</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201628" data-destination="navGrp946">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Verksamhetsid&#233;, m&#229;l och strategier</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp946">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp946" data-destination="navGrp201628">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Organisation &amp; styrning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/verksamhetside-vision-och-strategiska-mal/slus-strategi/" id="navItm3rdLvl455612" data-group="navGrp946">SLU:s strategi 2021-2025</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/lika-villkor/" id="navItm2ndLvl204511" data-group="navGrp201628">J&#228;mst&#228;lldhet och lika villkor vid SLU</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/agenda-2030/" id="navItm2ndLvl464976" data-group="navGrp201628">Agenda 2030</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/planering/" id="navItm2ndLvl230502" data-group="navGrp201628">Verksamhetsplanering</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201628" data-destination="navGrp230502">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Planering och utveckling</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp230502">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp230502" data-destination="navGrp201628">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Organisation &amp; styrning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/planering/verksamhetsplanering-och-anslagsfordelning/" id="navItm3rdLvl961" data-group="navGrp230502">Anslagsf&#246;rdelning och verksamhetsplanering</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/planering/intern-styrning-och-kontroll/" id="navItm3rdLvl963" data-group="navGrp230502">Strategisk riskanalys</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/planering/avgiftsbelagd-verksamhet/" id="navItm3rdLvl3380" data-group="navGrp230502">Avgiftsbelagd verksamhet</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/planering/gemensammakostnader-lonekostnadspalagg-lkp/" id="navItm3rdLvl950" data-group="navGrp230502">Gemensamma kostnader / l&#246;nekostnadsp&#229;l&#228;gg (LKP)</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/planering/budget/" id="navItm3rdLvl941" data-group="navGrp230502">SLU:s budget</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/planering/budgetunderlag/" id="navItm3rdLvl270232" data-group="navGrp230502">Budgetunderlag</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/planering/budgetpropositioner/" id="navItm3rdLvl942" data-group="navGrp230502">Budgetpropositioner</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/planering/regleringsbrev/" id="navItm3rdLvl230712" data-group="navGrp230502">Regleringsbrev</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/" id="navItm2ndLvl449" data-group="navGrp201628">Uppf&#246;ljning och utv&#228;rdering</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201628" data-destination="navGrp449">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Uppf&#246;ljning och utv&#228;rdering</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp449">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp449" data-destination="navGrp201628">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Organisation &amp; styrning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/arsredovisningar/" id="navItm3rdLvl959" data-group="navGrp449">&#197;rsredovisningar</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/ekonomisk-uppfoljning/" id="navItm3rdLvl3573" data-group="navGrp449">Ekonomisk uppf&#246;ljning</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/internrevision/" id="navItm3rdLvl223" data-group="navGrp449">Internrevision</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/indikatorer/" id="navItm3rdLvl957" data-group="navGrp449">Indikatorer</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/enkater/" id="navItm3rdLvl960" data-group="navGrp449">Enk&#228;ter</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/studentuppfoljning/" id="navItm3rdLvl258189" data-group="navGrp449">Studentuppf&#246;ljning</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/doktoranduppfoljning/" id="navItm3rdLvl16906" data-group="navGrp449">Doktorand- och handledarenk&#228;ter</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/forskningsutvarderingar-kvalitet-och-nytta/" id="navItm3rdLvl388018" data-group="navGrp449">Forskningsutv&#228;rderingarna KoN (Kvalitet och Nytta)</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/utredningar/" id="navItm3rdLvl450" data-group="navGrp449">Utredningar och uppdrag</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/uppfoljningar-och-indikatorer/hypergene/" id="navItm3rdLvl438547" data-group="navGrp449">Hypergene f&#246;r SLU</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/styrande-dokument-och-beslut/" id="navItm2ndLvl516852" data-group="navGrp201628">Styrande dokument och beslut</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201628" data-destination="navGrp516852">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Styrande dokument</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp516852">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp516852" data-destination="navGrp201628">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Organisation &amp; styrning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/styrande-dokument-och-beslut/regleringsbrev/" id="navItm3rdLvl949" data-group="navGrp516852">Regleringsbrev</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/styrande-dokument-och-beslut/beslutsfattande-pa-slu/" id="navItm3rdLvl515821" data-group="navGrp516852">Beslutsfattande p&#229; SLU</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/styrande-dokument-och-beslut/delegationsordningar/" id="navItm3rdLvl943" data-group="navGrp516852">Delegationsordningar</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/styrande-dokument-och-beslut/interna-styrande-dokument/" id="navItm3rdLvl525326" data-group="navGrp516852">Interna styrande dokument</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/styrande-dokument-och-beslut/protokoll-och-rektorsbeslut/" id="navItm3rdLvl948" data-group="navGrp516852">Protokoll och beslutslistor</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/styrande-dokument-och-beslut/lagar-och-forordningar/" id="navItm3rdLvl14581" data-group="navGrp516852">Lagar och andra f&#246;rfattningar</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/styrande-dokument-och-beslut/fakultetsnamnder/" id="navItm3rdLvl375578" data-group="navGrp516852">Dokumentation f&#246;r fakultetsn&#228;mnderna</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/kvalitetssakring-utbildning/" id="navItm2ndLvl323636" data-group="navGrp201628">Kvalitetss&#228;kring av utbildningen</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/kvalitetssakring-forskning-miljoanalys/" id="navItm2ndLvl520979" data-group="navGrp201628">Kvalitetss&#228;kring av forskning och milj&#246;analys</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/organisation/" id="navItm2ndLvl225544" data-group="navGrp201628">Organisation</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201628" data-destination="navGrp225544">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Organisation</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp225544">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp225544" data-destination="navGrp201628">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Organisation &amp; styrning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="https://www.slu.se/om-slu/organisation/centrumbildningar-projekt/" id="navItm3rdLvl287837" data-group="navGrp225544">Centra och samverkansprojekt</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/organisation/institutioner-och-fakulteter/" id="navItm3rdLvl287835" data-group="navGrp225544">Institutioner och fakulteter</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/interna-fakultetssidor/" id="navItm3rdLvl375497" data-group="navGrp225544">Interna fakultetssidor</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/organisation/radgivande-organ/" id="navItm3rdLvl939" data-group="navGrp225544">R&#229;dgivande organ</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/organisation/slu-styrelse/" id="navItm3rdLvl935" data-group="navGrp225544">SLU:s styrelse</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/organisation/gemensamma-verksamhetsstodet/" id="navItm3rdLvl226782" data-group="navGrp225544">Gemensamma verksamhetsst&#246;det</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/organisation/universitetsledningen/" id="navItm3rdLvl388835" data-group="navGrp225544">Universitetsledning</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/namndvalet-2024/" id="navItm2ndLvl694835" data-group="navGrp201628">Fakultetsn&#228;mndsval</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/administrativa-roller/" id="navItm2ndLvl36688" data-group="navGrp201628">Administrativa roller och projekt</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201628" data-destination="navGrp36688">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Administrativa roller</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp36688">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp36688" data-destination="navGrp201628">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Organisation &amp; styrning</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/administrativa-roller/de-administrativa-rollerna/" id="navItm3rdLvl37545" data-group="navGrp36688">Administrativa roller</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/Organisation-och-styrning/administrativa-roller/Administrativa-utvecklingsprojekt/" id="navItm3rdLvl929" data-group="navGrp36688">Administrativa utvecklingsprojekt</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/Organisation-och-styrning/vart-slu/" id="navItm2ndLvl499050" data-group="navGrp201628">V&#229;rt SLU</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+                    </div>
+                </div>
+
+                                            </li><li class="flex-shrink-0">
+                                                <a class="mega-menu__root-link mega-menu__root-link--expand d-block py-2 px-lg-2" href="/riktat/" id="navItm1stLvl201629" data-group="navGrpRoot" data-target="navGrp201629">Riktade sidor</a>
+                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrpRoot" data-destination="navGrp201629">
+                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Riktade sidor</span>
+                </button>
+                <div class="mega-menu__level mega-menu__level--two z-index-lg-1 d-lg-none mx-lg-3 p-lg-4" id="navGrp201629">
+                    <span class="fas fa-circle-location-arrow fa-2x d-none d-lg-inline me-2" aria-hidden="true"></span>
+                    <a class="d-none d-lg-inline" href="/riktat/">Startsida f&#246;r Riktade sidor</a>
+                    <hr class="d-none d-lg-block my-2">
+
+                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201629" data-destination="navGrpRoot">
+                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                        <span>Tillbaka till huvudmenyn</span>
+                    </button>
+
+                    <div class="mega-menu__mega-scroll">
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/riktat/interna-fakultetssidor/" id="navItm2ndLvl164" data-group="navGrp201629">Interna fakultetssidor</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201629" data-destination="navGrp164">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Interna fakultetssidor</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp164">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp164" data-destination="navGrp201629">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Riktade sidor</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/interna-fakultetssidor/ltv/" id="navItm3rdLvl62616" data-group="navGrp164">LTV-fakulteten</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/interna-fakultetssidor/nj-fak/" id="navItm3rdLvl2945" data-group="navGrp164">NJ-fakulteten</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/interna-fakultetssidor/s-fak/" id="navItm3rdLvl26142" data-group="navGrp164">S-fakulteten</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/interna-fakultetssidor/vh-fakulteten/" id="navItm3rdLvl24365" data-group="navGrp164">VH-fakulteten</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/riktat/skara-internt/" id="navItm2ndLvl502250" data-group="navGrp201629">Skara internt</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/riktat/lasta-interna-sidor/" id="navItm2ndLvl65655" data-group="navGrp201629">Interna institutionssidor (inlogg kr&#228;vs)</a>
+
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/riktat/malgrupp/" id="navItm2ndLvl42109" data-group="navGrp201629">F&#246;r dig som &#228;r</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201629" data-destination="navGrp42109">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r M&#229;lgruppsing&#229;ngar</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp42109">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp42109" data-destination="navGrp201629">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Riktade sidor</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/malgrupp/doktorand/" id="navItm3rdLvl38041" data-group="navGrp42109">Doktorand</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/malgrupp/forskare/" id="navItm3rdLvl53786" data-group="navGrp42109">Forskare</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/malgrupp/handlaggare-arendehandbok/" id="navItm3rdLvl320771" data-group="navGrp42109">Handl&#228;ggare</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/malgrupp/larare-studierektor/" id="navItm3rdLvl42110" data-group="navGrp42109">L&#228;rare/studierektor</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/utbildning/grund--och-avancerad-utbildning/stod/psr-stod/" id="navItm3rdLvl247255" data-group="navGrp42109">Programstudierektor</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/malgrupp/kommunikator/" id="navItm3rdLvl404267" data-group="navGrp42109">Kommunikat&#246;r</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+            <ul>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/riktat/administrativa-roller/" id="navItm2ndLvl213215" data-group="navGrp201629">Administrativa roller</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201629" data-destination="navGrp213215">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Administrativa roller</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp213215">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp213215" data-destination="navGrp201629">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Riktade sidor</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/ekonomi/administrativa-roller-ekonomi/ekonomirollerna/beslutsstod/" id="navItm3rdLvl385205" data-group="navGrp213215">Beslutsst&#246;d</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/ekonomi/administrativa-roller-ekonomi/ekonomirollerna/ekonomiregistrerare/" id="navItm3rdLvl385204" data-group="navGrp213215">Ekonomiregistrerare</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/administrativa-roller/katalogansvarig/" id="navItm3rdLvl73900" data-group="navGrp213215">Katalogansvarig</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/administrativa-roller/personalrollen-personalregistreringsrollen/" id="navItm3rdLvl510753" data-group="navGrp213215">Personalrollen/personalregistreringsrollen</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/ekonomi/administrativa-roller-ekonomi/ekonomirollerna/projektekonom/" id="navItm3rdLvl385206" data-group="navGrp213215">Projektekonom</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/administrativa-roller/webbpublicerare/" id="navItm3rdLvl213219" data-group="navGrp213215">Webbpublicerare</a>
+                                                </li>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/stod-service/admin-stod/ekonomi/administrativa-roller-ekonomi/ekonomirollerna/overgripande-ekonom/" id="navItm3rdLvl385207" data-group="navGrp213215">&#214;vergripande ekonom</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+                    <li class="py-2 pt-lg-0">
+                            <a href="/riktat/personalforeningar/" id="navItm2ndLvl428" data-group="navGrp201629">Personalf&#246;reningar</a>
+
+                                <button class="icon-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp201629" data-destination="navGrp428">
+                                    <span class="fas fa-chevron-right fa-fw" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Visa navigeringl&#228;nkar f&#246;r Personalf&#246;reningar</span>
+                                </button>
+                                <div class="mega-menu__level mega-menu__level--three" id="navGrp428">
+                                    <button class="mega-menu__back-button mega-menu__mobile-traverse d-lg-none" type="button" data-origin="navGrp428" data-destination="navGrp201629">
+                                        <span class="fas fa-chevron-left fa-fw" aria-hidden="true"></span>
+                                        <span>Tillbaka till Riktade sidor</span>
+                                    </button>
+
+                                    <div class="mega-menu__mega-scroll">
+                                        <ul>
+                                                <li class="py-2 pb-lg-0">
+                                                    <a href="/riktat/personalforeningar/ultuna-konstklubb/" id="navItm3rdLvl643824" data-group="navGrp428">Ultuna konstklubb</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                        <hr class="d-none d-lg-block mt-2 mb-0">
+                    </li>
+            </ul>
+                    </div>
+                </div>
+
+                                            </li><li class="flex-shrink-0">
+                                                <a class="mega-menu__root-link  d-block py-2 px-lg-2" href="/nyheter/" id="navItm1stLvl528082" data-group="navGrpRoot" data-target="navGrp528082">Nyheter</a>
+
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+<div id="breadcrumbs" class="d-none d-lg-block print-hidden">
+    <div class="breadcrumbs py-2">
+        <ul class="m-0">
+
+            <li><a href="/">Start MW</a></li>
+                            <li><span class="divider">/</span></li>
+                <li>[Inst&#228;llningar]</li>
+                <li><span class="divider">/</span></li>
+                <li>Sida inte hittad</li>
+
+        </ul>
+    </div>
+</div>
+
+    <form class="quick-search z-index-1 py-4 py-lg-5" id="quickSearch" action="/sok/" autocomplete="off" method="Get" novalidate="novalidate">
+        <div class="container-fluid">
+            <div class="row px-3">
+                <div class="quick-search__input col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3" id="quickSearchInput">
+                    <input id="quick-search-ac" name="searchQuery" placeholder="S&#246;k" type="text">
+                    <label class="visually-hidden" for="quick-search-ac">Vad s&#246;ker du?</label>
+                    <button class="searchbutton icon-button me-2" id="quicksearchbutton" type="submit" value="">
+                        <span class="icon-button__icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">S&#246;k</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function (event) {
+            $('#quickSearch').on("submit", function () {
+                $('.loading').show();
+            });
+            $('#quickSearchMobile').on("submit", function () {
+                $('.loading').show();
+            });
+            $('#globalSearch').on("submit", function () {
+                $('.loading').show();
+            });
+        });
+    </script>
+</header>
+
+
+    <main class="content-wrapper z-index-1 position-relative" id="main">
+
+        
+
+
+
+<div class="content-area">
+    <div class="container">
+        <div class="main-area" id="main-area">
+            <div class="row">
+                <div class="main-content col-12 col-lg-8 offset-lg-2 p-0">
+
+
+                    <div class="main-content__text">
+
+                        <header>
+                            <h1 class="border-title" >Tyv&#228;rr lyckas vi inte hitta sidan du s&#246;kte…</h1>
+
+                                                            <div class="publish-info">Senast &#228;ndrad: 26 maj 2021</div>
+
+
+
+                        </header>
+
+                        <aside class="sticker-functions-mobile print-hidden d-lg-none">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between flex-wrap gap-3 xpx-sm-4 xpx-md-5" id="sticker-functions-mobile">
+
+        <div><a href="#contact-information-header" class="clearfix"><span class="fas fa-user fa-2x fa-fw"></span><span>Kontakt</span></a></div>
+
+<div class="js-printbtn d-none d-lg-block">
+    <a href="#" class="clearfix"><span class="fas fa-print fa-2x fa-fw"></span><span>Skriv ut</span></a>
+</div>
+
+
+
+
+<div><a href="#share-box-header" class="clearfix"><span class="fas fa-users fa-2x fa-fw"></span><span>Dela</span></a></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+
+                        
+
+
+
+
+    <p class="intro " >Anv&#228;nd l&#228;nkarna i toppmenyn h&#246;gst upp p&#229; sidan eller n&#229;gon av ing&#229;ngssidorna i huvudmenyn i den gula listen ovan, s&#229; kanske du &#228;nd&#229; kan hitta det du s&#246;ker.</p>
+
+
+<div class="main-body clearfix " >
+    
+<div class="xhtmlstring">
+    <p>Söksidor:</p>
+<ul>
+<li><strong><a href="~/link/442953806b5b4293870af36920cd8c62.aspx">Söksida</a></strong> (söker bland SLU:s webbsidor)</li>
+</ul>
+<ul>
+<li><strong><a href="/installningar/sok-anstalld/">Sök anställd</a></strong> (söker i SLU:s personalkatalog)</li>
+</ul>
+<p>Huvudmenyns ingångssidor på medarbetarwebben:</p>
+<ul>
+<li><strong><a href="/min-anstallning/">Min anställning</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="/stod-service/">Stöd &amp; service</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="/Organisation-och-styrning/">Organisation &amp; styrning</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="/riktat/">Riktade sidor</a></strong></li>
+</ul>
+<p>Eller vill du komma till någon av SLU:s andra webbplatser?</p>
+<ul>
+<li><strong><a href="https://www.slu.se/">www.slu.se</a></strong> (SLU:s officiella webbplats)</li>
+</ul>
+<ul>
+<li><strong><a href="https://student.slu.se/">Studentwebben</a></strong> (för studenter vid SLU)</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.slu.se/site/bibliotek/">Biblioteket</a></strong> (för anställda och studenter, men även för en intresserad allmänhet)</li>
+</ul>
+<p>Tipsa oss gärna om du hittar fel på någon webbsida! Skriv i så fall till oss i <a href="mailto:webbredaktionen@slu.se">webbredaktionen@slu.se</a> och tala om vilken sida det gäller och vad felet består i, så åtgärdar vi det eller skickar vidare till ansvarig webbpublicerare.</p>
+<h2>Sorry, the page you requested could not be found…</h2>
+<p>Try searching for the page via the menu above.</p>
+<p>If you find any errors on our web pages, we are grateful for a message to <a href="mailto:webbredaktionen@slu.se">webbredaktionen@slu.se</a> describing the address of the page and the nature of the error.&nbsp;&nbsp;</p>
+</div>
+
+</div>
+
+
+
+
+<div class="secondary-body" >
+    
+<div class="xhtmlstring">
+    
+</div>
+
+</div>
+
+
+
+<article class="contact-information-box">
+    <hr />
+    <h2 id="contact-information-header" >
+        <span class="fas fa-user fa-fw"></span>
+        Kontaktinformation
+    </h2>
+    <div class="row"><div class="block contactinfoblock full col-12">
+<div class="contact-info-body" >
+    
+<div class="xhtmlstring">
+    <p><a href="mailto:webbredaktionen@slu.se">webbredaktionen@slu.se</a></p>
+</div>
+
+</div>
+</div></div>
+</article>
+
+
+    <div class="share-box print-hidden">
+        <hr />
+        <h2 id="share-box-header">Dela:</h2>
+        <div class="share-functions">
+            <ul class="rrssb-buttons">
+                <li class="rrssb-email">
+                    <a href="mailto:?subject=Tyv%c3%a4rr+lyckas+vi+inte+hitta+sidan+du+s%c3%b6kte%e2%80%a6+-+Medarbetarwebben&amp;body=http://internt.slu.se/404?404;http://internt.slu.se:80/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/globalassets/mw/stod-serv/utbildning/grund--och-avancerad-niva/utbildningshandbok/bilaga-1-utbildningsorganisationen-2023.pdf">
+                        <span class="rrssb-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                                <path d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z" />
+                            </svg>
+                        </span>
+                        <span class="rrssb-text">E-post</span>
+                    </a>
+                </li>
+                <li class="rrssb-facebook">
+                    <a href="http://www.facebook.com/sharer.php?u=http://internt.slu.se/404?404;http://internt.slu.se:80/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/globalassets/mw/stod-serv/utbildning/grund--och-avancerad-niva/utbildningshandbok/bilaga-1-utbildningsorganisationen-2023.pdf" class="popup">
+                        <span class="rrssb-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="29" height="29" viewBox="0 0 29 29">
+                                <path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
+                                        class="cls-2" fill-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <span class="rrssb-text">Facebook</span>
+                    </a>
+                </li>
+                <li class="rrssb-linkedin">
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://internt.slu.se/404?404;http://internt.slu.se:80/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/globalassets/mw/stod-serv/utbildning/grund--och-avancerad-niva/utbildningshandbok/bilaga-1-utbildningsorganisationen-2023.pdf&amp;title=Tyv%c3%a4rr+lyckas+vi+inte+hitta+sidan+du+s%c3%b6kte%e2%80%a6&amp;summary=&amp;source=AddToAny">
+                        <span class="rrssb-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                                <path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z" />
+                            </svg>
+                        </span>
+                        <span class="rrssb-text">LinkedIn</span>
+                    </a>
+                </li>
+                <li class="rrssb-twitter">
+                    <a href="http://twitter.com/intent/tweet?text=http://internt.slu.se/404?404;http://internt.slu.se:80/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/globalassets/mw/stod-serv/utbildning/grund--och-avancerad-niva/utbildningshandbok/bilaga-1-utbildningsorganisationen-2023.pdf%20(via%20SLU)" class="popup">
+                        <span class="rrssb-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 1200 1227">
+                                <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white" />
+                            </svg>
+                        </span>
+                        <span class="rrssb-text">X</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+                       
+
+
+                    </div>
+                </div>
+                <aside class="print-hidden col-lg-2 d-none d-lg-block xps-4">
+                    <div id="sticker-functions">
+
+        <div><a href="#contact-information-header" class="clearfix"><span class="fas fa-user fa-2x fa-fw"></span><span>Kontakt</span></a></div>
+
+<div class="js-printbtn d-none d-lg-block">
+    <a href="#" class="clearfix"><span class="fas fa-print fa-2x fa-fw"></span><span>Skriv ut</span></a>
+</div>
+
+
+
+
+<div><a href="#share-box-header" class="clearfix"><span class="fas fa-users fa-2x fa-fw"></span><span>Dela</span></a></div>
+
+
+                    </div>
+                </aside>
+            </div>
+           
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="loading z-index-3">Loading&#8230;</div>
+    </main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row print-hidden">
+
+            <div class="col-md-3 link-collection">
+                <h2>Organisationsenheter</h2>
+                <hr />
+                
+<div class="xhtmlstring">
+    <ul>
+<li><a href="https://www.slu.se/site/bibliotek/">Biblioteket</a></li>
+<li><a href="https://www.slu.se/om-slu/organisation/centrumbildningar-projekt/">Centrumbildningar och samarbetsprojekt</a></li>
+<li><a href="http://www.sluholding.se/" class="external-link">SLU Holding</a></li>
+<li><a href="/Organisation-och-styrning/organisation/gemensamma-verksamhetsstodet/">Gemensamma verksamhetsst&ouml;det</a></li>
+</ul>
+</div>
+
+
+                    <div class="form-group pt-3 mb-4">
+                        <select class="form-element__input" id="Layout_Column1_Foot_Title" name="Layout.Column1_Foot_Title" onchange="document.location.href=this.options[this.selectedIndex].value;"><option value="/">V&#228;lj institution</option>
+<option value="https://www.slu.se/institutioner/hippologutbildning/">Enheten f&#246;r hippologutbildning</option>
+<option value="https://www.slu.se/institutioner/skoglig-faltforskning/">Enheten f&#246;r skoglig f&#228;ltforskning</option>
+<option value="https://www.slu.se/institutioner/husdjursgenetik/">Husdjursgenetik</option>
+<option value="https://www.slu.se/institutioner/akvatiska-resurser/">Institutionen f&#246;r akvatiska resurser</option>
+<option value="https://www.slu.se/institutioner/anatomi-fysiologi-biokemi/">Institutionen f&#246;r anatomi, fysiologi och biokemi</option>
+<option value="https://www.slu.se/institutioner/biomedicin-veterinar-folkhalsovetenskap/">Institutionen f&#246;r biomedicin och veterin&#228;r folkh&#228;lsovetenskap</option>
+<option value="https://www.slu.se/institutioner/biosystem-teknologi/">Institutionen f&#246;r biosystem och teknologi</option>
+<option value="https://www.slu.se/institutioner/ekologi/">Institutionen f&#246;r ekologi</option>
+<option value="https://www.slu.se/institutioner/ekonomi/">Institutionen f&#246;r ekonomi</option>
+<option value="https://www.slu.se/institutioner/energi-teknik/">Institutionen f&#246;r energi och teknik</option>
+<option value="https://www.slu.se/institutioner/husdjurens-biovetenskaper/">Institutionen f&#246;r husdjurens biovetenskaper</option>
+<option value="https://www.slu.se/institutioner/husdjurens-miljo-halsa/">Institutionen f&#246;r husdjurens milj&#246; och h&#228;lsa</option>
+<option value="https://www.slu.se/institutioner/husdjurens-utfodring-vard/">Institutionen f&#246;r husdjurens utfodring och v&#229;rd</option>
+<option value="https://www.slu.se/institutioner/kliniska-vetenskaper/">Institutionen f&#246;r kliniska vetenskaper</option>
+<option value="https://www.slu.se/institutioner/kommande-ku/">Institutionen f&#246;r kliniska vetenskaper</option>
+<option value="https://www.slu.se/institutioner/landskapsarkitektur-planering-forvaltning/">Institutionen f&#246;r landskapsarkitektur, planering och f&#246;rvaltning</option>
+<option value="https://www.slu.se/institutioner/mark-miljo/">Institutionen f&#246;r mark och milj&#246;</option>
+<option value="https://www.slu.se/institutioner/molekylara-vetenskaper/">Institutionen f&#246;r molekyl&#228;ra vetenskaper</option>
+<option value="https://www.slu.se/institutioner/institutionen-for-manniska-och-samhalle/">Institutionen f&#246;r m&#228;nniska och samh&#228;lle</option>
+<option value="https://www.slu.se/institutioner/norrlandsk-jordbruksvetenskap/">Institutionen f&#246;r norrl&#228;ndsk jordbruksvetenskap</option>
+<option value="https://www.slu.se/institutioner/skogens-biomaterial-teknologi/">Institutionen f&#246;r skogens biomaterial och teknologi (SBT)</option>
+<option value="https://www.slu.se/institutioner/skogens-ekologi-skotsel/">Institutionen f&#246;r skogens ekologi och sk&#246;tsel</option>
+<option value="https://www.slu.se/institutioner/skoglig-genetik-vaxtfysiologi/">Institutionen f&#246;r skoglig genetik och v&#228;xtfysiologi</option>
+<option value="https://www.slu.se/institutioner/skoglig-mykologi-vaxtpatologi/">Institutionen f&#246;r skoglig mykologi och v&#228;xtpatologi</option>
+<option value="https://www.slu.se/institutioner/skoglig-resurshushallning/">Institutionen f&#246;r skoglig resurshush&#229;llning</option>
+<option value="https://www.slu.se/institutioner/skogsekonomi/">Institutionen f&#246;r skogsekonomi</option>
+<option value="https://www.slu.se/institutioner/stad-land/">Institutionen f&#246;r stad och land</option>
+<option value="https://www.slu.se/institutioner/sydsvensk-skogsvetenskap/">Institutionen f&#246;r sydsvensk skogsvetenskap</option>
+<option value="https://www.slu.se/institutioner/institutionen-for-tillampad-husdjursvetenskap-och-valfard/">Institutionen f&#246;r till&#228;mpad husdjursvetenskap och v&#228;lf&#228;rd</option>
+<option value="https://www.slu.se/institutioner/vatten-miljo/">Institutionen f&#246;r vatten och milj&#246;</option>
+<option value="https://www.slu.se/institutioner/vilt-fisk-miljo/">Institutionen f&#246;r vilt, fisk och milj&#246;</option>
+<option value="https://www.slu.se/institutioner/vaxtbiologi-skogsgenetik/">Institutionen f&#246;r v&#228;xtbiologi</option>
+<option value="https://www.slu.se/institutioner/vaxtforadling/">Institutionen f&#246;r v&#228;xtf&#246;r&#228;dling</option>
+<option value="https://www.slu.se/institutioner/vaxtproduktionsekologi/">Institutionen f&#246;r v&#228;xtproduktionsekologi</option>
+<option value="https://www.slu.se/institutioner/vaxtskyddsbiologi/">Institutionen f&#246;r v&#228;xtskyddsbiologi</option>
+<option value="https://www.slu.se/institutioner/skogsmastarskolan/">Skogsm&#228;starskolan</option>
+</select>
+                        <label class="visually-hidden" for="Layout_Column1_Foot_Title">V&#228;lj institution</label>
+                    </div>
+            </div>
+
+            <div class="col-md-3 link-collection">
+                <h2>F&#246;r dig som &#228;r</h2>
+                <hr />
+                
+<div class="xhtmlstring">
+    <ul>
+<li><a href="/riktat/malgrupp/chef/">Chef/ledare</a></li>
+<li><a href="/riktat/malgrupp/doktorand/">Doktorand eller handledare</a></li>
+<li><a href="/riktat/malgrupp/forskare/">Forskare</a></li>
+<li><a href="/riktat/malgrupp/handlaggare-arendehandbok/">Handl&auml;ggare</a></li>
+<li><a href="/stod-service/admin-stod/kommunikation-marknadsforing/kommunikator/">Kommunikat&ouml;r</a></li>
+<li><a href="/riktat/malgrupp/larare-studierektor/">L&auml;rare/studierektor</a></li>
+<li><a href="/stod-service/utbildning/grund--och-avancerad-utbildning/stod/psr-stod/">Programstudierektor</a></li>
+</ul>
+</div>
+
+            </div>
+
+            <div class="col-md-3 link-collection">
+                <h2>Senaste nytt fr&#229;n</h2>
+                <hr />
+                
+<div class="xhtmlstring">
+    <ul>
+<li><a href="https://arbetsplats.slu.se/sites/IT/Lists/Driftinfo/Aktuella.aspx" class="external-link">Driftinformation</a></li>
+<li><a href="/min-anstallning/lediga-anstallningar/">Lediga anst&auml;llningar</a></li>
+<li><a href="http://blogg.slu.se/rektor/" class="external-link">Rektorsbloggen</a></li>
+<li><a href="/stod-service/samverkan/slu-i-media/">SLU i media</a></li>
+<li><a href="https://play.slu.se/" class="external-link">SLU Play</a></li>
+</ul>
+</div>
+
+            </div>
+
+            <div class="col-md-3 link-collection">
+                <h2>Vanliga verktyg  </h2>
+                <hr />
+                
+<div class="xhtmlstring">
+    <ul>
+<li><a href="/verktyg/proceedo/">Proceedo (best&auml;llningar, fakturor)</a>&nbsp;</li>
+<li><a href="/verktyg/primula-sjalvservice/">Primula (ledighet, sjukanm&auml;lan, l&ouml;nespec m.m.)</a></li>
+<li><a href="/Organisation-och-styrning/styrande-dokument-och-beslut/protokoll-och-rektorsbeslut/">Protokoll och beslutslistor</a></li>
+<li><a href="/verktyg/webbmail/">Webbmejl</a></li>
+</ul>
+</div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            
+<div class="xhtmlstring">
+    <p>SLU, Sveriges lantbruksuniversitet, har verksamhet &ouml;ver hela Sverige. Huvudorter &auml;r Alnarp, Uppsala och Ume&aring;.&nbsp;<span>SLU &auml;r milj&ouml;certifierat enligt ISO 14001.&nbsp;&bull;&nbsp;</span>Telefon: 018-67 10 00 &bull; Org nr: 202100-2817 &bull; <a href="/installningar/om-medarbetarwebben/">Om medarbetarwebben</a>&nbsp;&bull;&nbsp;<a href="/stod-service/admin-stod/ekonomi/SLU-foretagsuppgifter/">SLU:s fakturaadress</a>&nbsp;&bull; <a href="https://www.slu.se/om-slu/om-webbplatsen/">Om SLU:s webbplatser</a>&nbsp;&bull; &nbsp;<a href="/stod-service/admin-stod/sakerhet/nar-nagot-hant/">Vid KRIS</a> &bull;&nbsp;<a id="cookiesettings" href="https://www.slu.se/">Hantera kakor</a> &bull; <a href="https://www.slu.se/om-slu/kontakta-slu/personuppgifter/">Behandling av personuppgifter</a></p>
+</div>
+
+        </div>
+    </div>
+</footer>
+
+<script type="text/template" id="rss-reader-template">
+    <ul>
+        <% _.each(rssItems,function(rssItem){ %>
+        <li>
+            <article class="row page-list__item">
+                <div class="page-list__item-content">
+                    <h2 class="xmt-0">
+                        <a href="<%= rssItem.Url%>" title="<%= rssItem.Title%>" target="<%= rssItem.Target%>"><%= rssItem.Title%></a>
+                    </h2>
+                    <%{if(!rssItem.HideDescription)%>
+                        <p class="mb-3"><%= rssItem.Description%></p>
+                    <%}%>
+                    <%{if(!rssItem.HidePublishDate)%>
+                        <span class="page-list__item-date"><%= rssItem.PublishDate%></span>
+                    <%}%>
+                </div>
+            </article>
+        </li>
+        <% }); %>
+    </ul>
+</script>
+
+
+
+<script src="/bundles/js/jquery?v=wzmMqmwPA4ZwYf2Pg7AzqyalnpjUEGnAScgqBYnMvv01"></script>
+
+
+<script src="/bundles/js/bootstrap?v=TiyUPipFpe71FggUTN6rZ3ZVnBy7ggrVXsdO7CcrI181"></script>
+
+
+<script src="/bundles/js/global?v=tCN0dPiz59ImkA5ixb9xUlKBmDl6C9j5M92ZOPqqj5o1"></script>
+
+
+
+
+    <script>
+        main.init();
+
+    </script>
+
+
+
+    <script>
+
+        window.addEventListener('message', function (e) {
+            var $div = jQuery("#lokaler-div");
+            var eventName = e.data[0];
+            var data = e.data[1];
+            switch (eventName) {
+                case 'setHeight_lokaler':
+                    $div.css("padding-bottom", data);
+                    break;
+            }
+        }, false);
+
+        window.addEventListener('message', function (e) {
+            var $div = jQuery("#videobokning-div");
+            var eventName = e.data[0];
+            var data = e.data[1];
+            switch (eventName) {
+                case 'setHeight_videobokning':
+                    $div.css("padding-bottom", data);
+                    break;
+            }
+        }, false);
+
+        window.addEventListener('message', function (e) {
+            var $div = jQuery("#mog-div");
+            var eventName = e.data[0];
+            var data = e.data[1];
+            switch (eventName) {
+                case 'setHeight_mog':
+                    $div.css("padding-bottom", data);
+                    break;
+            }
+        }, false);
+
+        window.addEventListener("message", function (e) {
+            var $div = jQuery("#markinfo-div");
+            var eventName = e.data[0];
+            var data = e.data[1];
+            switch (eventName) {
+                case 'setHeight_markinfo':
+                    $div.css("padding-bottom", data);
+                    break;
+            }
+        }, false);
+
+        window.ScrollToTop = function () {
+            $('html,body', window.document).animate({
+                scrollTop: '0px'
+            }, 'fast');
+        };
+
+        if (!helpers.isInEditMode()) {
+            $("#sticker-functions").sticky({ topSpacing: 75 });
+        }
+    </script>
+
+    <script type="text/javascript" src="/ClientResources/Scripts/find.js"></script>
+<script type="text/javascript">
+if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}
+</script>
+ 
+
+    
+
+
+</body>
+</html>

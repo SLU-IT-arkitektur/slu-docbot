@@ -8,7 +8,7 @@ def call_chat_completions(prompt: str):
     def worker():
         nonlocal response
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             temperature=0.0,
             messages=[
                 {"role": "user", "content": prompt}
@@ -17,7 +17,7 @@ def call_chat_completions(prompt: str):
 
     thread = threading.Thread(target=worker)
     thread.start()
-    thread.join(timeout=25)  # give open ai 25 seconds to respond
+    thread.join(timeout=65)  # give open ai 45 seconds to respond
 
     if thread.is_alive():
         raise TimeoutError("OpenAI API call took to long")

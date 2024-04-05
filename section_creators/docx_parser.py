@@ -1,10 +1,10 @@
-from docx import Document
-from typing import Tuple, Iterator
-
-
 '''
 This module parses a word document and extracts (headers, text, anchor_url) sections and yields one tuple at a time through a generator function.
 '''
+
+
+from docx import Document
+from typing import Tuple, Iterator
 
 
 def parse_docx(path_to_doc) -> Iterator[Tuple[str, str]]:

@@ -23,11 +23,11 @@ sections_min_similarity_score = sections_min_similarity_score_default_value if s
 
 
 def check_required():
-    if prompt_instructions is None:
-        logging.error("PROMPT_INST is not set")
-        exit(1)
     if redis_host is None:
         logging.error("Error: REDIS_HOST is not set")
+        exit(1)
+    if prompt_instructions is None:
+        logging.error("PROMPT_INST is not set")
         exit(1)
     if redis_port is None:
         logging.error("Error: REDIS_PORT is not set")

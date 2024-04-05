@@ -1,7 +1,10 @@
+'''
+This module exposes a create_embeddings function that takes an index_prefix and a sections generator and creates embeddings for each section and stores them in redis
+'''
+
 import os
 import redis
 from redis.commands.search.field import VectorField, TextField
-from redis.commands.search.indexDefinition import IndexDefinition, IndexType
 import numpy as np
 from util import get_embedding, num_tokens_from_string
 from dotenv import load_dotenv
@@ -21,18 +24,11 @@ SCHEMA = [
     VectorField("embedding", "HNSW", {"TYPE": "FLOAT32", "DIM": 1536, "DISTANCE_METRIC": "COSINE"}),
 ]
 
-# Create the index
-try:
-    print("creating index")
-    conn.ft("section").create_index(fields=SCHEMA, definition=IndexDefinition(prefix=["section:"], index_type=IndexType.HASH))
-except Exception as e:
-    print(e)
-    print("Index already exists")
 
 p = conn.pipeline(transaction=False)
 
 
-def create_embeddings(sections_generator):
+def create_embeddings(index_prefix: str, sections_generator):
     total_number_of_tokens = 0
     print('subscribing to sections_generator function and creating embeddings one (header, text, anchor_url) tuple at a time and saving them in redis')
     for header, text, anchor_url in sections_generator:
@@ -46,7 +42,6 @@ def create_embeddings(sections_generator):
         embedding = get_embedding(text)  # max tokens 8191!
         # convert to numpy array
         vector = np.array(embedding).astype(np.float32).tobytes()
-        # section-link default "" eller null? ska fungera även om section creator från docx eller pdf osv..
         section_hash = {
             "header": header,
             "body": text,
@@ -54,7 +49,7 @@ def create_embeddings(sections_generator):
             "num_of_tokens": num_of_tokens_in_section,
             "embedding": vector
         }
-        conn.hset(name=f"section:{header}", mapping=section_hash)
+        conn.hset(name=f"{index_prefix}{header}", mapping=section_hash)
 
     p.execute()
     print(f"Total number of tokens for this embeddings run: {total_number_of_tokens}")

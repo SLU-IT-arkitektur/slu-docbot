@@ -9,7 +9,6 @@ from server import settings
 
 
 class RedisStore:
-    SECTION_INDEX = "section"
 
     INTERACTION_INDEX = "interaction"
     INTERACTION_PREFIX = "interaction:"
@@ -29,6 +28,15 @@ class RedisStore:
         TextField("section_headers_as_json"),
         VectorField("embedding", "HNSW", {"TYPE": "FLOAT32", "DIM": 1536, "DISTANCE_METRIC": "COSINE"}),
     ]
+
+    SECTION_SCHEMA = [
+        TextField("header"),
+        TextField("body"),
+        TextField("num_of_tokens"),
+        VectorField("embedding", "HNSW", {"TYPE": "FLOAT32", "DIM": 1536, "DISTANCE_METRIC": "COSINE"}),
+    ]
+    SECTION_BLUE = "section_blue"
+    SECTION_GREEN = "section_green"
 
     redis_host = settings.redis_host
     redis_port = settings.redis_port
@@ -56,6 +64,15 @@ class RedisStore:
             logging.info(e)
             pass  # assume the index already exists
 
+    def _ensure_section_index(self, section_idx, conn: redis.Redis):
+        prefix = f"{section_idx}:"
+        try:
+            conn.ft(section_idx).create_index(fields=self.SECTION_SCHEMA, definition=IndexDefinition(prefix=[prefix], index_type=IndexType.HASH))
+            logging.info(f"Created section index {section_idx} with prefix {prefix}")
+        except Exception as e:
+            logging.info(e)
+        pass  # assume the index already exists
+
     def _connect_redis(self, retries=5, delay=5):
         for i in range(retries):
             try:
@@ -65,6 +82,14 @@ class RedisStore:
                     logging.info("Connected to Redis")
                     self._ensure_interaction_feedback_search_index(conn)
                     self._ensure_semantic_cache_search_index(conn)
+                    self._ensure_section_index(self.SECTION_BLUE, conn)
+                    self._ensure_section_index(self.SECTION_GREEN, conn)
+                    # ensure the active section index is set
+                    active_section_index = conn.get('active_section_index')
+                    if active_section_index is None or active_section_index == "":
+                        logging.info(f"active_section_index not set, setting to {self.SECTION_BLUE}")
+                        active_section_index = self.SECTION_BLUE
+                        conn.set('active_section_index', active_section_index)
                     return conn
             except redis.ConnectionError as e:
                 if i < retries - 1:
@@ -76,8 +101,56 @@ class RedisStore:
                 else:
                     raise
 
+    def set_embeddings_version(self, date_and_time: datetime):
+        dt = date_and_time.strftime("%Y-%m-%d")
+        logging.info(f'setting embeddings_version to {dt}')
+        try:
+            self.conn.set('embeddings_version', dt)
+        except Exception as e:
+            logging.error("Error setting embeddings version in Redis: ", e)
+            raise
+
+    def get_embeddings_version(self) -> datetime:
+        try:
+            version = self.conn.get('embeddings_version')
+            return version
+        except Exception as e:
+            logging.error("Error getting embeddings version from Redis: ", e)
+            return None
+
+    def get_active_section_index(self) -> str:
+        active_section_index = self.conn.get('active_section_index')
+        return active_section_index
+
+    def get_passive_section_index(self):
+        active_section_index = self.get_active_section_index()
+        if active_section_index == self.SECTION_BLUE:
+            return self.SECTION_GREEN
+        else:
+            return self.SECTION_BLUE
+
+    def set_active_section_index(self, section_idx: str):
+        try:
+            logging.info(f'setting active_section_index to {section_idx}')
+            self.conn.set('active_section_index', section_idx)
+        except Exception as e:
+            logging.error("Error setting active_section_index in Redis: ", e)
+            raise
+
+    def delete_all_sections(self, section_idx):
+        prefix = f"{section_idx}:*"
+        try:
+            logging.info(f'deleting all sections in index {section_idx}')
+            keys = self.conn.keys(prefix)
+            logging.info(f'deleting {len(keys)}')
+            if keys is not None and len(keys) != 0:
+                self.conn.delete(*keys)
+        except Exception as e:
+            logging.error("Error deleting all sections from Redis: ", e)
+            raise
+
     def set_interaction(self, interaction_id: any, start_time: float, query: str, reply: str, cache_reply: dict, chat_completions_req_duration: float,
-                        feedback: str = "not given", expiration=timedelta(minutes=10)):
+                        feedback: str = "not given", expiration=timedelta(days=7)):
 
         stop_time = time.time()
         request_duration = round(stop_time - start_time, 0)
@@ -157,13 +230,27 @@ class RedisStore:
             logging.error("Error saving semantic cache entry to Redis: ", e)
             return None
 
-    def search_sections(self, query_vector, top_k=5):
+    def delete_all_semantic_cache_entries(self):
+        try:
+            keys = self.conn.keys(f"{self.SEMANTIC_CACHE_PREFIX}*")
+            if keys is not None and len(keys) != 0:
+                self.conn.delete(*keys)
+        except Exception as e:
+            logging.error("Error deleting semantic cache entries from Redis: ", e)
+            return None
+
+    def search_sections(self, query_vector, top_k=5, use_passive_index=False):
+        section_index = self.get_active_section_index()
+        if use_passive_index:
+            logging.info("using passive index!")
+            section_index = self.get_passive_section_index()
+
+        logging.info(f"searching in active_section_index {section_index}")
         base_query = f"*=>[KNN {top_k} @embedding $vector AS vector_score]"
         query = Query(base_query).return_fields("header", "body", "anchor_url",
                                                 "num_of_tokens", "vector_score").sort_by("vector_score").dialect(2)
-
         try:
-            results = self.conn.ft(self.SECTION_INDEX).search(
+            results = self.conn.ft(section_index).search(
                 query, query_params={"vector": query_vector})
         except Exception as e:
             logging.info("Error calling Redis search: ", e)

@@ -1,0 +1,19 @@
+FROM python:3.11-slim-buster
+WORKDIR /app
+COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
+# set time zone
+ENV TZ=Europe/Stockholm
+
+# create and use non-root user.. (requires us to use a port number higher than 1024)
+RUN adduser \
+  --disabled-password \
+  --home /worker \
+  --gecos '' worker \
+  && chown -R worker /worker
+
+
+USER worker
+
+ENTRYPOINT ["python", "embeddings_updater.py"]
+

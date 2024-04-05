@@ -1,4 +1,4 @@
 window.env = {
     'ENVIRONMENT': 'test',
-    "API_URL": "https://chatbotpoc.app.slu.se/"
+    "API_URL": "https://utbildningshandboken.app.slu.se/"
 };

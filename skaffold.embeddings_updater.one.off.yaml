@@ -4,16 +4,16 @@ build:
   local:
     push: false
   artifacts:
-    - image: docbot
+    - image: embeddings-worker
       context: .
       docker:
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.worker
 manifests:
   rawYaml:
     - ./devops/k8s/local/openai-secret.yaml
     - ./devops/k8s/local/prompt-secret.yaml
     - ./devops/k8s/local/redis-stack-server.yaml
-    - ./devops/k8s/local/chatbot.yaml
+    - ./devops/k8s/local/one-off-embeddings-updater.yaml
 deploy:
   statusCheck: false
   kubectl: {}

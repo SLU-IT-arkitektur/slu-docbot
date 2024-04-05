@@ -36,3 +36,13 @@
     color: hsl(195, 85%, 41%);
     display: none;
 }
+#updated-info {
+    margin-top:10px;
+    font-style: italic;
+    font-size: 0.8em;
+    display: none;
+}
+#updated-info-header {
+    font-style: italic;
+    font-size: 0.8em;
+}

@@ -1,0 +1,46 @@
+[
+    {
+        "question": "När ska studieavgiften betalas?",
+        "answer": "Studieavgiften ska betalas inför varje termin enligt SLU:s fastställda tidpunkt för betalning enligt SUHF:s rekommendationer. Hela avgiften måste normalt sett ha inkommit till SLU för att studenten ska få påbörja terminens kurser."
+    },
+    {
+        "question": "När ska kurslitteraturen finnas tillgänglig?",
+        "answer": "Kurslitteraturen ska finnas tillgänglig via kurssidan senast åtta (8) veckor före kursstart."
+    },
+    {
+        "question": "Vad är Cellbiologi och vilka typer studeras på SLU?",
+        "answer": "Cellbiologi är vetenskapen om cellens struktur, funktion och reglering samt interaktioner mellan celler i vävnader och organ. På SLU studeras särskilt signalering, metabolism, försvar och adhesion inom området Cellbiologi."
+    }, 
+    {
+        "question": "Vad är egentligen fusk?",
+        "answer": "Fusk definieras som handlingar där en student avsiktligt försöker vilseleda läraren för att påverka bedömningen av sin studieprestation. Detta kan inkludera användning av otillåtna hjälpmedel vid prov, ändring av återlämnade bedömda tentamina, otillåtet samarbete på individuella uppgifter, kopiering av andra studenters arbeten, plagiering, fabricering av uppgifter, förfalskning av dokument, felaktig anteckning om närvaro vid obligatorisk undervisning, och oriktig uppgift om tidigare studieprestationer. För att en handling ska klassas som fusk krävs det att studenten medvetet har agerat med uppsåt att vilseleda, och varit medveten om att handlingen inte var tillåten."
+     },
+    {
+        "question": "När ska kursschemat finnas tillgängligt egentligen?",
+        "answer": "Kursschemat ska finnas tillgängligt via kurssidan senast fyra (4) veckor före kursstart."
+    },
+    {
+        "question": "Vad är en lärmiljö?",
+        "answer": "En lärmiljö är en fysisk eller virtuell plats för lärande. Den kan finnas inomhus, utomhus eller på webben. Formella lärmiljöer inkluderar aulor, undervisningssalar, laborationssalar och grupprum som kan bokas för lärarledd undervisning. Informella lärmiljöer består av publika utrymmen, ofta i anslutning till formella lärmiljöer, som används av studenter för enskilda arbeten eller grupparbeten. Lärplattformar, eller Learning management systems, är en del av den virtuella lärmiljön."
+    },
+    {
+        "question": "Vem beslutar om stipendier till avgiftsskyldiga studenter?",
+        "answer": "Beslut om tilldelning av stipendier till berörda studenter fattas av chefen för utbildningsavdelningen."
+    },
+    {
+        "question": "Kan det finnas stipendier till avgiftsskyldiga studenter?",
+        "answer": "Ja, det finns stipendier till avgiftsskyldiga studenter vid SLU. Enligt förordningen (2010:718) om stipendier till avgiftsskyldiga studenter får SLU dela ut stipendier som avser hela eller delar av studieavgiften till särskilt kvalificerade avgiftsskyldiga studenter."
+    },
+    {
+        "question": "Har studenter någon upphovsrätt för det de gör?",
+        "answer": "Ja, studenter vid SLU har upphovsrätt till sina självständiga arbeten och motsvarande. Handledarens medverkan i dessa arbeten leder inte till gemensam upphovsrätt. Detta innebär att studenten ensam har rättigheter till det material och de resultat som genereras i samband med exempelvis examensarbeten, så länge de inte ingår i ett större forskningsprojekt där andra regler kan gälla."
+    },
+    {
+        "question": "Vilka examinationsformer finns på SLU?",
+        "answer": "Vanliga examinationsformer vid SLU inkluderar: 1. **Salstentamen** - Denna form av tentamen skrivs på plats på campus i anvisade salar. Den kan ske skriftligt på papper eller via ett digitalt system för tentamen. 2. **Muntlig tentamen** - Kan ske digitalt eller fysiskt. Examinationen får spelas in så länge det inte är i studentens hemmiljö. 3. **Praktiska examinationer** - Vid dessa examinationer ska i möjligaste mån samma regler gälla som vid skriftliga salstentamina. Anonymitetskoder ska tillämpas om möjligt. 4. **Inlämningsuppgift och hemtentamen** - Vid en hemtentamen utför studenten provet utan vaktning och på annan plats än i SLU:s lokaler; kan ske via digitalt system för tentamen eller via inlämning. 5. **Självständigt arbete (examensarbete)** - Detaljer om denna form finns i kapitel 9 i dokumentet. Dessa är de examinationsformer som nämns i det tillhandahållna dokumentet från SLU."
+    },
+    {
+        "question": "Vem kan vara examinator?",
+        "answer": "En examinator vid SLU kan vara en person som uppfyller något av följande kriterier: 1. På grundnivå: - Personen har minst magisterexamen inom relevant område eller yrkesexamen på avancerad nivå inom relevant område. - Personen är anställd vid kursansvarig eller medansvarig institution. - Personen har genomgått kurs i examination och betygssättning. 2. På avancerad nivå: - Personen har minst doktorsexamen inom relevant område. - Personen är anställd vid kursansvarig eller medansvarig institution. - Personen har genomgått kurs i examination och betygssättning. Dessutom finns det specifika anställningskriterier som måste uppfyllas: - Alternativ 1a: Personen har läraranställning som professor, gästprofessor, adjungerad professor, universitetslektor, biträdande universitetslektor, adjungerad universitetslektor, universitetsadjunkt, eller adjungerad universitetsadjunkt. - Alternativ 1b: Personen har tidigare haft läraranställning som professor, adjungerad professor, lektor, adjungerad lektor, adjunkt, adjungerad adjunkt, forskarassistent eller varit tim- eller gästlärare. - Alternativ 2: Personen innehar inte läraranställning men har doktorsexamen och tillsvidareanställning som kräver doktorsexamen eller motsvarande kompetens samt relevant pedagogisk kompetens motsvarande kraven för anställning som universitetslektor. Tidsbegränsade dispenser för att vara examinator kan beviljas av den ansvariga fakulteten."
+    }
+  ]

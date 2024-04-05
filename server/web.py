@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+load_dotenv()  # this needs to be before some other imports
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from pathlib import Path
@@ -11,7 +12,6 @@ from .auth import authenticate
 from .redis_store import RedisStore
 from .feedback_handler import handle_feedback
 from .query_handler import handle_query
-load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 settings.check_required()   # .. or fail early!
@@ -25,6 +25,15 @@ static_folder = Path(__file__).parent / "static"
 @app.get("/")
 async def root(credentials: HTTPBasicCredentials = Depends(authenticate)):
     return FileResponse(static_folder / "index.html")
+
+
+@app.get("/embeddings_version", status_code=200)
+async def embeddings_version(credentials: HTTPBasicCredentials = Depends(authenticate)):
+    version = redis_store.get_embeddings_version()
+    resp = {
+        'version': version
+    }
+    return resp
 
 
 @app.get("/static/{file_name}")
