@@ -5,7 +5,7 @@ This is a QA bot that can answer questions about a given document. In this examp
 ## prerequisites
 - a local k8s cluster, e.g [docker desktop](https://www.docker.com/products/docker-desktop/) (with kubernetes **"enabled"**)  
 - [skaffold](https://skaffold.dev/) (for building and deploying the app to the cluster)
-- python 3.10.x
+- python 3.11.x
 - an OpenAI API key 
 
 ## get started
