@@ -9,7 +9,7 @@ This is a QA bot that can answer questions about a given document. In this examp
 - an OpenAI API key 
 
 ## get started
-- create a virtual environment: `python3 -m venv env`   
+- create a virtual environment: `python3.11 -m venv env`   
 - create a .env file in the root of this project with the following content:
 ```
 REDIS_HOST = 'localhost'
