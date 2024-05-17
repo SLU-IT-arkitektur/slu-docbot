@@ -10,7 +10,7 @@ def run():
     ''')
 
     section_generator = docx_parser.parse_docx('data/cleaned-v1-Utbildningshandboken.docx')
-    redis_store.create_embeddings(section_generator)
+    redis_store.create_embeddings("section_blue:", section_generator)
     print('done')
 
 

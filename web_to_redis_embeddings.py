@@ -10,7 +10,7 @@ def run():
     ''')
 
     sections_generator = web_scraper.extract_content('https://internt.slu.se/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/')
-    redis_store.create_embeddings(sections_generator)
+    redis_store.create_embeddings("section_blue:", sections_generator)
 
 
 if __name__ == '__main__':

@@ -48,13 +48,16 @@ stringData:
 
 
 ## run locally in Kubernetes
-- activate the virtual environment: `source env/bin/activate`
-- run: `skaffold run --tail`  
+1. activate the virtual environment: `source env/bin/activate`
+2. run: `skaffold run --tail`  
   or if you want you can stand up redis-stack only with `skaffold run -f skaffold.exclude.bot.yaml` and run the bot locally with reloading by running `./bot.sh`
-- run: `python docx_to_redis_embeddings.py` to populate redis with embeddings *(repeat this step between skaffold delete's)*  
-(you can also run `python web_to_redis_embeddings.py` to populate redis with embeddings by scraping the web version)   
-(and you can also run the embeddings_updater, see *run embeddings_updater* below)  
-- now go to localhost:8000 in your browser and ask away..
+
+3. run: (**news!**) see *run embeddings_updater* below 
+
+... you can also run: `python docx_to_redis_embeddings.py` to populate redis with embeddings *(repeat this step between skaffold delete's)*  
+... and you can also run `python web_to_redis_embeddings.py` to populate redis with embeddings by scraping the web version     
+
+4. now go to localhost:8000 in your browser and ask away..
 
 In both scenarios (*skaffold.yaml and skaffold.exclude.bot.yaml*) redis persists data in a volume mounted to the redis container. This means that you can stop and start the bot without having to re-populate redis with embeddings.
 If you want to reset redis you can run: `skaffold delete` and then `skaffold run --tail` again.  
