@@ -5,10 +5,7 @@ from fastapi.responses import FileResponse
 from pathlib import Path
 from pydantic import BaseModel
 import logging
-from fastapi import Depends
-from fastapi.security import HTTPBasicCredentials
 from server import settings
-from .auth import authenticate
 from .redis_store import RedisStore
 from .feedback_handler import handle_feedback
 from .query_handler import handle_query
@@ -23,12 +20,12 @@ static_folder = Path(__file__).parent / "static"
 
 
 @app.get("/")
-async def root(credentials: HTTPBasicCredentials = Depends(authenticate)):
+async def root():
     return FileResponse(static_folder / "index.html")
 
 
 @app.get("/embeddings_version", status_code=200)
-async def embeddings_version(credentials: HTTPBasicCredentials = Depends(authenticate)):
+async def embeddings_version():
     version = redis_store.get_embeddings_version()
     resp = {
         'version': version
@@ -37,7 +34,7 @@ async def embeddings_version(credentials: HTTPBasicCredentials = Depends(authent
 
 
 @app.get("/static/{file_name}")
-async def static(file_name: str, credentials: HTTPBasicCredentials = Depends(authenticate)):
+async def static(file_name: str):
     return FileResponse(static_folder / file_name)
 
 
@@ -46,7 +43,7 @@ class QAPayload(BaseModel):
 
 
 @app.post("/qa", status_code=200)
-async def qa(payload: QAPayload, credentials: HTTPBasicCredentials = Depends(authenticate)):
+async def qa(payload: QAPayload):
     return handle_query(payload.query, redis_store)
 
 
@@ -56,5 +53,5 @@ class FeedbackPayload(BaseModel):
 
 
 @app.post("/feedback", status_code=200)
-async def feedback(payload: FeedbackPayload, credentials: HTTPBasicCredentials = Depends(authenticate)):
+async def feedback(payload: FeedbackPayload):
     return handle_feedback(payload.feedback, payload.interaction_id, redis_store)

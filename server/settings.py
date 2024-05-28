@@ -6,8 +6,6 @@ prompt_instructions = os.getenv('PROMPT_INST')
 redis_host = os.getenv('REDIS_HOST')
 redis_port = os.getenv('REDIS_PORT')
 redis_password = os.getenv('REDIS_PASSWORD')
-correct_username = os.getenv('USERNAME')
-correct_password = os.getenv('PASSWORD')
 
 semantic_cache_enabled_default_value = True
 semantic_cache_enabled = os.getenv('SEMANTIC_CACHE_ENABLED')
@@ -34,12 +32,6 @@ def check_required():
         exit(1)
     if redis_password is None:
         logging.error("Error: REDIS_PASSWORD is not set")
-        exit(1)
-    if correct_username is None:
-        logging.error("Error: USERNAME is not set")
-        exit(1)
-    if correct_password is None:
-        logging.error("Error: PASSWORD is not set")
         exit(1)
 
     logging.info('Settings initialized successfully')
