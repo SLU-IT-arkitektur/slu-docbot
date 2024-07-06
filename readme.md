@@ -17,6 +17,7 @@ REDIS_PORT = 6379
 REDIS_PASSWORD = 'mysecretpassword'
 OPENAI_API_KEY = 'REPLACE_WITH_YOUR_OPENAI_API_KEY'
 PROMPT_INST = 'REPLACE_WITH_YOUR_PROMPT'
+PROMPT_INST_EN = 'REPLACE_WITH_YOUR_EN_PROMPT'
 ```  
 - activate the virtual environment: `source env/bin/activate`   
 - install dependencies: `pip install -r requirements.txt`  
@@ -40,6 +41,7 @@ metadata:
 type: Opaque
 stringData:
   instructions: REPLACE_WITH_YOUR_PROMPT
+  instructions-en: REPLACE_WITH_YOUR_EN_PROMPT
 
 ```  
 

@@ -14,6 +14,8 @@ spec:
     spec:
       containers:
         - env:
+            - name: CHATBOT_LANG
+              value: "en"
             - name: SEMANTIC_CACHE_ENABLED
               value: "true"
             - name: SEMANTIC_CACHE_MIN_SIMILARITY_SCORE
@@ -36,6 +38,11 @@ spec:
                 secretKeyRef:
                   name: openai
                   key: api-key
+            - name: PROMPT_INST_EN
+              valueFrom:
+                secretKeyRef:
+                  name: prompt
+                  key: instructions-en
             - name: PROMPT_INST
               valueFrom:
                 secretKeyRef:

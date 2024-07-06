@@ -1,6 +1,7 @@
 from datetime import timedelta
 from fastapi.responses import JSONResponse
 from .redis_store import RedisStore
+from server import settings
 
 
 def handle_feedback(feedback: str, interaction_id: str, redis_store: RedisStore):
@@ -18,4 +19,4 @@ def handle_feedback(feedback: str, interaction_id: str, redis_store: RedisStore)
     interaction["feedback"] = feedback
     redis_store.update_interaction(interaction, interaction_id, timedelta(days=90))
 
-    return {"message": "Tack för din feedback!"}
+    return {"message": settings.get_locale()["server_texts"]["thanks_for_feedback"]}

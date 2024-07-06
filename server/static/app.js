@@ -2,8 +2,12 @@ const App = {
     apiUrl: window.env.API_URL,
     state: {
         interaction_id: '',
+        locale: {}
     },
     $: {
+        appHeader: document.getElementById('app-header'),
+        intro: document.getElementById('intro'),
+        loggingInfo: document.getElementById('logging-info'),
         inputEl: document.getElementById('queryInput'),
         feedbackSpan: document.getElementById('feedbackSpan'),
         responseDiv: document.querySelector('.response'),
@@ -23,7 +27,7 @@ const App = {
             App.$.feedbackSpan.style.display = 'none';
         },
         showProgressbar: () => {
-            App.$.responseDiv.innerHTML = "<span aria-busy='true'>Söker efter svaret i Utbildningshandboken...</span>";
+            App.$.responseDiv.innerHTML = `<span aria-busy='true'>${App.state.locale.progressbar_info}</span>`;
         },
         hideProgressbar: () => {
             const pb = App.$.responseDiv.querySelector('progress');
@@ -31,6 +35,9 @@ const App = {
         },
         enableInput: () => {
             App.$.inputEl.disabled = false;
+        },
+        setInputElPlaceholder: (str) => {
+            App.$.inputEl.placeholder = str;
         },
         disableInput: () => {
             App.$.inputEl.disabled = true;
@@ -52,6 +59,15 @@ const App = {
         },
         hideUpdatedInfoSpan: () => {
             App.$.updatedInfo.style.display = 'none';
+        },
+        setAppHeaderSpanText: (str) => {
+            App.$.appHeader.textContent = str;
+        },
+        setIntro: (str) => {
+            App.$.intro.innerHTML = str;
+        },
+        setLoggingInfoSpanText: (str) => {
+            App.$.loggingInfo.textContent = str;
         },
         setCacheInfoSpanText: (str) => {
             App.$.cacheInfo.textContent = str;
@@ -124,7 +140,7 @@ const App = {
     sendQuery: async () => {
         const query = App.$.inputEl.value.trim();
         if (query.length < 1) {
-            App.$.setResponseDivText("Du måste ställa en fråga...");
+            App.$.setResponseDivText(App.state.locale.validation.min_length);
             return;
         }
 
@@ -145,18 +161,18 @@ const App = {
                 App.state.interaction_id = data.interaction_id;
                 App.$.setResponseDivText(data.message); // textContent does not parse HTML (safer when presenting response from LLM)
                 if (data.from_cache && data.from_cache === 'true') {
-                    App.$.setCacheInfoSpanText(`OBS: Svaret på din fråga levereras direkt från vår cache (snabbminne). Detta sker när en fråga är väldigt lik en tidigare ställd fråga. Det hjälper oss att leverera svar snabbare och effektivare. Den ursprungliga frågan, från vilken vi återanvände svaret, var:  "${data.original_query}"`);
+                    App.$.setCacheInfoSpanText(`${App.state.locale.cache_info_intro} ${data.original_query}`);
                     App.$.showCacheInfoSpan();
                 }
                 App.$.showFeedbackSpan();
                 if (data.sectionHeaders && data.sectionHeaders.length > 0) {
-                    App.$.appendReadmoreHtml('Läs mer:<br/>');
+                    App.$.appendReadmoreHtml(`${App.state.locale.read_more}:<br/>`);
                     data.sectionHeaders.forEach(s => {
                         App.$.appendReadmoreHtml(`${s}<br/>`);
                     });
                 }
                 if (data.embeddings_version) {
-                    App.$.setUpdatedInfoSpanText(`(chatbot uppdaterad mot källa:  ${data.embeddings_version})`);
+                    App.$.setUpdatedInfoSpanText(`${App.state.locale.updated_source_with_placeholder_for_embver.replace('PLACEHOLDER', data.embeddings_version)}`);
                     App.$.showUpdatedInfoSpan();
                 }
             } else {
@@ -184,13 +200,28 @@ const App = {
     displayEmbeddingsUpdatedAtInfo: async () => {
         const response = await fetch(App.apiUrl + 'embeddings_version', {
             method: 'GET',
-       });
+        });
         if (response.ok) {
             const data = await response.json();
             if (data && data.version) {
-               App.$.setUpdatedInfoHeaderSpanText(`(chatbot uppdaterad mot källa:  ${data.version})`) 
+                App.$.setUpdatedInfoHeaderSpanText(`${App.state.locale.updated_source_with_placeholder_for_embver.replace('PLACEHOLDER', data.version)}`);
             }
         }
+    },
+    loadLocaleAndSetUITexts: async () => {
+        const response = await fetch(App.apiUrl + 'locale', {
+            method: 'GET',
+        });
+        if (response.ok) {
+            const data = await response.json();
+            App.state.locale = data;
+            App.$.setIntro(App.state.locale.intro)
+            App.$.setUpdatedInfoHeaderSpanText(App.state.locale.updated_source)
+            App.$.setLoggingInfoSpanText(App.state.locale.logging_info)
+            App.$.setAppHeaderSpanText(App.state.locale.app_header)
+            App.$.setInputElPlaceholder(App.state.locale.textbox_placeholder)
+        }
+
     },
     wireEvents: () => {
         App.$.inputEl.addEventListener('keydown', async (e) => {
@@ -202,6 +233,7 @@ const App = {
         });
     },
     init: () => {
+        App.loadLocaleAndSetUITexts();
         App.displayEmbeddingsUpdatedAtInfo();
         App.wireEvents();
         App.$.renderFeedbackSpan();

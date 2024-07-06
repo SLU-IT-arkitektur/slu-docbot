@@ -35,12 +35,12 @@ def handle_query(query: str, redis_store: RedisStore, use_passive_index=False):
         similar_sections, total_tokens_allowed_for_request)
 
     # prompt injection mitigation technique: not sending the query if it is not similar enough to the context
-    # if less than 1000 tokens in the context it's probably not enough to give a good answer
-    if context is None or len(context) == 0 or tokens_in_context < 1000:
+    # if less than 100 tokens in the context it's probably not enough to give a good answer
+    if context is None or len(context) == 0 or tokens_in_context < 100:
         redis_store.set_interaction(
             interaction_id, start_time, query, '', cache_reply=None, chat_completions_req_duration=0)
         logging.info('query is not similar enough to the context')
-        return {"interaction_id": str(interaction_id), "message": "Jag hittar inget svar på din fråga i Utbildningshandboken"}
+        return {"interaction_id": str(interaction_id), "message": settings.get_locale()["server_texts"]["not_similar_enough_to_context"]}
 
     # prompt injection mitigation technique: having the last word..
     prompt = f'''context: """{context}""" question: """{query}"""
@@ -51,23 +51,24 @@ def handle_query(query: str, redis_store: RedisStore, use_passive_index=False):
                                                                     "cl100k_base")) + " tokens to the API")
 
     chat_completions_req_start = time.time()
+    catch_all_error_msg = settings.get_locale()["server_texts"]["errors"]["something_went_wrong"]
     try:
         response = call_chat_completions(prompt)
     except openai.error.APIError as e:
         logging.error(f"OpenAI API returned an API Error: {e}")
-        return {"message": "Något gick fel :("}
+        return {"message": catch_all_error_msg}
     except openai.error.APIConnectionError as e:
         logging.error(f"Failed to connect to OpenAI API: {e}")
-        return {"message": "Något gick fel :("}
+        return {"message": catch_all_error_msg}
     except openai.error.RateLimitError as e:
         logging.error(f"OpenAI API request exceeded rate limit: {e}")
-        return {"message": "Något gick fel :("}
+        return {"message": catch_all_error_msg}
     except TimeoutError as e:
         logging.error(f"OpenAI API request timed out: {e}")
-        return JSONResponse(content={"message": "OpenAI har väldigt långa svarstider just nu, var god försök igen senare."}, status_code=200)
+        return JSONResponse(content={"message": settings.get_locale()["server_texts"]["errors"]["openai_timeout"]}, status_code=200)
     except Exception as e:
         logging.error("unknown error", e)
-        return {"message": "Något gick fel :("}
+        return {"message": catch_all_error_msg}
 
     chat_completions_req_stop = time.time()
     chat_completions_req_duration = round(
@@ -154,12 +155,12 @@ def create_read_more_content(similar_sections) -> str:
 
 def validate(query: str) -> Tuple[bool, str]:
     if len(query) < 1:
-        return False, "Please enter a query"
+        return False, settings.get_locale()["server_texts"]["validation"]["min_length"]
 
     if len(query) > 80:
         logging.info(f'query is too long (max 80 characters): {len(query)}')
         logging.info(query)
-        return False, "Max 80 tecken"
+        return False, settings.get_locale()["server_texts"]["validation"]["max_length"]
 
     return True, ""
 

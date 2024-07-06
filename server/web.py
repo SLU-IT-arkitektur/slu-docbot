@@ -38,6 +38,12 @@ async def static(file_name: str):
     return FileResponse(static_folder / file_name)
 
 
+@app.get("/locale", status_code=200)
+async def locale():
+    locale = settings.get_locale()
+    return locale["ui_texts"]
+
+
 class QAPayload(BaseModel):
     query: str
 

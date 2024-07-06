@@ -29,11 +29,21 @@ except Exception as e:
 
 index_prefix = f"{target_section_index}:"
 print("\nextracting sections from web page and creating embeddings...\n")
-sections_generator = web_scraper.extract_content('https://internt.slu.se/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/')
+target_url = "https://internt.slu.se/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/"
+if settings.lang == "en":
+    target_url = "https://internt.slu.se/en/support-services/education/education-at-bachelors-and-masters-level/local-statutes-and-organization/education-planning-and-administration-handbook/"
+print(f'running with language {settings.lang} therefore setting target_url to {target_url}')
+
+sections_generator = web_scraper.extract_content(target_url)
 redis_embedding_store.create_embeddings(index_prefix, sections_generator)
 
 print("\nrunning Quality Assurance tests...\n")
-file_path = os.path.join(os.path.dirname(__file__), 'qa_qa.json')
+target_file = "qa_qa.json"
+if settings.lang == "en":
+    target_file = "qa_qa_en.json"
+print(f'running with language {settings.lang} therefore setting target_file to {target_file}')
+
+file_path = os.path.join(os.path.dirname(__file__), target_file)
 quality_qas = json.load(open(file_path))
 # disable semantic_cache when testing new embeddings
 settings.semantic_cache_enabled = False
@@ -52,6 +62,7 @@ for qa in quality_qas:
         exit(1)
 
 print(f"\nall qa tests passed, setting active section index to {target_section_index}\n")
+
 redis.set_active_section_index(target_section_index)
 
 print('\ndeleting semantic cache since we now have new fresh embeddings...\n')

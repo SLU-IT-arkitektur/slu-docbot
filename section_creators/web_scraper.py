@@ -1,5 +1,5 @@
 '''
-This module scrapes https://internt.slu.se/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/ and extracts (headers, text, anchor_url) sections and yields one tuple at a time through a generator function.
+This module scrapes the target url (Utbildningshandboken sv or en version) and extracts (headers, text, anchor_url) sections and yields one tuple at a time through a generator function.
 '''
 
 import requests
@@ -8,6 +8,8 @@ from typing import Tuple, Iterator
 from util import num_tokens_from_string, truncate_text
 import fitz  # imports the pymupdf library
 import tempfile
+from server import settings
+
 
 def extract_content(url: str) -> Iterator[Tuple[str, str]]:
     response = requests.get(url)
@@ -24,8 +26,15 @@ def extract_content(url: str) -> Iterator[Tuple[str, str]]:
     # strip out h2 tags that does not contain an anchor link
     all_special_h2 = [h2 for h2 in all_h2_tags if not h2.find('a', href=True)]
 
+    page_label = 'sida'
+    target_header = "Bilageförteckning"
+    if settings.lang == "en":
+        target_header = "Annexes"
+        page_label = 'page'
+
+    print(f'running with language {settings.lang} therefore looking for target_header {target_header}')
     # Bilagor (appendices)
-    last_appendices_header = [h2 for h2 in all_h2_tags if h2.text == "Bilageförteckning"][1]  # there are two of these headers, the second one is the one we want. it has the links
+    last_appendices_header = [h2 for h2 in all_h2_tags if h2.text == target_header][1]  # there are two of these headers, the second one is the one we want. it has the links
     if last_appendices_header is not None:
         print("found the appendices in the web document")
         # foreach a href in the paragraph directly below the Bilageföreckning header (all in one p right now..)
@@ -54,7 +63,7 @@ def extract_content(url: str) -> Iterator[Tuple[str, str]]:
                     print(f"number of tokens for page {tokens_for_page}")
                     total_tokens += tokens_for_page
                     a_tag_text = a_tag.get_text()
-                    yield f"{a_tag_text[:70]}... sida {page_number}", text, pdf_url
+                    yield f"{a_tag_text[:70]}... {page_label} {page_number}", text, pdf_url
 
                 print(f"total tokens for pdf {total_tokens}")
                 print("number of pages", len(pdf))

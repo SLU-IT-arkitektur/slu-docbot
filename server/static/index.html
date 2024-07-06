@@ -12,18 +12,15 @@
 <body>
     <main class="container">
         <section>
-            <h2>Chatbot Utbildningshandboken (beta)</h2>
+            <h2><span id="app-header"></span></h2>
             <img src="./static/chatbot.png" id="chatbotimg" alt="Chatbot Image"/>
-            <p>Jag är en chatbot som är specialiserad på <a target="_blank" href="https://internt.slu.se/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/">Utbildningshandboken</a>.
-            Ställ en fråga till mig nedan. Ibland kan jag tolka fel, verifiera därför gärna svaren själv i Utbildningshandboken. <span id="updated-info-header">(chatbot uppdaterad mot källa: ...)</span>
+                <p><span id="intro"></span> <span id="updated-info-header"></span>
              
             </p>
             <p class="info">
-                <i>OBS: Alla frågor och svar loggas för att förbättra chatboten. Dock loggas
-                    ingen information som kan kopplas till dig som användare, du är anonym. 
-                    Tänk på att aldrig ange några personuppgifter i dina frågor!</i>
+                    <i><span id="logging-info"></span></i>
             </p>
-            <input type="text" id="queryInput" placeholder="Ange din fråga här och tryck enter..">
+            <input type="text" id="queryInput">
         </section>
 
         <section>
