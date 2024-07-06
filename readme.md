@@ -17,9 +17,6 @@ REDIS_PORT = 6379
 REDIS_PASSWORD = 'mysecretpassword'
 OPENAI_API_KEY = 'REPLACE_WITH_YOUR_OPENAI_API_KEY'
 PROMPT_INST = 'REPLACE_WITH_YOUR_PROMPT'
-USERNAME = 'admin'
-PASSWORD = 'admin'
-
 ```  
 - activate the virtual environment: `source env/bin/activate`   
 - install dependencies: `pip install -r requirements.txt`  

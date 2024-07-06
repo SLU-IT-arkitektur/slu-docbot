@@ -15,10 +15,6 @@ spec:
               value: "0.81"
             - name: REDIS_HOST
               value: redis-service
-            - name: USERNAME
-              value: admin
-            - name: PASSWORD
-              value: admin
             - name: SPAENVIRONMENT
               value: "local"
             - name: REDIS_PORT
