@@ -1,0 +1,18 @@
+apiVersion: skaffold/v4beta5
+kind: Config
+build:
+  local:
+    push: false
+  artifacts:
+    - image: reporter
+      context: .
+      docker:
+        dockerfile: Dockerfile.reporter
+manifests:
+  rawYaml:
+    - ./devops/k8s/local/one-off-reporter.yaml
+    - ./devops/k8s/local/smtp4dev.yaml
+deploy:
+  statusCheck: false
+  kubectl: {}
+

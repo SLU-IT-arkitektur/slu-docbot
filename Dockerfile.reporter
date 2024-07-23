@@ -1,0 +1,22 @@
+FROM python:3.11
+WORKDIR /app
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
+# set time zone
+ENV TZ=Europe/Stockholm
+
+# create and use non-root user.. (requires us to use a port number higher than 1024)
+RUN adduser \
+  --disabled-password \
+  --home /reporter_usr \
+  --gecos '' reporter_usr \
+  && chown -R reporter_usr /reporter_usr
+
+RUN chown -R reporter_usr /app/reports
+
+USER reporter_usr
+WORKDIR /app/reports
+
+ENTRYPOINT ["python", "reporter.py"]
+

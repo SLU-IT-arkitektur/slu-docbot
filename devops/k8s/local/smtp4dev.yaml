@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: smtp4dev
+  name: smtp4dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smtp4dev
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: smtp4dev
+    spec:
+      containers:
+        - image: rnwood/smtp4dev
+          name: smtp4dev
+          ports:
+            - containerPort: 25
+            - containerPort: 80
+          resources: {}
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: smtp4dev
+  name: smtp4dev
+spec:
+  ports:
+    - name: "smtp"
+      port: 2525
+      targetPort: 25
+    - name: "web"
+      port: 5005
+      targetPort: 80
+  type: LoadBalancer
+  selector:
+    app: smtp4dev

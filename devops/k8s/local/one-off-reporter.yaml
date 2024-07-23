@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: one-off-reporter-run
+spec:
+  template:
+    spec:
+      containers:
+        - env:
+            - name: REPORT_RECEIVERS
+              value: "hellgrenj@gmail.com, johan.hellgren@bracketsquare.se"
+            - name: REPORT_SENDER_PASSWORD
+              value: "a_secret_password"
+            - name: REPORT_SMTP_HOST
+              value: "smtp4dev"
+            - name: REPORT_SMTP_PORT
+              value: "2525"
+            - name: REDIS_HOST
+              value: redis-service
+            - name: REDIS_PORT
+              value: "6379"
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: redis-secret
+                  key: redis-password
+          name: reporter
+          image: reporter
+      restartPolicy: Never
