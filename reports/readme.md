@@ -5,5 +5,6 @@
 3. open report.html
 
 # Run reporter locally
-1. run: ``docker run --rm -it -p 5005:80 -p 2525:25 rnwood/smtp4dev``  
-2. run: ``python reporter.py``  
+run: ``skaffold run -f skaffold.embeddings_updater.one.off.yaml --tail``  
+open localhost:5005 in your browser to access the smtp4dev UI and see the email with the attached report (pdf)     
+
