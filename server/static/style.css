@@ -6,9 +6,27 @@
     margin-bottom: 2px
 }
 
+#feedback-container {
+    padding-top:6px;
+    float: right;
+    display: none;
+    width: 500px;
+}
+
+/* if it is a mobile device, make the feedback container full width */
+@media only screen and (max-width: 600px) {
+    #feedback-container {
+        width: 100%;
+    }
+}
+#feedbackInput {
+    display: block;
+    resize: none;
+    margin-bottom: 0px;
+}
+
 #feedbackSpan {
     float: right;
-    display: none
 }
 
 .responseLabel {

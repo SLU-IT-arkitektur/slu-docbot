@@ -55,9 +55,10 @@ async def qa(payload: QAPayload):
 
 class FeedbackPayload(BaseModel):
     feedback: str
+    comment: str
     interaction_id: str
 
 
 @app.post("/feedback", status_code=200)
 async def feedback(payload: FeedbackPayload):
-    return handle_feedback(payload.feedback, payload.interaction_id, redis_store)
+    return handle_feedback(payload.feedback, payload.comment, payload.interaction_id, redis_store)

@@ -1,19 +1,19 @@
 {
     "ui_texts": {
-    "app_header": "Chatbot Utbildningshandboken (beta)",
-    "intro": "Jag är en chatbot som är specialiserad på <a target=\"_blank\" href=\"https://internt.slu.se/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/\">Utbildningshandboken</a>. Ställ en fråga till mig nedan. Ibland kan jag tolka fel, verifiera därför gärna svaren själv i Utbildningshandboken.",
-    "updated_source": "(chatbot uppdaterad mot källa: ...) ",
-    "updated_source_with_placeholder_for_embver": "(chatbot uppdaterad mot källa: PLACEHOLDER)",
-    "logging_info": "OBS: Alla frågor och svar loggas för att förbättra chatboten. Dock loggas ingen information som kan kopplas till dig som användare, du är anonym. Tänk på att aldrig ange några personuppgifter i dina frågor!",
-    "textbox_placeholder": "Ange din fråga här och tryck enter...",
-    "progressbar_info": "Söker efter svaret i Utbildningshandboken...",
-    "cache_info_intro": "OBS: Svaret på din fråga levereras direkt från vår cache (snabbminne). Detta sker när en fråga är väldigt lik en tidigare ställd fråga. Det hjälper oss att leverera svar snabbare och effektivare. Den ursprungliga frågan, från vilken vi återanvände svaret, var:",
-    "read_more": "Läs mer",
-    "validation": {
+        "app_header": "Chatbot Utbildningshandboken (beta)",
+        "intro": "Jag är en chatbot som är specialiserad på <a target=\"_blank\" href=\"https://internt.slu.se/stod-service/utbildning/grund--och-avancerad-utbildning/utbildningens-ramar/utbildningshandboken/\">Utbildningshandboken</a>. Ställ en fråga till mig nedan. Ibland kan jag tolka fel, verifiera därför gärna svaren själv i Utbildningshandboken.",
+        "updated_source": "(chatbot uppdaterad mot källa: ...) ",
+        "updated_source_with_placeholder_for_embver": "(chatbot uppdaterad mot källa: PLACEHOLDER)",
+        "logging_info": "OBS: Alla frågor och svar loggas för att förbättra chatboten. Dock loggas ingen information som kan kopplas till dig som användare, du är anonym. Tänk på att aldrig ange några personuppgifter i dina frågor och feedback!",
+        "textbox_placeholder": "Ange din fråga här och tryck enter...",
+        "progressbar_info": "Söker efter svaret i Utbildningshandboken...",
+        "cache_info_intro": "OBS: Svaret på din fråga levereras direkt från vår cache (snabbminne). Detta sker när en fråga är väldigt lik en tidigare ställd fråga. Det hjälper oss att leverera svar snabbare och effektivare. Den ursprungliga frågan, från vilken vi återanvände svaret, var:",
+        "read_more": "Läs mer",
+        "feedback_input_placeholder": "skriv gärna några ord här innan du klickar tummen upp eller tummen ner! (valfritt!)",
+        "validation": {
             "max_length": "Frågan får vara max 80 tecken lång.",
             "min_length": "Frågan får inte vara tom."
         }
-
     },
     "server_texts": {
         "thanks_for_feedback": "Tack för din feedback!",
@@ -26,7 +26,6 @@
             "something_went_wrong": "Något gick fel :(",
             "openai_timeout": "OpenAI har väldigt långa svarstider just nu, var god försök igen senare."
         }
-
     }
 }
 

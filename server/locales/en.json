@@ -4,11 +4,12 @@
         "intro": "I am a chatbot specialized in the <a target=\"_blank\" href=\"https://internt.slu.se/en/support-services/education/education-at-bachelors-and-masters-level/local-statutes-and-organization/education-planning-and-administration-handbook/\">Education Planning and Administration Handbook</a>. Ask me a question below. Sometimes I get things wrong, please verify important responses against the handbook.",
         "updated_source": "(chatbot updated against the source: ...)",
         "updated_source_with_placeholder_for_embver": "(chatbot updated against the source: PLACEHOLDER)",
-        "logging_info": "NOTE: All questions and answers are logged to improve the chatbot. However, no information that can be linked to you as a user is logged, you are anonymous. Remember to never provide any personal information in your questions!",
+        "logging_info": "NOTE: All questions and answers are logged to improve the chatbot. However, no information that can be linked to you as a user is logged, you are anonymous. Remember to never provide any personal information in your questions and feedback!",
         "textbox_placeholder": "Enter your question here and press enter...",
         "progressbar_info": "Searching for the answer in the Education Handbook...",
-        "cache_info_intro": "NOTE: The answer to your question is delivered directly from our cache (quick memory). This happens when a question is very similar to a previously asked question. It helps us deliver answers faster and more efficiently. The original question, from which we reused the answer, was:",
-        "read_more": "read more",
+        "cache_info_intro": "NOTE: The answer to your question is delivered directly from our cache (system memory). This happens when a question is very similar to a previously asked question. It helps us deliver answers faster and more efficiently. The original question, from which we reused the answer, was:",
+        "read_more": "Read more",
+        "feedback_input_placeholder": "Please write a few words here before you click thumbs up or thumbs down! (optional!)",
         "validation": {
             "max_length": "The question can be a maximum of 80 characters long.",
             "min_length": "The question cannot be empty."

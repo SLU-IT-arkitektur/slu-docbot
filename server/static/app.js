@@ -10,6 +10,8 @@ const App = {
         loggingInfo: document.getElementById('logging-info'),
         inputEl: document.getElementById('queryInput'),
         feedbackSpan: document.getElementById('feedbackSpan'),
+        feedbackContainer: document.getElementById('feedback-container'),
+        feedbackInput: document.getElementById('feedbackInput'),
         responseDiv: document.querySelector('.response'),
         cacheInfo: document.getElementById('cache-info'),
         updatedInfo: document.getElementById('updated-info'),
@@ -20,11 +22,11 @@ const App = {
                 <img src="./static/thumbsUp.png" onClick="App.sendFeedback('thumbsup')" class="feedbackButton" />
                 <img src="./static/thumbsDown.png" onClick="App.sendFeedback('thumbsdown')" class="feedbackButton" />`
         },
-        showFeedbackSpan: () => {
-            App.$.feedbackSpan.style.display = 'block';
+        showFeedbackContainer: () => {
+            App.$.feedbackContainer.style.display = 'inline-block';
         },
-        hideFeedbackSpan: () => {
-            App.$.feedbackSpan.style.display = 'none';
+        hideFeedbackContainer: () => {
+            App.$.feedbackContainer.style.display = 'none';
         },
         showProgressbar: () => {
             App.$.responseDiv.innerHTML = `<span aria-busy='true'>${App.state.locale.progressbar_info}</span>`;
@@ -41,6 +43,12 @@ const App = {
         },
         disableInput: () => {
             App.$.inputEl.disabled = true;
+        },
+        disableFeedbackInput: () => {
+            App.$.feedbackInput.disabled = true;
+        },
+        enableFeedbackInput: () => {
+            App.$.feedbackInput.disabled = false;
         },
         setResponseDivText: (str) => {
             App.$.responseDiv.textContent = str;
@@ -87,6 +95,12 @@ const App = {
         setReadmoreHtml: (str) => {
             App.$.readmore.innerHTML = str;
         },
+        setFeedbackInputValue: (str) => {
+            App.$.feedbackInput.value = str;
+        },
+        setFeedbackInputPlaceholder: (str) => {
+            App.$.feedbackInput.placeholder = str;
+        },
         appendReadmoreHtml: (str) => {
             App.$.readmore.innerHTML += str;
         }
@@ -94,12 +108,17 @@ const App = {
     },
     reset: () => {
         App.$.setReadmoreHtml('');
+        App.$.setResponseDivText('');
         App.$.hideCacheInfoSpan();
-        App.$.hideFeedbackSpan();
+        App.$.hideFeedbackContainer();
         App.$.hideUpdatedInfoSpan();
+        App.$.setFeedbackInputValue('');
+        App.$.enableFeedbackInput();
+
     },
     sendFeedback: async (str) => {
         try {
+            App.$.disableFeedbackInput();
             const response = await fetch(App.apiUrl + 'feedback', {
                 method: 'POST',
                 headers: {
@@ -107,7 +126,8 @@ const App = {
                 },
                 body: JSON.stringify({
                     "interaction_id": App.state.interaction_id,
-                    "feedback": str
+                    "feedback": str,
+                    "comment": App.$.feedbackInput.value.trim().substring(0, 300),
                 })
             });
             if (response.ok) {
@@ -115,8 +135,10 @@ const App = {
                 const message = data.message;
                 App.$.setFeedbackSpanHtml(`<strong>${message}</strong>`);
                 setTimeout(() => {
-                    App.$.hideFeedbackSpan();
+                    App.$.hideFeedbackContainer();
                     App.$.renderFeedbackSpan(); // re-render feedback span
+                    App.$.setFeedbackInputValue('');
+                    App.$.enableFeedbackInput();
                 }, 3000);
             } else {
                 console.error(`Error: ${response.status} ${response.statusText}`);
@@ -164,7 +186,7 @@ const App = {
                     App.$.setCacheInfoSpanText(`${App.state.locale.cache_info_intro} ${data.original_query}`);
                     App.$.showCacheInfoSpan();
                 }
-                App.$.showFeedbackSpan();
+                App.$.showFeedbackContainer();
                 if (data.sectionHeaders && data.sectionHeaders.length > 0) {
                     App.$.appendReadmoreHtml(`${App.state.locale.read_more}:<br/>`);
                     data.sectionHeaders.forEach(s => {
@@ -220,6 +242,7 @@ const App = {
             App.$.setLoggingInfoSpanText(App.state.locale.logging_info)
             App.$.setAppHeaderSpanText(App.state.locale.app_header)
             App.$.setInputElPlaceholder(App.state.locale.textbox_placeholder)
+            App.$.setFeedbackInputPlaceholder(App.state.locale.feedback_input_placeholder)
         }
 
     },
@@ -240,4 +263,4 @@ const App = {
     }
 
 }
-App.init();
+App.init()
