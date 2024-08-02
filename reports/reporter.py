@@ -10,6 +10,12 @@ from datetime import datetime
 
 generate_report()
 
+# get chatbot url from env var
+chatbot_url = os.getenv('CHATBOT_URL')
+if chatbot_url is None:
+    print("CHATBOT_URL env var not set")
+    exit(1)
+
 # get receivers as a comma separated string from env var
 receivers = os.getenv('REPORT_RECEIVERS')
 if receivers is None:
@@ -41,8 +47,8 @@ if smtp_port is None:
     exit(1)
 
 today = datetime.now().strftime('%Y-%m-%d')
-subject = f'Report for {today}'
-body = f'Se rapporten för {today} i bifogad pdf.'
+subject = f'Report for {chatbot_url} {today}'
+body = f'Se rapporten för {chatbot_url} {today} i bifogad pdf.'
 
 sender = "noreply@app.slu.se"
 
