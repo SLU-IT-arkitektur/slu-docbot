@@ -90,5 +90,8 @@ The embeddings_updater is a script that will perform the following steps when ex
 
 It is executed as a Kubernetes CronJob (on a configurable interval) in the test/prod environment but you can also run it locally either by running `python embeddings_updater.py` or `skaffold run -f skaffold.embeddings_updater.one.off.yaml` (both requires the chatbot to be up and running via `skaffold run`)
 
+## run the reporter
+check the [reports readme](./reports/readme.md)
+
 ## tests
 run ```python -m unittest discover``` in the root of this project
