@@ -8,7 +8,7 @@ spec:
       containers:
         - env:
             - name: CHATBOT_LANG
-              value: "en"
+              value: "sv"
             - name: SEMANTIC_CACHE_ENABLED
               value: "true"
             - name: SEMANTIC_CACHE_MIN_SIMILARITY_SCORE
