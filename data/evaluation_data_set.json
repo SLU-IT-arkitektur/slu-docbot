@@ -1,0 +1,63 @@
+[
+	{
+		"query": "Hur många hp av ett masterprogram behöver utgöras kurser på nivå A1F?",
+		"relevant_section_headers": [
+			{
+				"title": "11.1 Mål och krav för utbildningsprogram vid SLU",
+				"rel_grade": 5
+			},
+			{ "title": "9.2 Kursplan", "rel_grade": 4 },
+			{ "title": "6.2 Kursplan", "rel_grade": 3 },
+			{ "title": "1.4 Förändringar sedan föregående version", "rel_grade": 1 }
+		]
+	},
+	{
+		"query": "När ska kurslitteraturen finnas tillgänglig?",
+		"relevant_section_headers": [
+			{
+				"title": "7.1 Tidig kursinformation",
+				"rel_grade": 5
+			},
+			{ "title": "7.4 Kursstart", "rel_grade": 3 },
+			{ "title": "6.1 Utgångspunkter", "rel_grade": 2 }
+		]
+	},
+	{
+		"query": "Har studenter någon upphovsrätt för det de gör?",
+		"relevant_section_headers": [
+			{
+				"title": "3.6 Studenters upphovsrätt",
+				"rel_grade": 5
+			},
+			{
+				"title": "4.8 Lärares upphovsrätt",
+				"rel_grade": 3
+			},
+			{
+				"title": "3.14 Studentinflytande",
+				"rel_grade": 1
+			}
+		]
+	},
+
+	{
+		"query": "När börjar höstterminen?",
+		"relevant_section_headers": [
+			{ "title": "2.4 Läsår och terminstider", "rel_grade": 5 },
+			{ "title": "12.3 Tillfälligt antagningsstopp", "rel_grade": 1 }
+		]
+	},
+	{
+		"query": "Vad är cellbiologi och vilka sorter studeras på SLU?",
+		"relevant_section_headers": [
+			{
+				"title": "Bilaga 3b: Ämnesbeskrivningar för SLU:s huvudområden... sida 4",
+				"rel_grade": 5
+			},
+			{
+				"title": "Bilaga 3b: Ämnesbeskrivningar för SLU:s huvudområden... sida 21",
+				"rel_grade": 1
+			}
+		]
+	}
+]
