@@ -157,5 +157,39 @@
 				"rel_grade": 1
 			}
 		]
+	},
+	{
+		"query": "Kan det finnas stipendier till avgiftsskyldiga studenter?",
+		"relevant_section_headers": [
+			{
+				"title": "3.12 Stipendier",
+				"rel_grade": 5
+			},
+			{
+				"title": "3.11 Studenters skuldförhållanden",
+				"rel_grade": 3
+			},
+			{
+				"title": "3.10 Återbetalning av studieavgifter",
+				"rel_grade": 1
+			}
+		]
+	},
+	{
+		"query": "Vem kan vara examinator?",
+		"relevant_section_headers": [
+			{
+				"title": "4.5 Examinator",
+				"rel_grade": 5
+			},
+			{
+				"title": "4.6 Kompetenskrav för examinatorer",
+				"rel_grade": 4
+			},
+			{
+				"title": "4.7 Byte av examinator",
+				"rel_grade": 2
+			}
+		]
 	}
 ]
