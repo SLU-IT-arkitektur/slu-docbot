@@ -59,5 +59,103 @@
 				"rel_grade": 1
 			}
 		]
+	},
+	{
+		"query": "Vad är egentligen fusk?",
+		"relevant_section_headers": [
+			{
+				"title": "10.1 Fusk och plagiering",
+				"rel_grade": 5
+			},
+			{
+				"title": "10.3 Upptäcka och ingripa",
+				"rel_grade": 3
+			}
+		]
+	},
+	{
+		"query": "Vilka examinationsformer finns på SLU?",
+		"relevant_section_headers": [
+			{
+				"title": "8.1 Utgångspunkter",
+				"rel_grade": 5
+			},
+			{
+				"title": "8.9 Förnyad examination",
+				"rel_grade": 3
+			},
+			{
+				"title": "8.8 Alternativt examinationstillfälle",
+				"rel_grade": 2
+			}
+		]
+	},
+	{
+		"query": "Vem beslutar om stipendier till avgiftsskyldiga studenter?",
+		"relevant_section_headers": [
+			{
+				"title": "3.12 Stipendier",
+				"rel_grade": 5
+			},
+			{
+				"title": "3.11 Studenters skuldförhållanden",
+				"rel_grade": 2
+			},
+			{
+				"title": "3.9 Studieavgifter",
+				"rel_grade": 2
+			}
+		]
+	},
+	{
+		"query": "När ska studieavgiften betalas?",
+		"relevant_section_headers": [
+			{
+				"title": "3.9 Studieavgifter",
+				"rel_grade": 5
+			},
+			{
+				"title": "3.11 Studenters skuldförhållanden",
+				"rel_grade": 3
+			},
+			{
+				"title": "3.10 Återbetalning av studieavgifter",
+				"rel_grade": 2
+			}
+		]
+	},
+	{
+		"query": "När ska kursschemat finnas tillgängligt egentligen?",
+		"relevant_section_headers": [
+			{
+				"title": "7.1 Tidig kursinformation",
+				"rel_grade": 5
+			},
+			{
+				"title": "6.2 Kursplan",
+				"rel_grade": 4
+			},
+			{
+				"title": "6.1 Utgångspunkter",
+				"rel_grade": 2
+			}
+		]
+	},
+	{
+		"query": "Vad är en lärmiljö?",
+		"relevant_section_headers": [
+			{
+				"title": "3.2 Lärmiljöer",
+				"rel_grade": 5
+			},
+			{
+				"title": "Bilaga 3b: Ämnesbeskrivningar för SLU:s huvudområden... sida 22",
+				"rel_grade": 2
+			},
+			{
+				"title": "Bilaga 3b: Ämnesbeskrivningar för SLU:s huvudområden... sida 23",
+				"rel_grade": 1
+			}
+		]
 	}
 ]
