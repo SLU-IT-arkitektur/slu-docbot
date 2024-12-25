@@ -37,7 +37,6 @@ def get_query_vector(query: str) -> bytes:
     return np.array(query_embedding).astype(np.float32).tobytes()
 
 
-# TODO make sure the ground truth is correct!
 def load_evaluation_dataset() -> list[dict]:
     with open('./data/evaluation_data_set.json') as eds:
         data = json.load(eds)
