@@ -38,9 +38,19 @@ def get_query_vector(query: str) -> bytes:
 
 
 def load_evaluation_dataset() -> list[dict]:
-    with open('./data/evaluation_data_set.json') as eds:
-        data = json.load(eds)
-    return data
+    if settings.lang == "sv":
+        print('loading evaluation data set for swedish version')
+        with open('./data/evaluation_data_set.json') as eds:
+            data = json.load(eds)
+            return data
+    elif settings.lang == "en":
+        print('loading evaluation data set for engligh version')
+        with open('./data/evaluation_data_set_en.json') as eds:
+            data = json.load(eds)
+            return data
+    else:
+        print(f'language {settings.lang} not supported')
+        exit(1)
 
 
 def recall_k(k: int, data: dict, query_vector: bytes) -> float:
