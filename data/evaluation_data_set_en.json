@@ -1,0 +1,30 @@
+[
+	{
+		"query": "What is microbiology and who studies it at SLU?",
+		"relevant_section_headers": [
+			{
+				"title": "Annex 3b: Main fields of study with subject descriptions... page 7",
+				"rel_grade": 5
+			},
+			{
+				"title": "Annex 3b: Main fields of study with subject descriptions... page 8",
+				"rel_grade": 3
+			},
+			{
+				"title": "Annex 3b: Main fields of study with subject descriptions... page 9",
+				"rel_grade": 2
+			}
+		]
+	},
+	{
+		"query": "When should the course schedule be available?",
+		"relevant_section_headers": [
+			{
+				"title": "7.1 Early course information",
+				"rel_grade": 5
+			},
+			{ "title": "Annex 2: Annual cycle for course and programme planning... page 4", "rel_grade": 3 },
+			{ "title": "Annex 2: Annual cycle for course and programme planning... page 7", "rel_grade": 2 }
+		]
+	}
+]
