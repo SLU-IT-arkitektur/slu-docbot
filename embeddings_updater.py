@@ -38,9 +38,9 @@ sections_generator = web_scraper.extract_content(target_url)
 redis_embedding_store.create_embeddings(index_prefix, sections_generator)
 
 print("\nrunning Quality Assurance tests...\n")
-target_file = "qa_qa.json"
+target_file = "./data/qa_qa.json"
 if settings.lang == "en":
-    target_file = "qa_qa_en.json"
+    target_file = "./data/qa_qa_en.json"
 print(f'running with language {settings.lang} therefore setting target_file to {target_file}')
 
 file_path = os.path.join(os.path.dirname(__file__), target_file)
