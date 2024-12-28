@@ -95,7 +95,7 @@ class RedisStore:
                 if i < retries - 1:
                     logging.error(e)
                     logging.info(
-                        f'Retry {i+1}/{retries} failed, retrying in {delay} seconds')
+                        f'Retry {i + 1}/{retries} failed, retrying in {delay} seconds')
                     time.sleep(delay)
                     continue
                 else:
