@@ -1,0 +1,52 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: one-off-datapump-run
+spec:
+  template:
+    spec:
+      containers:
+        - env:
+            - name: STATSDB_CONNECTION_STRING
+              valueFrom:
+                 secretKeyRef:
+                  name: postgres-secret
+                  key: connection_string
+            - name: CHATBOT_LANG
+              value: "sv"
+            - name: SEMANTIC_CACHE_ENABLED
+              value: "true"
+            - name: SEMANTIC_CACHE_MIN_SIMILARITY_SCORE
+              value: "0.97"
+            - name: SECTIONS_MIN_SIMILARITY_SCORE
+              value: "0.81"
+            - name: REDIS_HOST
+              value: redis-service
+            - name: SPAENVIRONMENT
+              value: "local"
+            - name: REDIS_PORT
+              value: "6379"
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: redis-secret
+                  key: redis-password
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: openai
+                  key: api-key
+            - name: PROMPT_INST_EN
+              valueFrom:
+                secretKeyRef:
+                  name: prompt
+                  key: instructions-en
+            - name: PROMPT_INST
+              valueFrom:
+                secretKeyRef:
+                  name: prompt
+                  key: instructions
+
+          name: datapump
+          image: datapump
+      restartPolicy: Never

@@ -150,7 +150,7 @@ class RedisStore:
             raise
 
     def set_interaction(self, interaction_id: any, start_time: float, query: str, reply: str, cache_reply: dict, chat_completions_req_duration: float,
-                        feedback: str = "not given", expiration=timedelta(days=7)):
+                        feedback: str = "not given", expiration=timedelta(days=4)):
 
         stop_time = time.time()
         request_duration = round(stop_time - start_time, 0)
@@ -175,18 +175,19 @@ class RedisStore:
             logging.info(
                 f'Saving interaction to Redis with id {interaction_id}')
             self.conn.hset(name=key, mapping=interaction)
+            # save for (default=4) days (nightly datapump-cron-job gets 4 chances to copy to statsdb)
+            # while still keeping the in-memory redis small
             self.conn.expire(key, expiration)
         except Exception as e:
             logging.error("Error saving interaction to Redis: ", e)
             return None
 
-    def update_interaction(self, interaction: any, interaction_id: str, expiration=timedelta(days=90)):
+    def update_interaction(self, interaction: any, interaction_id: str):
         key = f'{self.INTERACTION_PREFIX}{interaction_id}'
         try:
             logging.info(
                 f'Updating interaction in Redis with id {interaction_id}')
             self.conn.hset(name=key, mapping=interaction)
-            self.conn.expire(key, expiration)
         except Exception as e:
             logging.error("Error updating interaction in Redis: ", e)
             return None
@@ -199,6 +200,19 @@ class RedisStore:
             return interaction
         except Exception as e:
             logging.error("Error getting interaction from Redis: ", e)
+            return None
+
+    def get_all_interactions_with_keys(self) -> dict:
+        try:
+            keys = self.conn.keys(f"{self.INTERACTION_PREFIX}*")
+            key_interacton_dict = {}
+            for key in keys:
+                interaction = self.conn.hgetall(key)
+                key_interacton_dict[key] = interaction
+            return key_interacton_dict
+
+        except Exception as e:
+            logging.error("Error getting all interactions from Redis: ", e)
             return None
 
     def search_semantic_cache(self, query_vector, top_k=1):

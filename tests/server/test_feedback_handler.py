@@ -1,4 +1,3 @@
-import datetime
 import json
 from unittest.mock import Mock
 from server.feedback_handler import handle_feedback
@@ -43,4 +42,4 @@ class TestHandleFeedback(BaseTest):
         response = handle_feedback(feedback, "comment", "interaction_id", self.mock_redis)
         self.assertEqual(response, {"message": "Tack för din feedback!"})
         self.mock_redis.update_interaction.assert_called_once_with({"interaction_id": "interaction_id", "feedback": feedback, "feedback_comment": "comment"},
-                                                                   'interaction_id', datetime.timedelta(days=90))
+                                                                   'interaction_id')

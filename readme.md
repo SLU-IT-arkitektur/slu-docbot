@@ -1,6 +1,67 @@
 # slu-docbot
 
-This is a QA bot that can answer questions about a given document. In this example it is specialized to answer questions about the document ***Utbildningshandboken (Policy, regler och riktlinjer för utbildning på grundnivå och avancerad nivå vid SLU)***.
+This is a QA bot that can answer questions about a given document. In this example it is specialized to answer questions about the document ***Utbildningshandboken (Policy, regler och riktlinjer för utbildning på grundnivå och avancerad nivå vid SLU)***. The bot has support for multiple languages.
+
+## overview
+
+Here’s a high-level overview of the system's components and how they interact:
+
+```
+                      +----------------------------+
+                      |     User/Client Input      |
+                      +----------------------------+
+                                  |
+                                  v
+                     +-----------------------------+
+                     |          QA Bot             |
+                     |  - Receives questions       |
+                     |  - Searches embeddings      |
+                     |  - Queries LLM API          |
+                     +-----------------------------+
+                                  |
+                                  v
+        +----------------------------+       +-----------------------------+
+        |          Redis             |<------|    Embeddings Updater       |
+        |  - Stores embeddings       |       |  - Creates sections         |
+        |  - Temporary interactions  |       |  - Generates embeddings     |
+        +----------------------------+       |  - Updates Redis store       |
+                               ^             +-----------------------------+
+                               |                        |
+                               |                        v
+                               |             +-----------------------------+
+                               |             |    Quality Assurance         |
+                               |             | - Verifies new embeddings    |
+                               |             | - Ensures data quality       |
+                               |             +-----------------------------+
+                               |
+                     +-----------------------------+
+                     |         Datapump            |
+                     |  - Transfers interactions   |
+                     |    from Redis to StatsDB    |
+                     +-----------------------------+
+                                  |
+                                  v
+                     +-----------------------------+
+                     |    PostgreSQL (StatsDB)     |
+                     | - Persistent interaction    |
+                     |   storage for reporting     |
+                     +-----------------------------+
+                                  |
+                                  v
+                     +-----------------------------+
+                     |          Reporter           |
+                     |  - Generates reports        |
+                     |  - Sends reports via email  |
+                     +-----------------------------+
+
+
+   +----------------------------------------------------+
+   |                    Evaluator                       |
+   |  - Measures retrieval performance of the system    |
+   |  - Metrics: recall@k, precision@k, nDCG@k          |
+   +----------------------------------------------------+
+```
+
 
 ## prerequisites
 - a local k8s cluster, e.g [docker desktop](https://www.docker.com/products/docker-desktop/) (with kubernetes **"enabled"**)  
@@ -90,8 +151,50 @@ The embeddings_updater is a script that will perform the following steps when ex
 
 It is executed as a Kubernetes CronJob (on a configurable interval) in the test/prod environment but you can also run it locally either by running `python embeddings_updater.py` or `skaffold run -f skaffold.embeddings_updater.one.off.yaml` (both requires the chatbot to be up and running via `skaffold run`)
 
+## run the datapump
+The datapump transfers interactions from Redis to the StatsDB (PostgreSQL). Interactions are temporarily stored in Redis and then permanently persisted in StatsDB for reporting and analytics.
+### how the datapump runs
+- **Test/Production**: Runs as a Kubernetes CronJob.
+- **Local Execution**: You can run it locally with the following command:  
+  ```bash
+  skaffold run -f skaffold.datapump.one.off.yaml --tail
+  ```
+  
+### before running locally 
+- make sure the QA bot is running (skaffold run)  
+- make sure you have created (and kubectl applied..) this file: ``./devops/k8s/local/postgres-secret.yaml`` with this content:  
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-secret
+type: Opaque
+stringData:
+  connection_string: dbname=statsdb user=localdevuser password=localdevpassword host=postgres
+```
+
 ## run the reporter
 check the [reports readme](./reports/readme.md)
+
+## run the evaluator
+
+The evaluator assesses the retrieval performance of this RAG application by calculating the following metrics:
+
+- **recall@k**: Measures coverage by evaluating how many relevant sections are returned among the top-k results (binary relevance, order unaware).
+- **precision@k**: Measures accuracy by evaluating how many of the retrieved sections are relevant (binary relevance, order unaware).
+- **nDCG@k**: Measures ranking quality by evaluating the order of retrieved sections based on graded relevance (order aware).
+
+### prerequisites
+Ensure the following before running the evaluator:
+- Redis is running and populated with sections data.
+- The evaluation dataset (`evaluation_data_set.json`) exists in the `./data/` directory.
+
+### how to run
+The evaluator can be run as a standalone script or imported as a module. By default, it calculates metrics for the top-3 results (`k=3`):
+
+```bash
+python evaluator.py
+```
 
 ## tests
 run ```python -m unittest discover``` in the root of this project

@@ -1,4 +1,3 @@
-from datetime import timedelta
 from fastapi.responses import JSONResponse
 from .redis_store import RedisStore
 from server import settings
@@ -25,6 +24,6 @@ def handle_feedback(feedback: str, comment: str, interaction_id: str, redis_stor
     # update interaction with feedback and new expiration of 90 days
     interaction["feedback"] = feedback
     interaction["feedback_comment"] = comment
-    redis_store.update_interaction(interaction, interaction_id, timedelta(days=90))
+    redis_store.update_interaction(interaction, interaction_id)
 
     return {"message": settings.get_locale()["server_texts"]["thanks_for_feedback"]}

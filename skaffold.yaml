@@ -8,8 +8,12 @@ build:
       context: .
       docker:
         dockerfile: Dockerfile
+    - image: db-mig 
+      context: ./migrations
 manifests:
   rawYaml:
+    - ./devops/k8s/local/postgres.yaml
+    - ./devops/k8s/local/db-migration.yaml
     - ./devops/k8s/local/openai-secret.yaml
     - ./devops/k8s/local/prompt-secret.yaml
     - ./devops/k8s/local/redis-stack-server.yaml

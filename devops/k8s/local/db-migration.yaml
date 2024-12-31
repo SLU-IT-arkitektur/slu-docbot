@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job # <-- job that runs db migrations (only one instance will run regardless of number of api instances...)
+metadata:
+  name: db-mig
+spec:
+  ttlSecondsAfterFinished: 10 # delete after 10 seconds (give api init container a chance to see it..)
+  template:
+    spec:
+      containers:
+        - env:
+            - name: POSTGRES_CONNECTION_STRING
+              value: postgres://localdevuser:localdevpassword@postgres:5432/statsdb?sslmode=disable # <-- this is the connection string that the migration tool uses to connect to the db
+          name: db-mig
+          image: db-mig
+      restartPolicy: Never
+  backoffLimit: 10

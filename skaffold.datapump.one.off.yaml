@@ -1,0 +1,17 @@
+apiVersion: skaffold/v4beta5
+kind: Config
+build:
+  local:
+    push: false
+  artifacts:
+    - image: datapump
+      context: .
+      docker:
+        dockerfile: Dockerfile.datapump
+manifests:
+  rawYaml:
+    - ./devops/k8s/local/one-off-datapump.yaml
+deploy:
+  statusCheck: false
+  kubectl: {}
+

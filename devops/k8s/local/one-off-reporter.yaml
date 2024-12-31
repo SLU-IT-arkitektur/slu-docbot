@@ -7,6 +7,11 @@ spec:
     spec:
       containers:
         - env:
+            - name: STATSDB_CONNECTION_STRING
+              valueFrom:
+                 secretKeyRef:
+                  name: postgres-secret
+                  key: connection_string
             - name: CHATBOT_URL
               value: "localhost:8000"
             - name: REPORT_RECEIVERS
