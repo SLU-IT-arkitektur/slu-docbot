@@ -12,7 +12,7 @@ do
     echo "skaffold delete -f $BLUE$file$RESET"
 done
 current_k8s_env=$(kubectl config current-context)
-echo "you are currently targetting the kubectl context $RED$current_k8s_env$RESET"
+echo "you are currently targeting the kubectl context $RED$current_k8s_env$RESET"
 echo 'are you sure you want to continue? (y/n)'
 read answer
 if [ "$answer" = "Y" ] || [ "$answer" = "y" ]; then
