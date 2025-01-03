@@ -1,3 +1,7 @@
+"""
+Data pump to copy interactions from redis to statsdb (postgres) for analytics and reporting.
+"""
+
 from dotenv import load_dotenv
 load_dotenv()
 from datetime import datetime, timedelta
