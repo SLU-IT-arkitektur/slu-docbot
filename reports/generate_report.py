@@ -13,8 +13,8 @@ def connect_to_postgres():
     """
     connection_string = os.getenv('STATSDB_CONNECTION_STRING')
     if connection_string is None:
-        logging.error("STATSDB_CONNECTION_STRING is not set, using default for local dev only")
-        connection_string = "dbname=statsdb user=localdevuser password=localdevpassword host=localhost"
+        logging.error("STATSDB_CONNECTION_STRING is not set")
+        exit(1)
     else:
         logging.info("Using connection string from env var STATSDB_CONNECTION_STRING")
 
