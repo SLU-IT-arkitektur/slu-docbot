@@ -35,8 +35,8 @@ def handle_query(query: str, redis_store: RedisStore, use_passive_index=False):
         similar_sections, total_tokens_allowed_for_request)
 
     # prompt injection mitigation technique: not sending the query if it is not similar enough to the context
-    # if less than 100 tokens in the context it's probably not enough to give a good answer
-    if context is None or len(context) == 0 or tokens_in_context < 100:
+    min_tokens_required = 100
+    if context is None or len(context) == 0 or tokens_in_context < min_tokens_required:
         redis_store.set_interaction(
             interaction_id, start_time, query, '', cache_reply=None, chat_completions_req_duration=0)
         logging.info('query is not similar enough to the context')

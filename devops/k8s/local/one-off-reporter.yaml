@@ -15,7 +15,7 @@ spec:
             - name: CHATBOT_URL
               value: "localhost:8000"
             - name: REPORT_RECEIVERS
-              value: "hellgrenj@gmail.com, johan.hellgren@bracketsquare.se"
+              value: "hellgrenj@gmail.com, johan.hellgren@conceptasolutions.se"
             - name: REPORT_SENDER_PASSWORD
               value: "a_secret_password"
             - name: REPORT_SMTP_HOST
