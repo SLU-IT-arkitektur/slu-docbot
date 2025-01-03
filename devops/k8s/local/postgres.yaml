@@ -34,9 +34,15 @@ spec:
             - name: POSTGRES_DB
               value: statsdb
             - name: POSTGRES_PASSWORD
-              value: localdevpassword
+              valueFrom:
+                 secretKeyRef:
+                  name: postgres-secret
+                  key: password
             - name: POSTGRES_USER
-              value: localdevuser
+              valueFrom:
+                 secretKeyRef:
+                  name: postgres-secret
+                  key: user
             - name: PGDATA
               value:  /var/lib/postgresql/data/statsdb
           image: postgres:17 

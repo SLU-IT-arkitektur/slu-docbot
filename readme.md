@@ -76,10 +76,12 @@ Here’s a high-level overview of the system's components and how they interact:
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_PASSWORD = 'mysecretpassword'
+STATSDB_CONNECTION_STRING = 'REPLACE_WITH_YOUR_POSTGRES_CONNECTION_STRING'
 OPENAI_API_KEY = 'REPLACE_WITH_YOUR_OPENAI_API_KEY'
 PROMPT_INST = 'REPLACE_WITH_YOUR_PROMPT'
 PROMPT_INST_EN = 'REPLACE_WITH_YOUR_EN_PROMPT'
-```  
+```    
+(..set your preferred redis_password, and see the section 'run the datapump' below for info about the statsdb setup)  
 - activate the virtual environment: `source env/bin/activate`   
 - install dependencies: `pip install -r requirements.txt`  
 - in devops/k8s/local create a file called openai-secret.yaml with the following content:  
@@ -171,7 +173,10 @@ metadata:
 type: Opaque
 stringData:
   connection_string: dbname=statsdb user=localdevuser password=localdevpassword host=postgres
-```
+  user: localdevuser
+  password: localdevpassword
+```  
+(set your preferred username and password, make sure to also update the same values in the connection string)  
 
 ## run the reporter
 check the [reports readme](./reports/readme.md)
