@@ -58,22 +58,41 @@ def copy_interaction_to_statsdb(cur, key_interaction, all_interactions):
     if 'feedback_comment' not in interaction or interaction['feedback_comment'] is None:
         interaction['feedback_comment'] = ''
 
+    if 'from_cache' not in interaction or interaction['from_cache'] is None:
+        interaction['from_cache'] = False
+    elif interaction['from_cache'] == 'true':
+        interaction['from_cache'] = True
+    else:  # something other than 'true' or None
+        interaction['from_cache'] = False
+
+    if 'cached_reply' not in interaction or interaction['cached_reply'] is None:
+        interaction['cached_reply'] = ''
+
+    if 'original_query' not in interaction or interaction['original_query'] is None:
+        interaction['original_query'] = ''
+
     cur.execute('''INSERT INTO
                                interactions
                                (redis_key,
                                redis_timestamp,
                                query,
                                reply,
+                               from_cache,
+                               cached_reply,
+                               original_query,
                                feedback,
                                feedback_comment,
                                request_duration_in_seconds,
                                chat_completions_req_duration_in_seconds)
-                               VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                                ON CONFLICT (redis_key) DO NOTHING''',
                 (key_interaction,
                  interaction['timestamp'],
                  interaction['query'],
                  interaction['reply'],
+                 interaction['from_cache'],
+                 interaction['cached_reply'],
+                 interaction['original_query'],
                  interaction['feedback'],
                  interaction['feedback_comment'],
                  interaction['request_duration_in_seconds'],
