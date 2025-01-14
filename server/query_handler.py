@@ -53,14 +53,14 @@ def handle_query(query: str, redis_store: RedisStore, use_passive_index=False):
     chat_completions_req_start = time.time()
     catch_all_error_msg = settings.get_locale()["server_texts"]["errors"]["something_went_wrong"]
     try:
-        response = call_chat_completions(prompt)
-    except openai.error.APIError as e:
+        message = call_chat_completions(prompt)
+    except openai.APIError as e:
         logging.error(f"OpenAI API returned an API Error: {e}")
         return {"message": catch_all_error_msg}
-    except openai.error.APIConnectionError as e:
+    except openai.APIConnectionError as e:
         logging.error(f"Failed to connect to OpenAI API: {e}")
         return {"message": catch_all_error_msg}
-    except openai.error.RateLimitError as e:
+    except openai.RateLimitError as e:
         logging.error(f"OpenAI API request exceeded rate limit: {e}")
         return {"message": catch_all_error_msg}
     except TimeoutError as e:
@@ -78,7 +78,6 @@ def handle_query(query: str, redis_store: RedisStore, use_passive_index=False):
         f'chat_completions_req_duration: {chat_completions_req_duration} seconds')
 
     read_more_headers = create_read_more_content(similar_sections)
-    message = response["choices"][0]["message"]["content"]
     # if message wrapped in """ remove the """ wrapping
     if message.startswith('"""') and message.endswith('"""'):
         message = message[3:-3]

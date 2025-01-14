@@ -50,8 +50,8 @@ settings.semantic_cache_enabled = False
 for qa in quality_qas:
     print(f"\n\nchecking question {qa['question']}")
     use_passive_index = True
-    reply = query_handler.handle_query(qa['question'], redis, use_passive_index)
-    answer = reply['message']
+    resp = query_handler.handle_query(qa['question'], redis, use_passive_index)
+    answer = resp["message"]
     answer_emb = get_embedding(answer)
     qa_answer_emb = get_embedding(qa['answer'])
     print("comparing qa answer with newly created embeddings answer")

@@ -1,14 +1,18 @@
 import threading
-import openai
+import os
+from openai import OpenAI
+client = OpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY")
+)
 
 
 def call_chat_completions(prompt: str):
-    response = None
+    completion = None
 
     def worker():
-        nonlocal response
-        response = openai.ChatCompletion.create(
-            model="gpt-4-turbo",
+        nonlocal completion
+        completion = client.chat.completions.create(
+            model="gpt-4o",
             temperature=0.0,
             messages=[
                 {"role": "user", "content": prompt}
@@ -22,4 +26,4 @@ def call_chat_completions(prompt: str):
     if thread.is_alive():
         raise TimeoutError("OpenAI API call took to long")
     else:
-        return response
+        return completion.choices[0].message.content

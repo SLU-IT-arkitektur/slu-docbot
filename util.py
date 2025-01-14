@@ -1,13 +1,14 @@
 import tiktoken
-import openai
-import os
+from openai import OpenAI
 import numpy as np
+import os
 from numpy.linalg import norm
 from dotenv import load_dotenv
 load_dotenv()
 
-openai.api_key = os.environ.get("OPENAI_API_KEY")
-
+client = OpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY")
+)
 
 def truncate_text(text: str, max_tokens: int) -> str:
     encoding = tiktoken.get_encoding("cl100k_base")
@@ -24,8 +25,11 @@ def num_tokens_from_string(string: str, encoding_name: str) -> int:
 
 
 def get_embedding(text, model="text-embedding-ada-002"):  # max tokens 8191
-    return openai.Embedding.create(input=[text], model=model)['data'][0]['embedding']
-
+    resp = client.embeddings.create(
+        model="text-embedding-ada-002",
+        input=text
+    )
+    return resp.data[0].embedding
 
 def cosine_similarity(vec1, vec2):
     return np.dot(vec1, vec2) / (norm(vec1) * norm(vec2))

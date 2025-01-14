@@ -62,15 +62,7 @@ class TestHandleQuery(BaseTest):
         mock_num_tokens_from_string.return_value = 2000
 
         # Mock the OpenAI API response
-        mocked_open_ai_response = {
-            "choices": [
-                {
-                    "message": {
-                        "content": "mocked open ai response"
-                    }
-                }
-            ]
-        }
+        mocked_open_ai_response = "mocked open ai response"
         mock_call_chat_completions.return_value = mocked_open_ai_response
 
         # Configure mock settings
@@ -116,15 +108,7 @@ class TestHandleQuery(BaseTest):
     @patch('server.semantic_cache.get_embedding')
     def test_call_to_open_ai_without_semantic_cache(self, mock_get_embedding_semantic_cache, mock_get_embedding_query_handler, mock_call_chat_completions, mock_settings, mock_add_to_cache):
 
-        mocked_open_ai_response = {
-            "choices": [
-                {
-                    "message": {
-                        "content": "mocked open ai response"
-                    }
-                }
-            ]
-        }
+        mocked_open_ai_response = "mocked open ai response"
         mock_call_chat_completions.return_value = mocked_open_ai_response
 
         mock_settings.configure_mock(semantic_cache_enabled=False,  # <--- disabling semantic cache
