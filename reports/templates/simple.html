@@ -21,7 +21,7 @@
     {% for feedback in thumbsUps %}
     <p>
         tumme upp {{loop.index}}/{{numberOfThumbsUps}}<br />
-        <b>datumstämpel</b>: {{ feedback.timestamp }}<br />
+        <b>datumstämpel</b>: {{ feedback.redis_timestamp }}<br />
         <b>frågan</b>: {{ feedback.query }}<br />
         {% if feedback.from_cache is defined and not feedback.from_cache == False %}
             <b>svar <span style="color:red">från cache</span></b>: {{ feedback.cached_reply }}<br />
@@ -46,7 +46,7 @@
     {% for feedback in thumbsDowns %}
     <p>
         tumme ner {{loop.index}}/{{numberOfThumbsDowns}}<br />
-        <b>datumstämpel</b>: {{ feedback.timestamp }}<br />
+        <b>datumstämpel</b>: {{ feedback.redis_timestamp }}<br />
         <b>frågan</b>: {{ feedback.query }}<br />
         {% if feedback.from_cache is defined and not feedback.from_cache == False %}
         <b>svar <span style="color:red">från cache</span></b>: {{ feedback.cached_reply }}<br />
