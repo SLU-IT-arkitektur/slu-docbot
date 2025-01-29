@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y dos2unix && dos2unix ./entrypoint.sh &&
 
 
 # create and use non-root user.. (requires us to use a port number higher than 1024)
-RUN adduser \
+RUN adduser -u 1000 \
   --disabled-password \
   --home /botrunner \
   --gecos '' botrunner \
