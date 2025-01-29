@@ -6,7 +6,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV TZ=Europe/Stockholm
 
 # create and use non-root user.. (requires us to use a port number higher than 1024)
-RUN adduser \
+RUN adduser -u 1000 \
   --disabled-password \
   --home /datapump-usr \
   --gecos '' datapump-usr \
