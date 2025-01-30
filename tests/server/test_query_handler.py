@@ -18,7 +18,7 @@ class TestHandleQuery(BaseTest):
         response = handle_query("", self.mock_redis)
         self.assertEqual(response.status_code, 400)
         response_body = response.body.decode('utf-8')
-        self.assertEqual(response_body, '{"message":"Frågan får inte vara tom."}')
+        self.assertEqual(response_body, '{"message":"Frågan får inte vara tom.XOXO"}')
 
     def test_query_more_than_80_chars(self):
         response = handle_query("a" * 81, self.mock_redis)
