@@ -1,6 +1,7 @@
-FROM python:3.10.12-slim
+FROM python:3.10.12-slim AS test-stage
 WORKDIR /app
 COPY . .
 RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
-CMD ["python", "-m", "unittest", "discover"]
+# Run unit tests inside the build process and fail if they don't pass (because buildkit inside k8s..no docker)
+RUN python -m unittest discover || exit 1
 
