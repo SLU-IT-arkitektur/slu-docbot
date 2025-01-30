@@ -1,8 +1,9 @@
 import threading
-import os
 from openai import OpenAI
+from server import settings
+
 client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY")
+    api_key=settings.openai_api_key
 )
 
 

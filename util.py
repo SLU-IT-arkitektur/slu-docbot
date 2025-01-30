@@ -1,13 +1,13 @@
 import tiktoken
 from openai import OpenAI
 import numpy as np
-import os
 from numpy.linalg import norm
 from dotenv import load_dotenv
 load_dotenv()
+from server import settings
 
 client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY")
+    api_key=settings.openai_api_key
 )
 
 def truncate_text(text: str, max_tokens: int) -> str:

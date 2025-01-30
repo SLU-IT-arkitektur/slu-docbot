@@ -53,6 +53,11 @@ sections_min_similarity_score_default_value = 0.8
 sections_min_similarity_score = os.getenv('SECTIONS_MIN_SIMILARITY_SCORE')
 sections_min_similarity_score = sections_min_similarity_score_default_value if sections_min_similarity_score is None else float(sections_min_similarity_score)
 
+openai_api_key = os.environ.get("OPENAI_API_KEY")
+if not openai_api_key:
+    print("Warning: OPENAI_API_KEY not set, using dummy value for tests")
+    openai_api_key = "dummy"
+
 
 def check_required():
     if redis_host is None:
